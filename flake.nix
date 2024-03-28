@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:/nixpkgs/-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager" ;
@@ -18,22 +18,22 @@
     home-manager, 
     ... 
   } @ inputs: {
-    # NixOS config entry
-    # Refresh using: `sudo nixos-rebuild --flake .#hostname`
-    nixosConfigurations = {
-      perfect-linux = nixpkgs.lib.nixosSystem {
+    #  config entry
+    # Refresh using: `sudo -rebuild --flake .#hostname`
+    Configurations = {
+      perfect-linux = nixpkgs.lib.System {
         specialArgs = { 
           inherit inputs; 
         };
         system = "x86_64-linux";
-        modules = [./nixos/configuration.nix];
+        modules = [./configuration.nix];
       };
     };
 
     homeConfigurations = {
       "khoi@perfect-linux" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux"; 
-        modules = [ ./nixos/home.nix ];
+        modules = [ ./home.nix ];
       };
     };
   };
