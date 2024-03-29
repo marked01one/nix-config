@@ -93,9 +93,11 @@ in {
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
         "${MOD}, SPACE, exec, rofi -show drun -show-icons"
-	      "${MOD}, RETURN, exec, kitty"
+        "${MOD}, RETURN, exec, kitty"
+        
+	"${MOD} SHIFT, Q, killactive"
 
-        "${MOD} ALT, right, workspace, e+1"
+	"${MOD} ALT, right, workspace, e+1"
         "${MOD} ALT, left, workspace, e-1"
 
         "${MOD} SHIFT, right, movetoworkspace, e+1"

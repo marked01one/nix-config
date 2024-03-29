@@ -21,7 +21,7 @@ in {
   ];
 
   home.file = {
-    ".config/neofetch/config.conf" = ''${builtins.readFile ./conf/neofetch.conf}''; 
+    ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}''; 
   };
   programs.home-manager.enable = true;
 
