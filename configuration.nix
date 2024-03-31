@@ -6,7 +6,43 @@
   config, 
   pkgs, 
   ... 
-}: {
+}: let
+  desktopApps = with pkgs; [
+    brave
+    neovim
+    vscode
+    obsidian
+    space-cadet-pinball
+    kicad
+    drawio
+    discord
+    prismlauncher 
+  ];
+
+  commandLineApps = with pkgs; [
+    wget
+    curl
+    networkmanager
+    lsd
+    zoxide
+    zsh-autocomplete
+    zsh-autosuggestions
+    neofetch
+    btop
+    thefuck
+  ];
+
+  languages = with pkgs; [
+    rustup
+    go
+    lua
+    dotnet-sdk_8
+    libgcc
+    nodejs_21
+    python3
+    jdk21
+  ];
+in {
   # Include the results of the hardware scan.
   imports = [ 
     ./hardware-configuration.nix
@@ -192,42 +228,7 @@
       rofi
       
 
-      # Command line tools
-      unzip
-      wget
-      curl
-      networkmanager
-      lsd
-      zoxide
-      zsh-autocomplete
-      zsh-autosuggestions
-      neofetch
-      btop
-      thefuck
-
-      # Desktop apps
-      brave
-      neovim
-      vscode
-      obsidian
-      space-cadet-pinball
-      kicad
-      drawio
-      discord
-      prismlauncher
-      nitrogen
-
-      # Languages
-      rustup
-      go
-      lua
-      dotnet-sdk_8
-      libgcc
-      nodejs_21
-      python3
-      jdk21
-
-      # Development tools
+           # Development tools
       docker
       git
       zsh
@@ -238,7 +239,8 @@
       # Language servers
       nil 
       gopls
-    ]);
+    ])
+    ++ desktopApps ++ commandLineApps ++ languages;
   
   programs = {
     nix-ld = {

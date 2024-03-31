@@ -5,6 +5,7 @@
 }: let
   homeImports = [
     ./home/hyprland.nix
+  
   ];
 in {
   nixpkgs.config.allowUnfree = true;
