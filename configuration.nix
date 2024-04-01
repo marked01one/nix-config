@@ -52,7 +52,8 @@
     polkit_gnome
     hyprpaper
     rofi
-    swww 
+    swww
+     
   ];
 
   devTools = with pkgs; [
@@ -190,7 +191,7 @@ in {
 
     displayManager.sddm = {
       enable = true;
-      theme = "";
+      theme = "${import ./modules/sddm-sugar-dark.nix { inherit pkgs; }}";
       wayland.enable = true;
     };
   };

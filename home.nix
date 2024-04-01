@@ -1,12 +1,13 @@
 { 
  # config, 
- # pkgs, 
+ pkgs, 
   ... 
 }: let
   homeImports = [
     ./home/hyprland.nix
   
   ];
+
 in {
   nixpkgs.config.allowUnfree = true;
 
@@ -21,9 +22,16 @@ in {
 
   ];
 
+
+
   # home.file = {
   #   ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}''; 
   # };
+
+  gtk = {
+    enable = true;
+  };
+
   programs.home-manager.enable = true;
 
 }
