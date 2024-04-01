@@ -53,7 +53,7 @@
     hyprpaper
     rofi
     swww
-    "xz-5.4.4" 
+    xz-5_4_4 
   ];
 
   devTools = with pkgs; [
