@@ -1,4 +1,12 @@
 { pkgs }:
+let
+  imgLink = "https://64.media.tumblr.com/16958cb609849796becc3ce87d321228/8adc7574e99f1e43-e6/s1280x1920/6153745aed37443a760e04689d4a8561a3a76354.jpg";
+
+  image = pkgs.fetchUrl {
+    url = imgLink;
+    sha256 = pkgs.lib.fakeSha256;
+  };
+in
 pkgs.stdenv.mkDerivation {
   name = "sddm-sugar-dark";
 
@@ -13,5 +21,7 @@ pkgs.stdenv.mkDerivation {
     mkdir -p $out
     cp -R ./* $out/
     cd $out/
+    rm Background.jpg
+    cp -r ${image} $out/Background.jpg
   '';
 }
