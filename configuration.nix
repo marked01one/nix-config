@@ -65,6 +65,11 @@
     nil 
     gopls
   ];
+
+  qt5Packages = with pkgs.libsForQt5.qt5; [
+    qtquickcontrols2
+    qtgraphicaleffects
+  ];
 in {
   # Include the results of the hardware scan.
   imports = [ 
@@ -238,7 +243,7 @@ in {
 
   # List packages installed in system profile.
   environment.systemPackages =
-    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages;
+    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages;
   
   programs = {
     nix-ld = {
