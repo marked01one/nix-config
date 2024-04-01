@@ -16,7 +16,8 @@
     kicad
     drawio
     discord
-    prismlauncher 
+    prismlauncher
+    waypaper
   ];
 
   commandLineApps = with pkgs; [
@@ -41,6 +42,28 @@
     nodejs_21
     python3
     jdk21
+  ];
+
+  systemPrograms = with pkgs; [
+    home-manager
+    dbus
+    kitty
+    polkit
+    polkit_gnome
+    hyprpaper
+    rofi
+    swww 
+  ];
+
+  devTools = with pkgs; [
+    docker
+    git
+    zsh
+    vim
+    neovim
+    newman
+    nil 
+    gopls
   ];
 in {
   # Include the results of the hardware scan.
@@ -215,32 +238,7 @@ in {
 
   # List packages installed in system profile.
   environment.systemPackages =
-    (with pkgs; [
-      # System packages
-      home-manager
-      dbus
-      picom
-      alacritty
-      kitty
-      polkit
-      polkit_gnome
-      hyprpaper
-      rofi
-      
-
-           # Development tools
-      docker
-      git
-      zsh
-      vim
-      neovim
-      newman
-
-      # Language servers
-      nil 
-      gopls
-    ])
-    ++ desktopApps ++ commandLineApps ++ languages;
+    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages;
   
   programs = {
     nix-ld = {
