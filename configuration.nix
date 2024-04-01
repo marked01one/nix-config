@@ -52,8 +52,7 @@
     polkit_gnome
     hyprpaper
     rofi
-    swww
-    xz-5_4_4 
+    swww 
   ];
 
   devTools = with pkgs; [
