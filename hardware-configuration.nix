@@ -26,6 +26,7 @@
   swapDevices = [ ];
   environment.systemPackages = with pkgs; [
     asusctl
+    nvtop
   ];
 
   services.asusd.enable = true;
@@ -58,7 +59,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     powerManagement = {
-      enable = true;
+      enable = false;
       finegrained = false;
     };
 
@@ -73,5 +74,5 @@
     };
   };
 
-  services.xserver.videoDrivers = [ "nvidia" "intel" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 }
