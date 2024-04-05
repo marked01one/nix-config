@@ -11,8 +11,8 @@ in {
 
     settings = {
       monitor = [
-        "DP-6,2560x1440@240,2560x0,1"
-        "eDP-1,2560x1600@240,0x0,1"
+        "eDP-1,2560x1600@240,0x0,auto"
+        "DP-6,2560x1440@240,2560x0,auto"
       ];
 
       env = "XCURSOR_SIZE,20";
