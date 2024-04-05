@@ -10,9 +10,6 @@ in {
     enable = true;
 
     settings = {
-      monitor = [
-        ",preferred,auto,auto"
-      ];
 
       env = "XCURSOR_SIZE,20";
       
