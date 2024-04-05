@@ -12,7 +12,7 @@ in {
     settings = {
       monitor = [
         "eDP-1,2560x1600@240,0x0,auto"
-        "DP-6,2560x1440@240,2560x0,auto"
+        "HDMI-A-3,2560x1440@120,2560x0,auto"
       ];
 
       env = "XCURSOR_SIZE,20";
@@ -96,9 +96,9 @@ in {
         "${MOD}, SPACE, exec, rofi -show drun -show-icons"
         "${MOD}, RETURN, exec, kitty"
         
-	"${MOD} SHIFT, Q, killactive"
+	      "${MOD} SHIFT, Q, killactive"
 
-	"${MOD} ALT, right, workspace, e+1"
+	      "${MOD} ALT, right, workspace, e+1"
         "${MOD} ALT, left, workspace, e-1"
 
         "${MOD} SHIFT, right, movetoworkspace, e+1"
