@@ -10,11 +10,15 @@ in {
     enable = true;
 
     settings = {
+      monitor = [
+        "DP-6,2560x1440@240,0x0,1"
+        "eDP-1,2560x1600@240,-2560x0,1"
+      ];
 
       env = "XCURSOR_SIZE,20";
       
       exec-once = [
-        "hyprpaper"
+        "waypaper --restore"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
