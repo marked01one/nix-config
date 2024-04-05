@@ -55,7 +55,7 @@
 
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
 
     powerManagement = {
       enable = true;
@@ -65,7 +65,7 @@
     prime = {
       offload = {
         enable = true;
-	enableOffloadCmd = true;
+	      enableOffloadCmd = true;
       };
 
       intelBusId = "PCI:0:2:0";
