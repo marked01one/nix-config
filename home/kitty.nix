@@ -1,7 +1,7 @@
 {
   # config,
   pkgs,
-  # ligb,
+  lib,
   ...
 }:
 
