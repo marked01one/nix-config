@@ -37,8 +37,6 @@
       add_newline = false;
       format = lib.concatStrings [
         "$username"
-        "@"
-        "$hostname"
         " ~ $directory"
         "$line_break"
         "$character"
