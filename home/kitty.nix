@@ -11,7 +11,7 @@
 
     font = {
       name = "CaskaydiaCove Nerd Font";
-      size = 9.0;
+      size = 10.0;
     };
 
     keybindings = {
@@ -23,17 +23,20 @@
       "ctrl+shift+down" = "scroll_line_down";
       "ctrl+shift+j" = "scroll_line_down";
     };
+
+    settings = {
+
+    };    
   };
 
   programs.starship = {
-      enable = true;
-      enableZshIntegration = true;
+    enable = true;
+    enableZshIntegration = true;
 
-      settings = {
+    settings = {
       add_newline = false;
       format = lib.concatStrings [
-        "$line_break"
-        "$package"
+        "$username@$hostname ~ $directory"
         "$line_break"
         "$character"
       ];

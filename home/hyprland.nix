@@ -11,8 +11,8 @@ in {
 
     settings = {
       monitor = [
-        "eDP-1,2560x1600@240,0x0,auto"
-        "HDMI-A-3,2560x1440@120,2560x0,auto"
+        "eDP-1,2560x1600@240,0x0,1"
+        "HDMI-A-3,2560x1440@120,2560x0,1"
       ];
 
       env = "XCURSOR_SIZE,20";

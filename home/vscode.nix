@@ -14,6 +14,8 @@
             "nix.serverSettings"."nil" = {
                 formatting.command = [ "alejandra" ];
             };
+
+            "editor.fontFamily" = "CaskaydiaCove Nerd Font";
         };
     };
 }
