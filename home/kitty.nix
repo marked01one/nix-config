@@ -33,19 +33,27 @@
     enable = true;
     enableZshIntegration = true;
 
-    # settings = {
-    #   add_newline = false;
-    #   format = lib.concatStrings [
-    #     "$username"
-    #     " ~ $directory"
-    #     "$line_break"
-    #     "$character"
-    #   ];
-    #   scan_timeout = 10;
-    #   character = {
-    #     success_symbol = "➜";
-    #     error_symbol = "➜";
-    #   };
-    # };
+    settings = {
+      add_newline = false;
+      scan_timeout = 10;
+      character = {
+        success_symbol = "➜";
+        error_symbol = "➜";
+      };
+
+      hostname = {
+        disabled = false;
+        format = "[$ssh_symbol](bold blue) on [$hostname](bold red) ";
+      };
+
+      username = {
+        disbled = false;
+        show_always = true;
+        style_user = "white bold";
+        style_root = "red bold";
+        format = "user: [$user]($style)";
+      };
+      
+    };
   };
 }

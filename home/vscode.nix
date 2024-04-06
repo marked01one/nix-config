@@ -6,6 +6,8 @@
         extensions = with pkgs.vscode-extensions; [
             jnoortheen.nix-ide
             vscodevim.vim
+            pkief.material-icon-theme
+            equinusocio.vsc-material-theme
         ];
 
         userSettings = {
@@ -14,6 +16,9 @@
             "nix.serverSettings"."nil" = {
                 formatting.command = [ "alejandra" ];
             };
+
+            "editor.accessibilityPageSize" = 11;
+            "window.titleBarStyle" = "custom";
 
             "editor.fontFamily" = "CaskaydiaCove Nerd Font";
         };

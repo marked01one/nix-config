@@ -64,6 +64,7 @@
     newman
     nil 
     gopls
+    alejandra
   ];
 
   qt5Packages = with pkgs.libsForQt5.qt5; [
