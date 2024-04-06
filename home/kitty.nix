@@ -47,11 +47,11 @@
       };
 
       username = {
-        disbled = false;
+        disabled = false;
         show_always = true;
         style_user = "white bold";
         style_root = "red bold";
-        format = "user: [$user]($style)";
+        format = "[$user]($style) in ";
       };
       
     };
