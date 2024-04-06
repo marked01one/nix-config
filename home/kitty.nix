@@ -33,19 +33,19 @@
     enable = true;
     enableZshIntegration = true;
 
-    settings = {
-      add_newline = false;
-      format = lib.concatStrings [
-        "$username"
-        " ~ $directory"
-        "$line_break"
-        "$character"
-      ];
-      scan_timeout = 10;
-      character = {
-        success_symbol = "➜";
-        error_symbol = "➜";
-      };
-    };
+    # settings = {
+    #   add_newline = false;
+    #   format = lib.concatStrings [
+    #     "$username"
+    #     " ~ $directory"
+    #     "$line_break"
+    #     "$character"
+    #   ];
+    #   scan_timeout = 10;
+    #   character = {
+    #     success_symbol = "➜";
+    #     error_symbol = "➜";
+    #   };
+    # };
   };
 }
