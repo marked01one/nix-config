@@ -10,10 +10,6 @@
     enable = true;
 
     font = {
-      package = with pkgs; [
-        (nerdfonts.override { fonts = ["CascadiaCode"]; })
-      ];
-
       name = "CaskaydiaCove Nerd Font";
       size = 9.0;
     };
