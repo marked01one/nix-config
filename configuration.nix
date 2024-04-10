@@ -15,7 +15,7 @@
     space-cadet-pinball
     kicad
     drawio
-    vesktop 
+    discord 
     prismlauncher
     waypaper
   ];
@@ -52,7 +52,9 @@
     polkit_gnome
     hyprpaper
     rofi
-    swww 
+    swww
+    brightnessctl
+    pulseaudio 
   ];
 
   devTools = with pkgs; [

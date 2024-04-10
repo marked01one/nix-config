@@ -10,11 +10,13 @@ in {
     enable = true;
 
     settings = {
-      monitor = [
-        "eDP-1,2560x1600@240,0x0,1"
-        "DP-3,2560x1440@240,2560x0,auto"
-        "HDMI-A-3,2560x1440@120,2560x0,auto"
-      ];
+      # monitor = [
+      #   "eDP-1,2560x1600@240,0x0,auto"
+      #   "DP-3,2560x1440@240,2560x0,auto"
+      #   "HDMI-A-3,2560x1440@120,2560x0,auto"
+      # ];
+
+      monitor = [ ",preferred,auto,auto" ];
 
       env = "XCURSOR_SIZE,20";
       
@@ -40,10 +42,10 @@ in {
       };
 
       general = {
-        gaps_in = 4;
-        gaps_out = 8;
-        "col.active_border" = "rbga(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rbga(595959aa)";
+        gaps_in = 3;
+        gaps_out = 6;
+        "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
+        "col.inactive_border" = "0x00000000";
 
         layout = "dwindle";
 
@@ -60,14 +62,14 @@ in {
         };
 
         drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
+        shadow_range = 2;
+        shadow_render_power = 4;
         "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
         enabled = true;
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1";
 
         animation = [
           "windows, 1, 7, myBezier"
@@ -93,6 +95,9 @@ in {
       };
 
       bind = [
+        ",XF86MonBrightnessUp, exec, brightness set +10%"
+        ",XF86MonBrightnessDown, exec, brightness set 10%-"
+
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
         "${MOD}, SPACE, exec, rofi -show drun -show-icons"
