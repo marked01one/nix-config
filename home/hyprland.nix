@@ -63,7 +63,7 @@ in {
           passes = 1;
         };
 
-        drop_shadow = true;
+        drop_shadow = false;
         shadow_range = 2;
         shadow_render_power = 4;
         "col.shadow" = "rgba(1a1a1aee)";
@@ -115,7 +115,7 @@ in {
 
         "${MOD}, S, togglespecialworkspace, magic"
         "${MOD} SHIFT, S, movetoworkspace, special:magic"
-        "${MOD}, F, fullscreen"
+        "${MOD}, F, fakefullscreen"
 
         "${MOD} SHIFT, right, movetoworkspace, e+1"
         "${MOD} SHIFT, left, movetoworkspace, e-1"
