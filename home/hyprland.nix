@@ -11,14 +11,15 @@ in {
 
     settings = {
       monitor = [
-        "eDP-1,2560x1600@240,0x0,2"
-        "DP-3,2560x1440@240,2560x0,1"
-        "HDMI-A-3,2560x1440@120,2560x0,1"
+        "eDP-1,2560x1600@240,0x0,auto"
+        "DP-3,2560x1440@240,2560x0,auto"
+        "HDMI-A-3,2560x1440@120,2560x0,auto"
       ];
 
       env = "XCURSOR_SIZE,20";
       
       exec-once = [
+        "hyprctl setcursor "
         "waypaper --restore"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];

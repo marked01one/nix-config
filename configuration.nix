@@ -74,7 +74,7 @@
 in {
   # Include the results of the hardware scan.
   imports = [ 
-    ./hardware-configuration.nix
+    ./hardware/hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
