@@ -302,9 +302,6 @@ in {
       extensions = [
         { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
       ];
-      commandLineArgs = [
-        "--disable-features=WebRtcAllowInputVolumeAdjustment"
-      ];
     };
   };
 
