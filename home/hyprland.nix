@@ -41,9 +41,9 @@ in {
       };
 
       general = {
-        gaps_in = 3;
-        gaps_out = 6;
-        border_size = 3;
+        gaps_in = 4;
+        gaps_out = 8;
+        border_size = 4;
 
         "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
         "col.inactive_border" = "0x00000000";
@@ -54,7 +54,7 @@ in {
       };
 
       decoration = {
-        rounding = 4;
+        rounding = 6;
 
         blur = {
           enabled = false;
