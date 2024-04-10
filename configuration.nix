@@ -18,6 +18,7 @@
     discord 
     prismlauncher
     waypaper
+    firefox
   ];
 
   commandLineApps = with pkgs; [
