@@ -32,7 +32,7 @@ in {
         kb_model = "";
         kb_rules = "";
 
-        follow_mouse = 1;
+        follow_mouse = 0;
 
         touchpad = {
           natural_scroll = false;
@@ -44,6 +44,8 @@ in {
       general = {
         gaps_in = 3;
         gaps_out = 6;
+        border_size = 3;
+
         "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
         "col.inactive_border" = "0x00000000";
 
@@ -95,8 +97,8 @@ in {
       };
 
       bind = [
-        ",XF86MonBrightnessUp, exec, brightness set +10%"
-        ",XF86MonBrightnessDown, exec, brightness set 10%-"
+        ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
+        ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
 
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
@@ -140,7 +142,6 @@ in {
       );
 
       misc = {
-        force_default_wallpaper = 0;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
