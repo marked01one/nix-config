@@ -8,6 +8,7 @@
   ... 
 }: let
   desktopApps = with pkgs; [
+    brave
     neovim
     vscode
     obsidian
@@ -294,15 +295,7 @@ in {
       enable = true;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-    };
-
-    chromium = {
-      enable = true;
-      package = pkgs.brave;
-      extensions = [
-        { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
-      ];
-    };
+    }; 
   };
 
   
