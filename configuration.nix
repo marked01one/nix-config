@@ -15,7 +15,7 @@
     space-cadet-pinball
     kicad
     drawio
-    discord
+    vesktop 
     prismlauncher
     waypaper
   ];
