@@ -115,7 +115,7 @@ in {
 
         "${MOD}, S, togglespecialworkspace, magic"
         "${MOD} SHIFT, S, movetoworkspace, special:magic"
-        "${MOD}, F, fakefullscreen"
+        "${MOD}, F, maximize"
 
         "${MOD} SHIFT, right, movetoworkspace, e+1"
         "${MOD} SHIFT, left, movetoworkspace, e-1"
