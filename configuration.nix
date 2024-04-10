@@ -8,7 +8,6 @@
   ... 
 }: let
   desktopApps = with pkgs; [
-    brave
     neovim
     vscode
     obsidian
@@ -17,8 +16,7 @@
     drawio
     discord 
     prismlauncher
-    waypaper
-    firefox
+    waypaper 
   ];
 
   commandLineApps = with pkgs; [
@@ -297,7 +295,20 @@ in {
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+
+    chromium = {
+      enable = true;
+      package = pkgs.brave;
+      extensions = [
+        { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      ];
+      commandLineArgs = [
+        "--disable-features=WebRtcAllowInputVolumeAdjustment"
+      ];
+    };
   };
+
+  
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
