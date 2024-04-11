@@ -19,6 +19,7 @@
     prismlauncher
     waypaper
     networkmanagerapplet 
+    geekbench
   ];
 
   commandLineApps = with pkgs; [
@@ -55,7 +56,8 @@
     rofi
     swww
     brightnessctl
-    pulseaudio 
+    pulseaudio
+    ags
   ];
 
   devTools = with pkgs; [
