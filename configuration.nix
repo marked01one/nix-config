@@ -17,7 +17,8 @@
     drawio
     discord 
     prismlauncher
-    waypaper 
+    waypaper
+    networkmanagerapplet 
   ];
 
   commandLineApps = with pkgs; [
