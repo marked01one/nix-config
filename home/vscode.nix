@@ -24,6 +24,7 @@
 
             "workbench.colorTheme" = "Material Theme Ocean High Contrast";
             "workbench.activityBar.location" = "top";
+            "workbench.iconTheme" = "eq-material-theme-icons-ocean";
         };
     };
 }
