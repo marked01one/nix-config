@@ -18,8 +18,7 @@
     discord 
     prismlauncher
     waypaper
-    networkmanagerapplet 
-    geekbench_5
+    networkmanagerapplet
   ];
 
   commandLineApps = with pkgs; [
@@ -30,9 +29,10 @@
     zoxide
     zsh-autocomplete
     zsh-autosuggestions
-    neofetch
+    fastfetch
     btop
     thefuck
+    bat
   ];
 
   languages = with pkgs; [
