@@ -120,9 +120,6 @@ in {
         "${MOD} SHIFT, S, movetoworkspace, special:magic"
         "${MOD}, F, fullscreen, 1"
 
-        "${MOD} SHIFT, right, movetoworkspace, e+1"
-        "${MOD} SHIFT, left, movetoworkspace, e-1"
-
         # Move focus with $MOD + arrow keys
         "${MOD}, left, movefocus, l"
         "${MOD}, right, movefocus, r"
