@@ -21,6 +21,8 @@
             "window.titleBarStyle" = "custom";
 
             "editor.fontFamily" = "CaskaydiaCove Nerd Font";
+
+            "workbench.colorTheme" = "Material Ocean Theme High Contrast";
         };
     };
 }
