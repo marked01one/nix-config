@@ -280,7 +280,7 @@ in {
         
         logout = "pkill -u $(whoami)";
         shutdown = "systemctl poweroff";
-        "copy-pw" = "sudo cat ./token | xclip -sel clip";
+        "copy-pw" = "sudo cat ~/.token | xclip -sel clip";
 
         home = "cd ~";
         ".." = "cd ..";
