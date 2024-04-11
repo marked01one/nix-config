@@ -201,6 +201,8 @@ in {
       theme = "${import ./modules/sddm-sugar-dark.nix { inherit pkgs; }}";
       wayland.enable = true;
     };
+
+    desktopManager.gnome.enable = true;
   };
 
   xdg.mime = {
