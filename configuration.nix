@@ -280,7 +280,7 @@ in {
         
         logout = "pkill -u $(whoami)";
         shutdown = "systemctl poweroff";
-        github-pw = "sudo cat ./token | xclip -ib";
+        "github-pw" = "sudo cat ./token | xclip -ib";
 
         home = "cd ~";
         ".." = "cd ..";
