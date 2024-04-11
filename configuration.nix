@@ -19,6 +19,8 @@
     prismlauncher
     waypaper
     networkmanagerapplet
+    zathura
+    teams-for-linux
   ];
 
   commandLineApps = with pkgs; [
