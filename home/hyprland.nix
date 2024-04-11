@@ -5,6 +5,7 @@
   ... 
 }: let 
   MOD = "SUPER";
+  deviceAudio = "alsa_output.pci-0000_00_1f.3.analog-stereo";
 in {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -21,6 +22,7 @@ in {
       env = "XCURSOR_SIZE,20";
       
       exec-once = [
+        "brightnessctl --restore"
         "waypaper --restore"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
@@ -98,6 +100,8 @@ in {
       bind = [
         ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        ",XF86AudioRaiseVolume, exec, pactl set-sink-volume ${deviceAudio} +10%"
+        ",XF86AudioLowerVolume, exed, pactl set-sink-volume ${deviceAudio} -10%"
 
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
