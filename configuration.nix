@@ -205,7 +205,6 @@ in {
       wayland.enable = true;
     };
 
-    desktopManager.gnome.enable = true;
   };
 
   xdg.mime = {
