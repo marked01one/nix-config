@@ -11,7 +11,7 @@
 
     font = {
       name = "CaskaydiaCove Nerd Font";
-      size = 16.0;
+      size = 14.0;
     };
 
     keybindings = {

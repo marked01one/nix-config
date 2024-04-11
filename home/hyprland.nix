@@ -101,7 +101,7 @@ in {
         ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
         ",XF86AudioRaiseVolume, exec, pactl set-sink-volume ${deviceAudio} +10%"
-        ",XF86AudioLowerVolume, exed, pactl set-sink-volume ${deviceAudio} -10%"
+        ",XF86AudioLowerVolume, exec, pactl set-sink-volume ${deviceAudio} -10%"
 
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
