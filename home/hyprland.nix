@@ -116,6 +116,11 @@ in {
         "${MOD} SHIFT, right, movetoworkspace, e+1"
         "${MOD} SHIFT, left, movetoworkspace, e-1"
 
+        "${MOD} CTRL, right, movewindow, r"
+        "${MOD} CTRL, left, movewindow, l"       
+        "${MOD} CTRL, up, movewindow, u"
+        "${MOD} CTRL, down, movewindow, d"
+
         "${MOD}, S, togglespecialworkspace, magic"
         "${MOD} SHIFT, S, movetoworkspace, special:magic"
         "${MOD}, F, fullscreen, 1"
