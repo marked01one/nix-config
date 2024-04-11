@@ -19,7 +19,7 @@
     prismlauncher
     waypaper
     networkmanagerapplet 
-    geekbench
+    geekbench_5
   ];
 
   commandLineApps = with pkgs; [
