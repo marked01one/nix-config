@@ -22,7 +22,7 @@
 
             "editor.fontFamily" = "CaskaydiaCove Nerd Font";
 
-            "workbench.colorTheme" = "Material Ocean Theme High Contrast";
+            "workbench.colorTheme" = "Material Theme Ocean High Contrast";
         };
     };
 }
