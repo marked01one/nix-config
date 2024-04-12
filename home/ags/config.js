@@ -1,4 +1,4 @@
-import { applauncher } from "./config/applauncher.js";
+import { applauncher } from "./components/applauncher.js";
 
 App.config({
     windows: [applauncher],

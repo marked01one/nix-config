@@ -7,6 +7,11 @@ const LAUNCHER_STYLES = {
     spacing: 12
 };
 
+const APP_NAMES = new Map([
+    ["Neovim wrapper", "Neovim"],
+    ["Microsoft Teams for Linux", "Microsoft Teams"]
+])
+
 const AppItem = app => Widget.Button({
     on_clicked: () => {
         App.closeWindow(WINDOW_NAME)
@@ -21,7 +26,7 @@ const AppItem = app => Widget.Button({
             }),
             Widget.Label({
                 class_name: "title",
-                label: app.name,
+                label: APP_NAMES.get(app.name) ?? app.name,
                 xalign: 0,
                 vpack: "center",
                 truncate: "end",
