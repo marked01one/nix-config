@@ -4,12 +4,20 @@
     programs.vscode = {
         enable = true;
         extensions = with pkgs.vscode-extensions; [
-            "ms-vscode.vscode-typescript-next"
+            ms-vscode.vscode-typescript-next
             
             jnoortheen.nix-ide
             vscodevim.vim
             pkief.material-icon-theme
             equinusocio.vsc-material-theme
+        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+                name = "JavaScript and TypeScript Nightly";
+                publisher = "Microsoft";
+                version = "5.5.20240411";
+                sha256 = lib.fakeSha256;
+
+            }
         ];
 
         userSettings = {
