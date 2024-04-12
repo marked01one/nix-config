@@ -13,7 +13,7 @@
                 name = "JavaScript and TypeScript Nightly";
                 publisher = "Microsoft";
                 version = "5.5.20240411";
-                sha256 = lib.fakeSha256;
+                sha256 = "0000000000000000000000000000000000000000000000000000";
 
             }
         ];
