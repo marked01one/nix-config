@@ -10,7 +10,7 @@
   desktopApps = with pkgs; [
     brave
     neovim
-    vscode
+    vscode-with-extensions
     obsidian
     space-cadet-pinball
     kicad
