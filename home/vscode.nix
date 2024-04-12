@@ -8,14 +8,8 @@
             vscodevim.vim
             pkief.material-icon-theme
             equinusocio.vsc-material-theme
-        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-                name = "JavaScript and TypeScript Nightly";
-                publisher = "Microsoft";
-                version = "5.5.20240411";
-                sha256 = "0000000000000000000000000000000000000000000000000000";
 
-            }
+            ms-vscode.vscode-typescript
         ];
 
         userSettings = {
