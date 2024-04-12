@@ -9,7 +9,6 @@
             pkief.material-icon-theme
             equinusocio.vsc-material-theme
 
-            ms-vscode.vscode-typescript-next
         ];
 
         userSettings = {
