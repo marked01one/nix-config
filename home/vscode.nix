@@ -3,9 +3,7 @@
 {
     programs.vscode = {
         enable = true;
-        extensions = with pkgs.vscode-extensions; [
-            ms-vscode.vscode-typescript-next
-            
+        extensions = with pkgs.vscode-extensions; [ 
             jnoortheen.nix-ide
             vscodevim.vim
             pkief.material-icon-theme
