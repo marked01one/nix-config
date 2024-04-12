@@ -60,7 +60,7 @@
     swww
     brightnessctl
     pulseaudio
-    ags
+    
   ];
 
   devTools = with pkgs; [
