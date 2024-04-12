@@ -4,7 +4,7 @@
     programs.vscode = {
         enable = true;
         extensions = with pkgs.vscode-extensions; [
-            vscode-typescript-next
+            "ms-vscode.vscode-typescript-next"
             
             jnoortheen.nix-ide
             vscodevim.vim
