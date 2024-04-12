@@ -1,5 +1,6 @@
 { 
  # config, 
+ inputs,
  pkgs, 
   ... 
 }: let
@@ -9,10 +10,14 @@
     ./home/kitty.nix
   ];
 
+  inputImports = [
+    inputs.ags.homeManagerModules.default
+  ];
+
 in {
   nixpkgs.config.allowUnfree = true;
 
-  imports = homeImports;
+  imports = homeImports ++ inputImports;
 
   
   home.username = "khoi";
@@ -37,6 +42,17 @@ in {
     enable = true;
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
 
+    ags = {
+      enable = true;
+
+      extraPackages = with pkgs; [
+        gtksourceview
+        webkitgtk
+        accountsservice
+      ];
+    };
+  };
 }
