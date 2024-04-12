@@ -13,7 +13,7 @@
                 name = "vscode-typescript-next";
                 publisher = "ms-vscode";
                 version = "5.5.20240411";
-                sha256 = lib.fakeSha256;
+                sha256 = "gyQCiyt4WQ/lhIoIE5qRPnnaN73kJ1khCAZtRHTj1Vs=";
             }
         ];
 
