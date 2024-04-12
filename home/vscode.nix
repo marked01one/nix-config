@@ -8,6 +8,13 @@
             vscodevim.vim
             pkief.material-icon-theme
             equinusocio.vsc-material-theme
+        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+                name = "vscode-typescript-next";
+                publisher = "ms-vscode";
+                version = "5.5.20240411";
+                sha256 = lib.fakeSha256;
+            }
         ];
 
         userSettings = {
