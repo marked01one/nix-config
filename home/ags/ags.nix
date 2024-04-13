@@ -13,9 +13,14 @@
 
   home.file = {
     ".config/ags/config.js".source = ./config.js;
+    ".config/ags/tsconfig.json".source = ./tsconfig.json;
     ".config/ags/components" = {
       source = ./components;
       recursive = true;
     };
+    ".config/ags/types" = {
+      source = ./types;
+      recursive = true;
+    }
   }; 
 }
