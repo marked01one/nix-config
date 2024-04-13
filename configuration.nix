@@ -220,6 +220,14 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.flatpak = {
+    enable = true;
+
+    packages = [
+      "app.moosync.moosync"
+    ];
+  };
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;

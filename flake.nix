@@ -10,13 +10,15 @@
     };
 
     ags.url = "github:Aylur/ags";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = { 
     self, 
     nixpkgs,
     hyprland,
-    home-manager, 
+    home-manager,
+    nix-flatpak, 
     ... 
   } @ inputs: {
     #  config entry
@@ -27,7 +29,10 @@
           inherit inputs; 
         };
         system = "x86_64-linux";
-        modules = [./configuration.nix];
+        modules = [
+          nix-flatpak.nixosModules.nix-flatpak
+          ./configuration.nix
+        ];
       };
     };
 
