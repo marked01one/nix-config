@@ -18,9 +18,5 @@
       source = ./components;
       recursive = true;
     };
-    ".config/ags/types" = {
-      source = ./types;
-      recursive = true;
-    };
   }; 
 }
