@@ -44,15 +44,5 @@ in {
 
   programs = {
     home-manager.enable = true;
-
-    ags = {
-      enable = true;
-
-      extraPackages = with pkgs; [
-        gtksourceview
-        webkitgtk
-        accountsservice
-      ];
-    };
   };
 }
