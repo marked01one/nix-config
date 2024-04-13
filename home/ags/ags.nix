@@ -21,6 +21,6 @@
     ".config/ags/types" = {
       source = ./types;
       recursive = true;
-    }
+    };
   }; 
 }
