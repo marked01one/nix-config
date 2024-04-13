@@ -39,7 +39,7 @@ const AppItem = app => Widget.Button({
 
 function AppLauncher() {
     // list of application buttons
-    let applications = query("").map(AppItem);
+    let applications = query("").map(AppItem).filter(app => app.name?.includes("KiCad "));
 
     // container holding the buttons
     const list = Widget.Box({
