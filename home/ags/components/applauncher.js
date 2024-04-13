@@ -30,6 +30,7 @@ const AppItem = app => Widget.Button({
                 xalign: 0,
                 vpack: "center",
                 truncate: "end",
+                css: `margin-left: 4px;`
             })
         ]
     })
