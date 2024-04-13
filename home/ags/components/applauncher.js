@@ -52,7 +52,7 @@ function AppLauncher() {
 
     // repopulate the box, so the most frequent apps are on top of the list
     function repopulate() {
-        applications = query("").map(AppItem).filter(app => !app.name?.includes("KiCad "))
+        applications = query("").filter(app => !app.name.includes("KiCad ")).map(AppItem)
         list.children = applications
     }
 
