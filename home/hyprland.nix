@@ -24,6 +24,7 @@ in {
       exec-once = [
         "brightnessctl --restore"
         "waypaper --restore"
+        "ags --init"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
@@ -105,7 +106,7 @@ in {
 
         "${MOD} SHIFT, P, exec, systemctl poweroff"
         "${MOD} SHIFT, RETURN, exec, brave"
-        "${MOD}, SPACE, exec, rofi -show drun -show-icons"
+        "${MOD}, SPACE, exec, ags -t applauncher"
         "${MOD}, RETURN, exec, kitty"
         
 	      "${MOD} SHIFT, Q, killactive"
