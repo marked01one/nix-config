@@ -16,7 +16,7 @@
   home.file = {
     ".config/ags/config.js".source = ./config.js;
     ".config/ags/components" = {
-      source = "./components/";
+      source = ./components;
       recursive = true;
     };
   }; 

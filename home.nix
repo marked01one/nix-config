@@ -8,16 +8,13 @@
     ./home/hyprland.nix
     ./home/vscode.nix
     ./home/kitty.nix
-  ];
-
-  inputImports = [
-    inputs.ags.homeManagerModules.default
+    ./home/ags/ags.nix
   ];
 
 in {
   nixpkgs.config.allowUnfree = true;
 
-  imports = homeImports ++ inputImports;
+  imports = homeImports;
 
   
   home.username = "khoi";
