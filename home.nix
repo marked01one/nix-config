@@ -11,10 +11,14 @@
     ./home/ags/ags.nix
   ];
 
+  inputImports = [
+    inputs.ags.homeManagerModules.default
+  ];
+
 in {
   nixpkgs.config.allowUnfree = true;
 
-  imports = homeImports;
+  imports = homeImports ++ inputImports;
 
   
   home.username = "khoi";
