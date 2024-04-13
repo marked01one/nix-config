@@ -23,6 +23,10 @@
     teams-for-linux
   ];
 
+  flatpakApps = [
+    "app.moosync.moosync"
+  ];
+
   commandLineApps = with pkgs; [
     wget
     curl
@@ -220,13 +224,7 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  services.flatpak = {
-    enable = true;
-
-    packages = [
-      "app.moosync.moosync"
-    ];
-  };
+  
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -263,6 +261,11 @@ in {
   environment.systemPackages =
     devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages;
   
+  services.flatpak = {
+    enable = true;
+    packages = flatpakApps;
+  };
+
   programs = {
     nix-ld = {
       enable = true;
