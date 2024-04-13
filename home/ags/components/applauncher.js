@@ -41,7 +41,6 @@ function AppLauncher() {
     // list of application buttons
     let applications = query("").map(AppItem)
 
-    console.log(applications.map(a => a.name))
 
     // container holding the buttons
     const list = Widget.Box({
