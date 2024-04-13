@@ -64,6 +64,7 @@ function AppLauncher() {
         on_accept: () => {
             // make sure we only consider visible (searched for) applications
             const results = applications.filter((item) => item.visible);
+            console.log(results.map(r => r.attribute.app.name))
             if (results[0]) {
                 App.toggleWindow(WINDOW_NAME)
                 results[0].attribute.app.launch()
