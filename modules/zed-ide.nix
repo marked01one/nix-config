@@ -1,4 +1,3 @@
-{ pkgs, rustPlatform, ... }:
 
 rustPlatform.buildRustPackage rec {
   name = "zed-ide";
@@ -10,7 +9,7 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
 
-  buildInputs = with pkgs; [
+  buildInputs = rec [
     alsa-lib
     fontconfig
     git
