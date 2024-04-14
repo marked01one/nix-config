@@ -27,12 +27,14 @@
       perfect-linux = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
+          inherit nixpkgs;
         };
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           ./configuration.nix
         ];
+
       };
     };
 
