@@ -21,6 +21,12 @@ pkgs.stdenv.mkDerivation {
   ];
 
   buildPhase = ''
+    mkdir -p $out
+    cp -R ./*
+    cd $out
+    git config --global init.defaultBranch main
+    git init
+    git submodule update --init --recursive
     cargo run --release
   '';
 }
