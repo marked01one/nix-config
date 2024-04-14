@@ -5,8 +5,7 @@ pkgs.stdenv.mkDerivation {
 
   src = fetchGit {
     url = "https://github.com/zed-industries/zed.git";
-    rev = "3289188e0adaa6c6e73836f8beef5abad3982376";
-    sha256 = "7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
+    narHash = "sha256-7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
   };
 
   buildInputs = with pkgs; [
