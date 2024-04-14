@@ -77,7 +77,7 @@
     nil 
     gopls
     alejandra
-    nix-prefetch
+    nix-prefetch-github
   ];
 
   qt5Packages = with pkgs.libsForQt5.qt5; [
