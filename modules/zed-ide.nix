@@ -21,9 +21,6 @@ pkgs.stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-    mkdir -p $out
-    cp -R ./*
-    cd $out
     git submodule update --init --recursive
     cargo run --release
   '';
