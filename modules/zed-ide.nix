@@ -14,9 +14,6 @@ pkgs.rustPlatform.buildRustPackage {
 
   cargoSha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
 
-  cargoLock.lockFile = pkgs.fetchurl {
-
-  };
 
   buildInputs = with pkgs; [
     alsa-lib
