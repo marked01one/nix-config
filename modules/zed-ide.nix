@@ -1,15 +1,14 @@
-{ rustPlatform, pkgs }:
+{ pkgs, lib, ... }:
 
+pkgs.rustPlatform.buildRustPackage {
+  src = pkgs.fetchFromGitHub {
+    owner = "zed-industries";
+    repo = "zed";
+    rev = "v0.130.6";
+    sha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
+  };  
 
-rustPlatform.buildRustPackage rec {
-  name = "zed-ide";
-
-  src = fetchGit {
-    url = "https://github.com/zed-industries/zed.git";
-    narHash = "sha256-7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
-  };
-
-  cargoSha256 = "7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
+  cargoSha256 = lib.fakeSha256;
 
   buildInputs = with pkgs; [
     alsa-lib
@@ -17,16 +16,16 @@ rustPlatform.buildRustPackage rec {
     git
     libgcc
     libxkbcommon
-    openssl_3_2
+    openssl
     rustup
     vulkan-loader
     zstd
   ];
 
-  buildPhase = ''
-    mkdir -p $out
-    cp --recursive ./* $out/
-    cd $out
-    cargo run --release
-  '';
+
+  meta = with lib; {
+    description = "A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.";
+    homepage = "https://zed.dev/";
+    license = licenses.gpl3;
+  };
 }
