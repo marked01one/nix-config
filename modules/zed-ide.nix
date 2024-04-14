@@ -1,3 +1,5 @@
+{ rustPlatform }:
+
 
 rustPlatform.buildRustPackage rec {
   name = "zed-ide";
