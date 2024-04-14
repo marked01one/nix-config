@@ -1,6 +1,10 @@
-{ config, lib, pkgs, modulesPath, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   hardware.nvidia = {
     modesetting.enable = true;
 
@@ -18,7 +22,7 @@
     prime = {
       offload = {
         enable = true;
-	      enableOffloadCmd = true;
+        enableOffloadCmd = true;
       };
 
       intelBusId = "PCI:0:2:0";

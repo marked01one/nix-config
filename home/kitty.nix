@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   programs.kitty = {
     enable = true;
 
@@ -17,7 +15,7 @@
     keybindings = {
       "ctrl+c" = "copy_or_interrupt";
       "ctrl+v" = "paste_from_clipboard";
-      
+
       "ctrl+shift+up" = "scroll_line_up";
       "ctrl+shift+k" = "scroll_line_up";
       "ctrl+shift+down" = "scroll_line_down";
@@ -26,7 +24,7 @@
 
     settings = {
       confirm_os_window_close = 0;
-    };    
+    };
   };
 
   programs.starship = {
@@ -53,7 +51,6 @@
         style_root = "red bold";
         format = "[$user]($style) in ";
       };
-      
     };
   };
 }

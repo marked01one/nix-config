@@ -1,11 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{ 
-  inputs, 
-  # config, 
-  pkgs, 
-  ... 
+{
+  inputs,
+  # config,
+  pkgs,
+  ...
 }: let
   desktopApps = with pkgs; [
     brave
@@ -15,13 +15,13 @@
     space-cadet-pinball
     kicad
     drawio
-    discord 
+    discord
     prismlauncher
     waypaper
     networkmanagerapplet
     zathura
     teams-for-linux
-    (import ./modules/zed-ide.nix { inherit pkgs; })
+    zed-editor
   ];
 
   flatpakApps = [
@@ -65,7 +65,6 @@
     swww
     brightnessctl
     pulseaudio
-    
   ];
 
   devTools = with pkgs; [
@@ -75,7 +74,7 @@
     vim
     neovim
     newman
-    nil 
+    nil
     gopls
     alejandra
     nix-prefetch-github
@@ -87,14 +86,14 @@
   ];
 in {
   # Include the results of the hardware scan.
-  imports = [ 
+  imports = [
     ./hardware/hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
   # Configure `home-manager` which allows for easy config management
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       khoi = import ./home.nix;
     };
@@ -114,9 +113,9 @@ in {
       powerOnBoot = true;
     };
   };
-  
+
   # Enable Nix Commands & Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -139,19 +138,18 @@ in {
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
       serviceConfig = {
         Type = "simple";
-	      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-	      Restart = "on-failure";
-	      RestartSec = 1;
-	      TimeoutStopSec = 10;
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
       };
     };
   };
-
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -172,48 +170,47 @@ in {
 
   fonts.packages = with pkgs; [
     google-fonts
-    (nerdfonts.override { fonts = ["CascadiaCode"];})
+    (nerdfonts.override {fonts = ["CascadiaCode"];})
     gyre-fonts
   ];
 
   # Enable the X11 windowing system.
   # services.xserver = {
-  # enable = true; 
+  # enable = true;
   # xkb.layout = "us";
   # xkb.variant = "";
   # excludePackages = [ pkgs.xterm ];
   # displayManager = {
   #   defaultSession = "Hyprland";
-      
+
   #   sddm = {
   #     enable = true;
   #     theme = "";
   #   };
   # };
 
-    # windowManager.i3 = {
-    #   enable = true;
-    #   package = pkgs.i3-gaps;
-    #   extraPackages = with pkgs; [
-    #     rofi
-    #     i3status-rust
-    #     i3blocks
-    #     i3lock
-    #   ];
-    # };
+  # windowManager.i3 = {
+  #   enable = true;
+  #   package = pkgs.i3-gaps;
+  #   extraPackages = with pkgs; [
+  #     rofi
+  #     i3status-rust
+  #     i3blocks
+  #     i3lock
+  #   ];
+  # };
   # };
 
   services.xserver = {
     enable = true;
-    
+
     displayManager.defaultSession = "hyprland";
 
     displayManager.sddm = {
       enable = true;
-      theme = "${import ./modules/sddm-sugar-dark.nix { inherit pkgs; }}";
+      theme = "${import ./modules/sddm-sugar-dark.nix {inherit pkgs;}}";
       wayland.enable = true;
     };
-
   };
 
   xdg.mime = {
@@ -225,8 +222,6 @@ in {
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -251,18 +246,18 @@ in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     defaultUserShell = pkgs.zsh;
-    
+
     users.khoi = {
       isNormalUser = true;
       description = "khoi";
-      extraGroups = [ "audio" "networkmanager" "wheel" ];
+      extraGroups = ["audio" "networkmanager" "wheel"];
     };
   };
 
   # List packages installed in system profile.
   environment.systemPackages =
     devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages;
-  
+
   services.flatpak = {
     enable = true;
     packages = flatpakApps;
@@ -292,7 +287,7 @@ in {
 
         cfnix = "/run/current-system/sw/bin/code ~/SystemFlake";
         update = "sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux";
-        
+
         logout = "pkill -u $(whoami)";
         shutdown = "systemctl poweroff";
         "copy-pw" = "sudo cat ~/.token | xclip -sel clip";
@@ -300,12 +295,11 @@ in {
         home = "cd ~";
         ".." = "cd ..";
         "..." = "cd ../..";
-
       };
     };
     hyprland = {
       enable = true;
-      
+
       package = inputs.hyprland.packages."${pkgs.system}".hyprland;
       xwayland.enable = true;
     };
@@ -316,10 +310,8 @@ in {
       enable = true;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-    }; 
+    };
   };
-
-  
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
@@ -346,5 +338,4 @@ in {
   # networking.firewall.enable = false;
 
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

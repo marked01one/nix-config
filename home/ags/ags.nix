@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.ags = {
     enable = true;
 
@@ -18,5 +16,5 @@
       source = ./components;
       recursive = true;
     };
-  }; 
+  };
 }

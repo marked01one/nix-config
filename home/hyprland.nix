@@ -1,9 +1,9 @@
-{ 
- # config, 
- # lib, 
- # pkgs, 
-  ... 
-}: let 
+{
+  # config,
+  # lib,
+  # pkgs,
+  ...
+}: let
   MOD = "SUPER";
   deviceAudio = "alsa_output.pci-0000_00_1f.3.analog-stereo";
 in {
@@ -20,7 +20,7 @@ in {
       # monitor = [ ",preferred,auto,auto" ];
 
       env = "XCURSOR_SIZE,20";
-      
+
       exec-once = [
         "brightnessctl --restore"
         "waypaper --restore"
@@ -98,54 +98,55 @@ in {
         workspace_swipe = true;
       };
 
-      bind = [
-        ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
-        ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ",XF86AudioRaiseVolume, exec, pactl set-sink-volume ${deviceAudio} +10%"
-        ",XF86AudioLowerVolume, exec, pactl set-sink-volume ${deviceAudio} -10%"
+      bind =
+        [
+          ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
+          ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+          ",XF86AudioRaiseVolume, exec, pactl set-sink-volume ${deviceAudio} +10%"
+          ",XF86AudioLowerVolume, exec, pactl set-sink-volume ${deviceAudio} -10%"
 
-        "${MOD} SHIFT, P, exec, systemctl poweroff"
-        "${MOD} SHIFT, RETURN, exec, brave"
-        "${MOD}, SPACE, exec, ags -t applauncher"
-        "${MOD}, RETURN, exec, kitty"
-        
-	      "${MOD} SHIFT, Q, killactive"
+          "${MOD} SHIFT, P, exec, systemctl poweroff"
+          "${MOD} SHIFT, RETURN, exec, brave"
+          "${MOD}, SPACE, exec, ags -t applauncher"
+          "${MOD}, RETURN, exec, kitty"
 
-	      "${MOD} ALT, right, workspace, e+1"
-        "${MOD} ALT, left, workspace, e-1"
+          "${MOD} SHIFT, Q, killactive"
 
-        "${MOD} SHIFT, right, movetoworkspace, e+1"
-        "${MOD} SHIFT, left, movetoworkspace, e-1"
+          "${MOD} ALT, right, workspace, e+1"
+          "${MOD} ALT, left, workspace, e-1"
 
-        "${MOD} CTRL, right, movewindow, r"
-        "${MOD} CTRL, left, movewindow, l"       
-        "${MOD} CTRL, up, movewindow, u"
-        "${MOD} CTRL, down, movewindow, d"
+          "${MOD} SHIFT, right, movetoworkspace, e+1"
+          "${MOD} SHIFT, left, movetoworkspace, e-1"
 
-        "${MOD}, S, togglespecialworkspace, magic"
-        "${MOD} SHIFT, S, movetoworkspace, special:magic"
-        "${MOD}, F, fullscreen, 1"
+          "${MOD} CTRL, right, movewindow, r"
+          "${MOD} CTRL, left, movewindow, l"
+          "${MOD} CTRL, up, movewindow, u"
+          "${MOD} CTRL, down, movewindow, d"
 
-        # Move focus with $MOD + arrow keys
-        "${MOD}, left, movefocus, l"
-        "${MOD}, right, movefocus, r"
-        "${MOD}, up, movefocus, u"
-        "${MOD}, down, movefocus, d"
-      ]
-      ++ (
-        builtins.concatLists(builtins.genList(
-            x: let
-              ws = let
-                c = (x + 1) / 10;
-              in
-                builtins.toString(x + 1 - (c * 10));
-            in [
-              "${MOD}, ${ws}, workspace, ${toString(x + 1)}"
-              "${MOD} SHIFT, ${ws}, movetoworkspace, ${toString(x + 1)}"
-            ]
-          )
-        10)
-      );
+          "${MOD}, S, togglespecialworkspace, magic"
+          "${MOD} SHIFT, S, movetoworkspace, special:magic"
+          "${MOD}, F, fullscreen, 1"
+
+          # Move focus with $MOD + arrow keys
+          "${MOD}, left, movefocus, l"
+          "${MOD}, right, movefocus, r"
+          "${MOD}, up, movefocus, u"
+          "${MOD}, down, movefocus, d"
+        ]
+        ++ (
+          builtins.concatLists (builtins.genList (
+              x: let
+                ws = let
+                  c = (x + 1) / 10;
+                in
+                  builtins.toString (x + 1 - (c * 10));
+              in [
+                "${MOD}, ${ws}, workspace, ${toString (x + 1)}"
+                "${MOD} SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              ]
+            )
+            10)
+        );
 
       misc = {
         disable_hyprland_logo = true;
