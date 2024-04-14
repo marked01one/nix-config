@@ -28,7 +28,6 @@
         specialArgs = attrs;
         system = "x86_64-linux";
         modules = [
-          nix-flatpak.nixosModules.nix-flatpak
           ./configuration.nix
         ];
 
