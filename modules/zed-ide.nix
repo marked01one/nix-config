@@ -8,7 +8,7 @@ pkgs.rustPlatform.buildRustPackage {
     sha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
   };  
 
-  cargoSha256 = lib.fakeSha256;
+  cargoSha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
 
   buildInputs = with pkgs; [
     alsa-lib
