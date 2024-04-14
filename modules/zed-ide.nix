@@ -24,10 +24,6 @@ pkgs.stdenv.mkDerivation {
     mkdir -p $out
     cp --recursive ./* $out/
     cd $out
-    ls
-    git config --global init.defaultBranch main
-    git init
-    git submodule update --init --recursive
     cargo run --release
   '';
 }
