@@ -1,12 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, lib, rustPlatform, ... }:
 
-pkgs.stdenv.mkDerivation {
+rustPlatform.buildRustPackage rec {
   name = "zed-ide";
 
   src = fetchGit {
     url = "https://github.com/zed-industries/zed.git";
     narHash = "sha256-7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
   };
+
+  cargoSha256 = lib.Sha256;
 
   buildInputs = with pkgs; [
     alsa-lib
