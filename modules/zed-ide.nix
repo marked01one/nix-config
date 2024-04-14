@@ -2,6 +2,8 @@
 }:
 
 pkgs.rustPlatform.buildRustPackage {
+  name = "zed-ide";
+  
   src = pkgs.fetchFromGitHub {
     owner = "zed-industries";
     repo = "zed";
