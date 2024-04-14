@@ -21,9 +21,6 @@ pkgs.stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-    git config --global init.defaultBranch main
-    git init
-    git submodule update --init --recursive
-    cargo run --release
+    sudo cargo run --release
   '';
 }
