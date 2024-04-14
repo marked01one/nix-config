@@ -8,7 +8,7 @@ rustPlatform.buildRustPackage rec {
     narHash = "sha256-7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
   };
 
-  cargoSha256 = lib.Sha256;
+  cargoSha256 = lib.fakeSha256;
 
   buildInputs = with pkgs; [
     alsa-lib
