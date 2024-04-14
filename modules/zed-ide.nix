@@ -26,7 +26,6 @@ pkgs.stdenv.mkDerivation {
     mkdir -p $out
     cp -R ./* $out/
     cd $out
-    git submodule update --init --recursive
     cargo run --release
   '';
 }
