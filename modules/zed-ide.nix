@@ -21,6 +21,6 @@ pkgs.stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-    sudo cargo run --release
+    cargo run --release
   '';
 }
