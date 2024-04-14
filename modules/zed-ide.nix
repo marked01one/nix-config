@@ -1,4 +1,5 @@
-{ pkgs, lib }:
+{ pkgs, # lib 
+}:
 
 pkgs.rustPlatform.buildRustPackage {
   src = pkgs.fetchFromGitHub {
@@ -23,9 +24,9 @@ pkgs.rustPlatform.buildRustPackage {
   ];
 
 
-  meta = with lib; {
-    description = "A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.";
-    homepage = "https://zed.dev/";
-    license = licenses.gpl3;
-  };
+  # meta = with lib; {
+  #   description = "A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.";
+  #   homepage = "https://zed.dev/";
+  #   license = licenses.gpl3;
+  # };
 }
