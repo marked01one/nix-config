@@ -9,9 +9,14 @@ pkgs.rustPlatform.buildRustPackage {
     repo = "zed";
     rev = "v0.130.6";
     sha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
+    fetchSubmodules = true;
   };  
 
   cargoSha256 = "HvzHqNfXoivsCegzoMMUW8avujq9OXqU+o8aU/f3d/g=";
+
+  cargoLock.lockFile = pkgs.fetchurl {
+
+  };
 
   buildInputs = with pkgs; [
     alsa-lib
