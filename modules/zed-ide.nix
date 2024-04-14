@@ -1,4 +1,4 @@
-{ rustPlatform }:
+{ rustPlatform, pkgs }:
 
 
 rustPlatform.buildRustPackage rec {
@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "7xJ/RGLtVF+crdZYcuEJxob2z6+znQNqzc1QeczNoqo=";
 
-  buildInputs = [
+  buildInputs = with pkgs; [
     alsa-lib
     fontconfig
     git
