@@ -22,7 +22,7 @@ pkgs.stdenv.mkDerivation {
 
   buildPhase = ''
     mkdir -p $out
-    cp -R ./*
+    cp --recursive ./* $out/
     cd $out
     git config --global init.defaultBranch main
     git init
