@@ -21,6 +21,7 @@
     networkmanagerapplet
     zathura
     teams-for-linux
+    (import ./modules/zed-ide.nix { inherit pkgs; })
   ];
 
   flatpakApps = [
