@@ -13,6 +13,7 @@ pkgs.stdenv.mkDerivation {
   buildInputs = with pkgs; [
     alsa-lib
     fontconfig
+    git
     libgcc
     libxkbcommon
     openssl_3_2
