@@ -1,4 +1,4 @@
-{ pkgs, lib, rustPlatform, ... }:
+{ pkgs, rustPlatform, ... }:
 
 rustPlatform.buildRustPackage rec {
   name = "zed-ide";
