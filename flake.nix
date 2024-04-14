@@ -20,14 +20,18 @@
     home-manager,
     nix-flatpak,
     ...
-  } @ attrs: {
+  } @ inputs: {
     #  config entry
     # Refresh using: `sudo -rebuild --flake .#hostname`
     nixosConfigurations = {
       perfect-linux = nixpkgs.lib.nixosSystem {
-        specialArgs = attrs;
+        specialArgs = {
+          inherit inputs;
+          inherit nixpkgs;
+        };
         system = "x86_64-linux";
         modules = [
+          nix-flatpak.nixosModules.nix-flatpak
           ./configuration.nix
         ];
 
