@@ -39,7 +39,9 @@ const AppItem = app => Widget.Button({
 
 function AppLauncher() {
     // list of application buttons
-    let applications = query("").map(AppItem)
+    let applications = query("")
+        .filter(app => !app.name.includes("KiCad "))
+        .map(AppItem)
 
 
     // container holding the buttons
@@ -51,7 +53,9 @@ function AppLauncher() {
 
     // repopulate the box, so the most frequent apps are on top of the list
     function repopulate() {
-        applications = query("").filter(app => !app.name.includes("KiCad ")).map(AppItem)
+        applications = query("")
+            .sort()
+            .map(AppItem)
         list.children = applications
     }
 
@@ -59,12 +63,10 @@ function AppLauncher() {
         hexpand: true,
         css: `margin-bottom: ${LAUNCHER_STYLES.spacing}px;`,
 
-
         // to launch the first item on Enter
         on_accept: () => {
             // make sure we only consider visible (searched for) applications
             const results = applications.filter((item) => item.visible);
-            console.log(results.map(r => r.attribute.app.name))
             if (results[0]) {
                 App.toggleWindow(WINDOW_NAME)
                 results[0].attribute.app.launch()
