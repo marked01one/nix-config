@@ -21,6 +21,7 @@ pkgs.stdenv.mkDerivation {
   ];
 
   buildPhase = ''
+    git init
     git submodule update --init --recursive
     cargo run --release
   '';
