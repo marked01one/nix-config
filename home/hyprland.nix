@@ -98,6 +98,11 @@ in {
         workspace_swipe = true;
       };
 
+      bindm = [
+        "${MOD}, mouse:272, movewindow"
+        "${MOD}, mouse:273, resizewindow"
+      ];
+
       bind =
         [
           ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
