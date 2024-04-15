@@ -46,6 +46,11 @@
       name = "Tokyonight-Dark-B";
       package = pkgs.tokyonight-gtk-theme;
     };
+
+    rose-pink = {
+      name = "rose-pink";
+      package = pkgs.rose-pink-gtk-theme;
+    };
   };
 
   gtkConfig = {

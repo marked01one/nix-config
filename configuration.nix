@@ -99,6 +99,7 @@
     dracula-theme
     nightfox-gtk-theme
     tokyonight-gtk-theme
+    rose-pink-gtk-theme
   ];
 in {
   # Include the results of the hardware scan.
