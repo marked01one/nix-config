@@ -13,6 +13,7 @@
 
   inputImports = [
     inputs.ags.homeManagerModules.default
+    inputs.nix-colors.homeManagerModules.default
   ];
 
   desktopThemes = {
@@ -61,6 +62,7 @@ in {
       color-scheme = "prefer-dark";
     };
   };
+
 
   gtk = {
     enable = true;

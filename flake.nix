@@ -11,6 +11,7 @@
 
     ags.url = "github:Aylur/ags";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-colors.url = "gtihub:misterio77/nix-colors";
   };
 
   outputs = {
