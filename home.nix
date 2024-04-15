@@ -48,7 +48,7 @@
     };
 
     rose-pine = {
-      name = "rose-pine";
+      name = "rose-pine-moon";
       package = pkgs.rose-pine-gtk-theme;
     };
   };
