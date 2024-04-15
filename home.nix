@@ -74,7 +74,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nordic-darker;
+    theme = desktopThemes.dracula;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
