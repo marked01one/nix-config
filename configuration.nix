@@ -62,12 +62,10 @@
     polkit
     polkit_gnome
     hyprpaper
-    rofi
     swww
     brightnessctl
     pulseaudio
     glib
-    nwg-look
   ];
 
   devTools = with pkgs; [
