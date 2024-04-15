@@ -97,6 +97,7 @@
     })
     nordic
     dracula-theme
+    nightfox-gtk-theme
   ];
 in {
   # Include the results of the hardware scan.

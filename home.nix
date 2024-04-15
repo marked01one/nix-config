@@ -36,6 +36,11 @@
       name = "Dracula";
       package = pkgs.dracula-theme;
     };
+
+    nightfox = {
+      name = "Nightfox-Dusk-B";
+      package = pkgs.nightfox-gtk-theme;
+    };
   };
 
   gtkConfig = {
