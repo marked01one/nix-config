@@ -12,7 +12,7 @@
     neovim
     vscode
     obsidian
-    shutter
+    flameshot
     space-cadet-pinball
     kicad
     drawio
