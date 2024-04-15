@@ -22,11 +22,11 @@
     zathura
     teams-for-linux
     zed-editor
+    kicad-small
   ];
 
   flatpakApps = [
     "app.moosync.moosync"
-    "org.kicad.KiCad"
   ];
 
   commandLineApps = with pkgs; [
