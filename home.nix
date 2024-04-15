@@ -40,7 +40,7 @@ in {
 
     theme = {
       name = "Catpuccin-Mocha-Standard-Lavender-Dark";
-      package = pkgs.catpuccin-gtk.override {
+      package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
         size = "standard";
         tweaks = ["rimless" "black"];

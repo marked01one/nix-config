@@ -87,7 +87,7 @@
   ];
 
   themes = with pkgs; [
-    (catpuccin-gtk.override {
+    (catppuccin-gtk.override {
       accents = ["lavender"];
       size = "standard";
       tweaks = ["rimless" "black"];
