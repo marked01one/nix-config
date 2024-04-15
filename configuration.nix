@@ -95,7 +95,7 @@
       variant = "mocha";
     })
     nordic
-    nightfox-gtk-theme
+    tokyonight-gtk-theme
   ];
 in {
   # Include the results of the hardware scan.
