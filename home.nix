@@ -47,9 +47,9 @@
       package = pkgs.tokyonight-gtk-theme;
     };
 
-    rose-pink = {
-      name = "rose-pink";
-      package = pkgs.rose-pink-gtk-theme;
+    rose-pine = {
+      name = "rose-pine";
+      package = pkgs.rose-pine-gtk-theme;
     };
   };
 
@@ -95,7 +95,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nightfox;
+    theme = desktopThemes.rose-pine;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
