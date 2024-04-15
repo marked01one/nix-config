@@ -24,7 +24,7 @@
         tweaks = ["black"];
         variant = "mocha";
       };
-    }
+    };
   };
 in {
   nixpkgs.config.allowUnfree = true;
