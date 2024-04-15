@@ -20,8 +20,9 @@
       name = "Catppuccin-Mocha-Standard-Lavender-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
-        size = "standard";
-        variant = "mocha";
+        tweaks = [ "normal" ];
+        size = "compact";
+        variant = "macchiato";
       };
     };
 
@@ -64,7 +65,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nordic-darker;
+    theme = desktopThemes.catpuccin-lavender;
 
     gtk2.extraConfig = ''
       gtk-application-prefer-dark-theme = 1
