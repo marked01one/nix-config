@@ -22,7 +22,7 @@
     zathura
     teams-for-linux
     zed-editor
-    kicad-small
+    kicad-unstable-small
   ];
 
   flatpakApps = [
