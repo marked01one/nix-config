@@ -41,6 +41,11 @@
       name = "Nightfox-Dusk-B";
       package = pkgs.nightfox-gtk-theme;
     };
+
+    tokyonight = {
+      name = "Tokyonight-Dark-B";
+      package = pkgs.tokyonight-gtk-theme;
+    };
   };
 
   gtkConfig = {
@@ -85,7 +90,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nightfox;
+    theme = desktopThemes.dracula;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
