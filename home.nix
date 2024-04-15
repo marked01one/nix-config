@@ -30,6 +30,11 @@
       name = "Nordic-darker";
       package = pkgs.nordic;
     };
+
+    nightfox = {
+      name = "nightfox";
+      package = pkgs.nightfox-gtk-theme;
+    }
   };
 
   gtkConfig = {
@@ -65,7 +70,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.catpuccin-lavender;
+    theme = desktopThemes.nordic-darker;
 
     gtk2.extraConfig = ''
       gtk-application-prefer-dark-theme = 1
