@@ -57,6 +57,8 @@ in {
 
   qt = {
     enable = true;
+    platformTheme = "gnome";
+    style = "Catppuccin-Mocha-Standard-Lavender-Dark";
   };
 
   programs = {
