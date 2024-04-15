@@ -64,7 +64,7 @@ in {
   };
 
 
-  colorScheme = inputs.nix-colors.colorScheme.nord;
+  colorScheme = inputs.nix-colors.colorSchemes.nord;
 
   gtk = {
     enable = true;
