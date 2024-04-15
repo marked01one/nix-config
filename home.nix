@@ -34,7 +34,7 @@ in {
     enable = true;
 
     font = {
-      name = "CaskaydiaCove Nerd Font";
+      name = "TeX Gyre Adventor";
       size = 12.0;
     };
   };
