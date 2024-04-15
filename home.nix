@@ -81,7 +81,6 @@ in {
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style = desktopThemes.nordic-darker;
   };
 
   programs = {
