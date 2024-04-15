@@ -24,6 +24,10 @@
         variant = "mocha";
       };
     };
+
+    nordic-darker = {
+      name = "Nordic-darker";
+    };
   };
 
   gtkConfig = {
@@ -59,7 +63,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.catpuccin-lavender;
+    theme = desktopThemes.nordic-darker;
 
     gtk2.extraConfig = ''
       gtk-application-prefer-dark-theme = 1
@@ -77,7 +81,7 @@ in {
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style = desktopThemes.catpuccin-lavender;
+    style = desktopThemes.nordic-darker;
   };
 
   programs = {
