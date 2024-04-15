@@ -36,7 +36,7 @@ in {
     font = {
       name = "CaskaydiaCove Nerd Font";
       size = 12.0;
-    }
+    };
   };
 
   qt = {
