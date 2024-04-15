@@ -32,7 +32,7 @@
     };
 
     nightfox = {
-      name = "nightfox";
+      name = "nightfox-gtk-theme";
       package = pkgs.nightfox-gtk-theme;
     };
   };
@@ -70,11 +70,8 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nordic-darker;
+    theme = desktopThemes.nightfox;
 
-    gtk2.extraConfig = ''
-      gtk-application-prefer-dark-theme = 1
-    '';
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
   };
