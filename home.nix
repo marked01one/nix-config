@@ -37,6 +37,16 @@ in {
       name = "TeX Gyre Adventor";
       size = 12.0;
     };
+
+    theme = {
+      name = "Catpuccin-Mocha-Standard-Lavender-Dark";
+      package = pkgs.catpuccin-gtk.override {
+        accents = ["lavender"];
+        size = "standard";
+        tweaks = ["rimless" "black"];
+        variant = "mocha";
+      };
+    };
   };
 
   qt = {

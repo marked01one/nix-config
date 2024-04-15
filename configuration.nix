@@ -85,6 +85,15 @@
     qtquickcontrols2
     qtgraphicaleffects
   ];
+
+  themes = with pkgs; [
+    (catpuccin-gtk.override {
+      accents = ["lavender"];
+      size = "standard";
+      tweaks = ["rimless" "black"];
+      variant = "mocha";
+    })
+  ];
 in {
   # Include the results of the hardware scan.
   imports = [
@@ -179,9 +188,9 @@ in {
 
     fontconfig = {
       defaultFonts = {
-        serif = [ "David Libre" ];
-        sansSerif = [ "TeX Gyre Adventor" ];
-        monospace = [ "CaskaydiaCove Nerd Font" ];
+        serif = ["David Libre"];
+        sansSerif = ["TeX Gyre Adventor"];
+        monospace = ["CaskaydiaCove Nerd Font"];
       };
     };
   };
@@ -215,7 +224,6 @@ in {
   services.xserver.enable = true;
 
   services.displayManager = {
-
     defaultSession = "hyprland";
 
     sddm = {
@@ -268,7 +276,7 @@ in {
 
   # List packages installed in system profile.
   environment.systemPackages =
-    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages;
+    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
 
   services.flatpak = {
     enable = true;
