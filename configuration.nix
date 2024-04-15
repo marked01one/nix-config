@@ -14,7 +14,6 @@
     obsidian
     grimblast
     space-cadet-pinball
-    kicad
     drawio
     discord
     prismlauncher
@@ -27,6 +26,7 @@
 
   flatpakApps = [
     "app.moosync.moosync"
+    "org.kicad.KiCad"
   ];
 
   commandLineApps = with pkgs; [
