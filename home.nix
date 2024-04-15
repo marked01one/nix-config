@@ -35,7 +35,7 @@
     dracula = {
       name = "dracula-theme";
       package = pkgs.dracula-theme;
-    }
+    };
   };
 
   gtkConfig = {
