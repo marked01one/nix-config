@@ -33,7 +33,7 @@
     };
 
     dracula = {
-      name = "dracula-theme";
+      name = "Dracula";
       package = pkgs.dracula-theme;
     };
   };
