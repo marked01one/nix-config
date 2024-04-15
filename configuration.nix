@@ -66,6 +66,7 @@
     swww
     brightnessctl
     pulseaudio
+    nwg-look
   ];
 
   devTools = with pkgs; [
