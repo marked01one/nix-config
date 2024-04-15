@@ -62,7 +62,9 @@ in {
 
     theme = desktopThemes.catpuccin-lavender;
 
-    gtk2.extraConfig = gtkConfig;
+    gtk2.extraConfig = ''
+      gtk-application-prefer-dark-theme=1
+    '';
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
   };
