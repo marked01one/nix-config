@@ -27,6 +27,7 @@
 
     nordic-darker = {
       name = "Nordic-darker";
+      package = pkgs.nordic;
     };
   };
 
