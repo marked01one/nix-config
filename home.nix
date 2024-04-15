@@ -97,6 +97,11 @@ in {
 
     theme = desktopThemes.tokyonight;
 
+    iconTheme = {
+      name = "Colloid-dark";
+      package = pkgs.colloid-icon-theme;
+    };
+
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
   };

@@ -100,6 +100,7 @@
     nightfox-gtk-theme
     tokyonight-gtk-theme
     rose-pine-gtk-theme
+    colloid-icon-theme
   ];
 in {
   # Include the results of the hardware scan.
