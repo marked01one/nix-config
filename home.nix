@@ -14,6 +14,18 @@
   inputImports = [
     inputs.ags.homeManagerModules.default
   ];
+
+  desktopThemes = {
+    catpuccin-lavender = {
+      name = "Catppuccin-Mocha-Standard-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["lavender"];
+        size = "standard";
+        tweaks = ["black"];
+        variant = "mocha";
+      };
+    }
+  };
 in {
   nixpkgs.config.allowUnfree = true;
 
@@ -29,6 +41,12 @@ in {
   # home.file = {
   #   ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}'';
   # };
+  
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 
   gtk = {
     enable = true;
@@ -38,15 +56,7 @@ in {
       size = 12.0;
     };
 
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Lavender-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["lavender"];
-        size = "standard";
-        tweaks = ["black"];
-        variant = "mocha";
-      };
-    };
+    theme = desktopThemes.catpuccin-lavender;
   };
 
   xdg.configFile = {
@@ -57,8 +67,8 @@ in {
 
   qt = {
     enable = true;
-    platformTheme = "gnome";
-    style = "Catppuccin-Mocha-Standard-Lavender-Dark";
+    platformTheme = "gtk";
+    style = desktopThemes.catpuccin-lavender;
   };
 
   programs = {
