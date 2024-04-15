@@ -34,7 +34,7 @@
     nightfox = {
       name = "nightfox";
       package = pkgs.nightfox-gtk-theme;
-    }
+    };
   };
 
   gtkConfig = {
