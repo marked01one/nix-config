@@ -168,18 +168,28 @@ in {
 
   environment.pathsToLink = ["/libexec"];
 
-  fonts.packages = with pkgs; [
-    google-fonts
-    (nerdfonts.override {fonts = ["CascadiaCode"];})
-    gyre-fonts
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      google-fonts
+      (nerdfonts.override {fonts = ["CascadiaCode"];})
+      gyre-fonts
+    ];
 
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "David Libre" ];
+        sansSerif = [ "TeX Gyre Adventor" ];
+        monospace = [ "CaskaydiaCove Nerd Font" ];
+      };
+    };
+  };
   # Enable the X11 windowing system.
   # services.xserver = {
   # enable = true;
   # xkb.layout = "us";
   # xkb.variant = "";
-  # excludePackages = [ pkgs.xterm ];
+  # excludePackages = [];
   # displayManager = {
   #   defaultSession = "Hyprland";
 
