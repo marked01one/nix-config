@@ -1,6 +1,6 @@
 {
   pkgs,
-  lib,
+  # lib,
   ...
 }: {
   programs.vscode = {

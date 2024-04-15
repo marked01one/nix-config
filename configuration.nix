@@ -12,6 +12,7 @@
     neovim
     vscode
     obsidian
+    shutter
     space-cadet-pinball
     kicad
     drawio
