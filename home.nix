@@ -31,9 +31,9 @@
       package = pkgs.nordic;
     };
 
-    nightfox = {
-      name = "nightfox-gtk-theme";
-      package = pkgs.nightfox-gtk-theme;
+    tokyonight = {
+      name = "tokyonight-gtk-theme";
+      package = pkgs.tokyonight-gtk-theme;
     };
   };
 
@@ -70,7 +70,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.nightfox;
+    theme = desktopThemes.tokyonight;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
