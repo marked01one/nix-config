@@ -40,7 +40,6 @@ const AppItem = app => Widget.Button({
 function AppLauncher() {
     // list of application buttons
     let applications = query("")
-        .filter(app => !app.name.includes("KiCad "))
         .map(AppItem)
 
 
@@ -54,7 +53,8 @@ function AppLauncher() {
     // repopulate the box, so the most frequent apps are on top of the list
     function repopulate() {
         applications = query("")
-            .sort()
+            .filter(app => !app.name.includes("KiCad "))
+            .sort((a,b) => a.name.localeCompare(b.name))
             .map(AppItem)
         list.children = applications
     }
