@@ -20,7 +20,7 @@
     hyprland,
     home-manager,
     nix-flatpak,
-    nix-colors
+    nix-colors,
     ...
   } @ inputs: {
     #  config entry
