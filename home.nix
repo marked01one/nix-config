@@ -26,6 +26,10 @@
       };
     };
   };
+
+  gtkConfig = {
+    gtk-application-prefer-dark-theme = "1";
+  }
 in {
   nixpkgs.config.allowUnfree = true;
 
@@ -58,9 +62,9 @@ in {
 
     theme = desktopThemes.catpuccin-lavender;
 
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = "1";
-    };
+    gtk2.extraConfig = gtkConfig;
+    gtk3.extraConfig = gtkConfig;
+    gtk4.extraConfig = gtkConfig; 
   };
 
   xdg.configFile = {
