@@ -95,7 +95,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.rose-pine;
+    theme = desktopThemes.dracula;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
