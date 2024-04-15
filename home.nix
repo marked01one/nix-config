@@ -38,7 +38,7 @@
   };
 
   gtkConfig = {
-    gtk-application-prefer-dark-theme = "0";
+    gtk-application-prefer-dark-theme = "1";
   };
 in {
   nixpkgs.config.allowUnfree = true;
