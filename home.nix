@@ -90,7 +90,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.dracula;
+    theme = desktopThemes.tokyonight;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
