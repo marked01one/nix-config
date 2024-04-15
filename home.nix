@@ -22,7 +22,7 @@ in {
   home.username = "khoi";
   home.homeDirectory = "/home/khoi";
 
-  home.stateVersion = "unstable";
+  home.stateVersion = "24.05";
   home.packages = [
   ];
 
@@ -32,6 +32,11 @@ in {
 
   gtk = {
     enable = true;
+
+    font = {
+      name = "CaskaydiaCove Nerd Font";
+      size = 12.0;
+    }
   };
 
   qt = {
