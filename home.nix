@@ -58,6 +58,12 @@ in {
   home.packages = [
   ];
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "brave";
+    TERMINAL = "kitty";
+  };
+
   # home.file = {
   #   ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}'';
   # };
