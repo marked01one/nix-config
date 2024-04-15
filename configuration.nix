@@ -95,6 +95,7 @@
       tweaks = ["rimless" "black"];
       variant = "mocha";
     })
+    nordic
   ];
 in {
   # Include the results of the hardware scan.
