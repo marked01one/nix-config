@@ -90,7 +90,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.tokyonight;
+    theme = desktopThemes.nightfox;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
