@@ -64,6 +64,8 @@ in {
   };
 
 
+  colorScheme = inputs.nix-colors.colorScheme.nord;
+
   gtk = {
     enable = true;
 
@@ -72,7 +74,7 @@ in {
       size = 12.0;
     };
 
-    theme = desktopThemes.tokyonight;
+    theme = desktopThemes.nordic-darker;
 
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
