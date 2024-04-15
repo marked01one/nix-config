@@ -31,7 +31,7 @@
   swapDevices = [];
   environment.systemPackages = with pkgs; [
     asusctl
-    nvtop
+    nvtopPackages.full
   ];
 
   services.asusd.enable = true;

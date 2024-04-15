@@ -201,12 +201,13 @@ in {
   # };
   # };
 
-  services.xserver = {
-    enable = true;
+  services.xserver.enable = true;
 
-    displayManager.defaultSession = "hyprland";
+  services.displayManager = {
 
-    displayManager.sddm = {
+    defaultSession = "hyprland";
+
+    sddm = {
       enable = true;
       theme = "${import ./modules/sddm-sugar-dark.nix {inherit pkgs;}}";
       wayland.enable = true;
