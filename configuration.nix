@@ -95,7 +95,7 @@
       variant = "mocha";
     })
     nordic
-    tokyonight-gtk-theme
+    dracula-theme
   ];
 in {
   # Include the results of the hardware scan.

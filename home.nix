@@ -32,10 +32,10 @@
       package = pkgs.nordic;
     };
 
-    tokyonight = {
-      name = "tokyonight-gtk-theme";
-      package = pkgs.tokyonight-gtk-theme;
-    };
+    dracula = {
+      name = "dracula-theme";
+      package = pkgs.dracula-theme;
+    }
   };
 
   gtkConfig = {
