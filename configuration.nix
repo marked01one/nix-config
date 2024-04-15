@@ -185,6 +185,10 @@ in {
 
   environment.pathsToLink = ["/libexec"];
 
+  environment.variables = {
+    TERMINAL = [ "kitty" ];
+  };
+
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
