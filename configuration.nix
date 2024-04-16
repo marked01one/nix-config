@@ -21,14 +21,12 @@
     zathura
     teams-for-linux
     zed-editor
-    sage
-    jupyter-all
+    obsidian
   ];
 
   flatpakApps = [
     "app.moosync.moosync"
     "org.kicad.KiCad"
-    "md.obsidian.Obsidian"
   ];
 
   commandLineApps = with pkgs; [
@@ -371,5 +369,5 @@ in {
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "unstable"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 }
