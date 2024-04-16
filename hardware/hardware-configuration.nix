@@ -18,14 +18,21 @@
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/dd60a79e-5e48-4299-a842-0367c8d25210";
-    fsType = "ext4";
-  };
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/dd60a79e-5e48-4299-a842-0367c8d25210";
+      fsType = "ext4";
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/B495-4172";
-    fsType = "vfat";
+    "/boot" = {
+      device = "/dev/disk/by-uuid/B495-4172";
+      fsType = "vfat";
+    };
+
+    "/home/khoi/Shared" = {
+      device = "/dev/disk/by-uuid/3d5fbc65-38fc-47a7-8578-bb87cc1a14f8";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [];
