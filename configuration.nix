@@ -11,7 +11,6 @@
     brave
     neovim
     vscode
-    obsidian
     grimblast
     space-cadet-pinball
     drawio
@@ -29,6 +28,7 @@
   flatpakApps = [
     "app.moosync.moosync"
     "org.kicad.KiCad"
+    "md.obsidian.Obsidian"
   ];
 
   commandLineApps = with pkgs; [
