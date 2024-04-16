@@ -51,7 +51,6 @@
     dotnet-sdk_8
     libgcc
     nodejs_21
-    python3
     jdk21
   ];
 
