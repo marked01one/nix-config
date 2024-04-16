@@ -115,7 +115,7 @@ in {
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {
-      khoi = import ./home.nix;
+      marked01one = import ./home.nix;
     };
   };
 
@@ -284,9 +284,9 @@ in {
   users = {
     defaultUserShell = pkgs.zsh;
 
-    users.khoi = {
+    users.marked01one = {
       isNormalUser = true;
-      description = "khoi";
+      description = "marked01one";
       extraGroups = ["audio" "networkmanager" "wheel"];
     };
   };

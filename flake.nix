@@ -40,7 +40,7 @@
     };
 
     homeConfigurations = {
-      "khoi@perfect-linux" = home-manager.lib.homeManagerConfiguration {
+      "marked01one@perfect-linux" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         modules = [./home.nix];
       };

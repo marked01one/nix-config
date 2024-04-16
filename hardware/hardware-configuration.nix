@@ -29,7 +29,7 @@
       fsType = "vfat";
     };
 
-    "/home/khoi/Shared" = {
+    "/home/marked01one/Shared" = {
       device = "/dev/disk/by-uuid/3d5fbc65-38fc-47a7-8578-bb87cc1a14f8";
       fsType = "ext4";
     };

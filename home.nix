@@ -61,8 +61,8 @@ in {
 
   imports = homeImports ++ inputImports;
 
-  home.username = "khoi";
-  home.homeDirectory = "/home/khoi";
+  home.username = "marked01one";
+  home.homeDirectory = "/home/marked01one";
 
   home.stateVersion = "24.05";
   home.packages = [
