@@ -4,7 +4,7 @@
 {
   config,
   lib,
-  pkgs,
+  pkgs, 
   modulesPath,
   ...
 }: {
@@ -20,7 +20,7 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/dd60a79e-5e48-4299-a842-0367c8d25210";
+      device = "/dev/disk/by-uuid/dc0028fb-8d21-44de-a3ca-95613a7d3827";
       fsType = "ext4";
     };
 
