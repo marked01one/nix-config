@@ -23,6 +23,7 @@
     teams-for-linux
     zed-editor
     sage
+    jupyter-all
   ];
 
   flatpakApps = [
