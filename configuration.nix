@@ -52,6 +52,9 @@
     libgcc
     nodejs_21
     jdk21
+    python3
+    lua
+    php
   ];
 
   systemPrograms = with pkgs; [
