@@ -12,6 +12,8 @@
       size = 14.0;
     };
 
+    theme = "Tokyo Night";
+
     keybindings = {
       "ctrl+c" = "copy_or_interrupt";
       "ctrl+v" = "paste_from_clipboard";
