@@ -55,6 +55,7 @@
     python3
     lua
     php
+    bun
   ];
 
   systemPrograms = with pkgs; [
