@@ -94,6 +94,12 @@ in {
       exec = "obsidian --disable-gpu";
       icon = "obsidian";
     };
+
+    discord = {
+      name = "Discord";
+      exec = "discord --disable-gpu";
+      icon = "discord";
+    };
   };
 
   gtk = {
