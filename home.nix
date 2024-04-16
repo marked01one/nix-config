@@ -98,8 +98,8 @@ in {
     theme = desktopThemes.tokyonight;
 
     iconTheme = {
-      name = "Colloid-dark";
-      package = pkgs.colloid-icon-theme;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
 
     gtk3.extraConfig = gtkConfig;

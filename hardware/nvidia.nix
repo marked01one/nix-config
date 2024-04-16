@@ -1,8 +1,8 @@
 {
   config,
-  lib,
-  pkgs,
-  modulesPath,
+  # lib,
+  # pkgs,
+  # modulesPath,
   ...
 }: {
   hardware.nvidia = {
