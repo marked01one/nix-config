@@ -369,5 +369,5 @@ in {
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "unstable"; # Did you read the comment?
 }
