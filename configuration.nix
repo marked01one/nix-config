@@ -22,6 +22,7 @@
     zathura
     teams-for-linux
     zed-editor
+    conf
   ];
 
   flatpakApps = [
@@ -87,12 +88,7 @@
   ];
 
   themes = with pkgs; [
-    (catppuccin-gtk.override {
-      accents = ["lavender"];
-      size = "standard";
-      tweaks = ["rimless" "black"];
-      variant = "mocha";
-    })
+    catppuccin-gtk
     nordic
     dracula-theme
     nightfox-gtk-theme
