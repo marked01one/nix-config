@@ -69,6 +69,7 @@
     brightnessctl
     pulseaudio
     glib
+    udiskie
   ];
 
   devTools = with pkgs; [
