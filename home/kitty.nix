@@ -1,7 +1,7 @@
 {
   # config,
-  pkgs,
-  lib,
+  # pkgs,
+  # lib,
   ...
 }: {
   programs.kitty = {
@@ -26,6 +26,8 @@
 
     settings = {
       confirm_os_window_close = 0;
+      dynamic_background_opacity = "yes";
+      background_opacity = 0.5;
     };
   };
 
