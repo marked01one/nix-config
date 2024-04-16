@@ -28,7 +28,7 @@
         formatting.command = ["alejandra"];
       };
 
-      "editor.accessibilityPageSize" = 11;
+      "editor.accessibilityPageSize" = 12;
       "window.titleBarStyle" = "custom";
 
       "editor.fontFamily" = "CaskaydiaCove Nerd Font";
