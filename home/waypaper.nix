@@ -11,7 +11,7 @@ in {
       [Settings]
       language = en
       folder = ~/Pictures/Wallpapers
-      wallpaper ~/Pictures/Wallpapers/luminousslime_001.jpg
+      wallpaper = ~/Pictures/Wallpapers/luminousslime_001.jpg
       backend = swww
       monitors = All
       fill = Fill
