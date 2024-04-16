@@ -97,6 +97,11 @@
     rose-pine-gtk-theme
     papirus-icon-theme
   ];
+
+  shellScripts = [
+    (import ./scripts/nvidia-offload.nix { inherit pkgs; })
+    (import ./scripts/cfnix.nix { inherit pkgs; })
+  ];
 in {
   # Include the results of the hardware scan.
   imports = [
@@ -284,7 +289,7 @@ in {
 
   # List packages installed in system profile.
   environment.systemPackages =
-    devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
+    shellScripts ++ devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
 
   services.flatpak = {
     enable = true;
