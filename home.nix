@@ -92,6 +92,7 @@ in {
     obsidian = {
       name = "Obsidian";
       exec = "obsidian --disable-gpu";
+      icon = "obsidian";
     };
   };
 
