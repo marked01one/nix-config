@@ -26,7 +26,7 @@
 
     settings = {
       confirm_os_window_close = 0;
-      dynamic_background_opacity = "yes";
+      dynamic_background_opacity = true;
       background_opacity = 0.5;
     };
   };
