@@ -99,8 +99,8 @@ in {
       };
 
       bindm = [
-        "${MOD}, mouse:272, movewindow"
         "${MOD}, mouse:273, resizewindow"
+        "${MOD}, mouse:272, movewindow"
       ];
 
       bind =

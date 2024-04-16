@@ -36,6 +36,7 @@
       "workbench.colorTheme" = "Material Theme Ocean High Contrast";
       "workbench.activityBar.location" = "top";
       "workbench.iconTheme" = "material-icon-theme";
+      "editor.fontSize" = 16;
     };
   };
 }
