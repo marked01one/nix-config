@@ -10,13 +10,19 @@ in {
     ".config/waypaper/config.ini".text = ''
       [Settings]
       language = en
-      folder = ~/Pictures/Wallpapers
-      wallpaper = ~/Pictures/Wallpapers/luminousslime_001.jpg
+      folder = /home/marked01one/Pictures/Wallpapers
+      wallpaper = /home/marked01one/Pictures/Wallpapers/luminousslime_001.jpg
       backend = swww
       monitors = All
       fill = Fill
       sort = name
-      subfolders = True
+      color = #ffffff
+      subfolders = False
+      post_command = 
+      swww_transition_type = any
+      swww_transition_step = 90
+      swww_transition_angle = 0
+      swww_transition_duration = 2
     '';
   };
 }
