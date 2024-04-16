@@ -256,12 +256,6 @@ in {
     };
   };
 
-  xdg.desktopEntries = {
-    obsidian = {
-      name = "Obsidian";
-      exec = "obsidian --disable-gpu";
-    };
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

@@ -87,6 +87,13 @@ in {
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
 
+  xdg.desktopEntries = {
+    obsidian = {
+      name = "Obsidian";
+      exec = "obsidian --disable-gpu";
+    };
+  };
+
   gtk = {
     enable = true;
 
