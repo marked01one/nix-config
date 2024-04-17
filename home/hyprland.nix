@@ -19,7 +19,12 @@ in {
 
       # monitor = [ ",preferred,auto,auto" ];
 
-      env = "XCURSOR_SIZE,20";
+      env = [
+        "XCURSOR_THEME, graphite-dark-nord"
+        "XCURSOR_SIZE, 30"
+        "HYPRCURSOR_THEME, graphite-dark-nord"
+        "HYPRCURSOR_SIZE, 30"
+      ];
 
       exec-once = [
         "brightnessctl --restore"
