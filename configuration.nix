@@ -87,6 +87,7 @@
     gopls
     alejandra
     nix-prefetch-github
+    ngspice
   ];
 
   qt5Packages = with pkgs.libsForQt5.qt5; [

@@ -101,12 +101,6 @@ in {
       icon = "discord";
     };
 
-    neovim = {
-      name = "Neovim";
-      exec = "nvim";
-      terminal = true;
-      icon = "neovim";
-    };
   };
 
   gtk = {
