@@ -109,9 +109,11 @@ in {
           ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
           ",XF86AudioRaiseVolume, exec, pactl set-sink-volume ${deviceAudio} +10%"
           ",XF86AudioLowerVolume, exec, pactl set-sink-volume ${deviceAudio} -10%"
+          ",XF86KbdBrightnessUp, exec, asusctl -n"
+          ",XF86KbdBrightnessDown, exec, asusctl -p"
 
           ",Print, exec, grimblast copysave area ~/Pictures/screenshots/screenshot.png"
-
+          
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, brave"
           "${MOD}, SPACE, exec, ags -t applauncher"
