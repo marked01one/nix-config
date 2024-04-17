@@ -24,6 +24,8 @@
     obsidian
     zotero
     zoom-us
+    qucs-s
+    ozu-lazer-bin
   ];
 
   flatpakApps = [
