@@ -23,6 +23,7 @@
     zed-editor
     obsidian
     zotero
+    zoom-us
   ];
 
   flatpakApps = [
