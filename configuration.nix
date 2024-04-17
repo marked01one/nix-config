@@ -22,6 +22,7 @@
     teams-for-linux
     zed-editor
     obsidian
+    zotero
   ];
 
   flatpakApps = [
@@ -187,11 +188,6 @@ in {
     LC_TIME = "en_US.UTF-8";
   };
 
-  environment.pathsToLink = ["/libexec"];
-
-  environment.variables = {
-    TERMINAL = [ "kitty" ];
-  };
 
   fonts = {
     enableDefaultPackages = true;
@@ -292,8 +288,6 @@ in {
   };
 
   # List packages installed in system profile.
-  environment.systemPackages =
-    shellScripts ++ devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
 
   services.flatpak = {
     enable = true;
@@ -350,9 +344,20 @@ in {
     };
   };
 
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
+  environment = {
+    pathsToLink = [ "/libexec" "/share/zsh" ];
+
+    systemPackages = 
+      shellScripts ++ devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
+    
+    sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = "1";
+      NIXOS_OZONE_WL = "1";
+    };
+
+    variables = {
+      TERMINAL = [ "kitty" ];
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
