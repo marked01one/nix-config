@@ -25,7 +25,7 @@
     zotero
     zoom-us
     qucs-s
-    ozu-lazer-bin
+    osu-lazer-bin
   ];
 
   flatpakApps = [
