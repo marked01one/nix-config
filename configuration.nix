@@ -103,6 +103,7 @@
     tokyonight-gtk-theme
     rose-pine-gtk-theme
     papirus-icon-theme
+    graphite-cursors
   ];
 
   shellScripts = [

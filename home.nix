@@ -118,6 +118,11 @@ in {
       package = pkgs.papirus-icon-theme;
     };
 
+    cursorTheme = {
+      name = "graphite-dark-nord";
+      package = pkgs.graphite-cursors;
+    };
+
     gtk3.extraConfig = gtkConfig;
     gtk4.extraConfig = gtkConfig; 
   };
