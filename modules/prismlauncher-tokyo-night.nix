@@ -6,7 +6,7 @@ in
 
     src = pkgs.fetchurl {
       url = "https://github.com/PrismLauncher/Themes/releases/latest/download/Tokyo-Night-theme.zip";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "DaDoYVMV4cNLXcRgsTb3u1yeMlToON5Byibr0o/2rzU=";
     };
 
     installPhase = ''
