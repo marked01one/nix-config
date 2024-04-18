@@ -23,7 +23,7 @@
       name = "Catppuccin-Mocha-Standard-Lavender-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
-        tweaks = [ "normal" ];
+        tweaks = ["normal"];
         size = "compact";
         variant = "macchiato";
       };
@@ -79,13 +79,12 @@ in {
   # home.file = {
   #   ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}'';
   # };
-  
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
   };
-
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
 
@@ -119,7 +118,15 @@ in {
       icon = "btop";
     };
 
+    xterm = {
+      name = "XTerm";
+      noDisplay = true;
+    };
 
+    nixos-manual = {
+      name = "NixOS Manual";
+      noDisplay = true;
+    };
   };
 
   gtk = {
@@ -143,7 +150,7 @@ in {
     };
 
     gtk3.extraConfig = gtkConfig;
-    gtk4.extraConfig = gtkConfig; 
+    gtk4.extraConfig = gtkConfig;
   };
 
   xdg.configFile = {

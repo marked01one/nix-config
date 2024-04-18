@@ -107,8 +107,8 @@
   ];
 
   shellScripts = [
-    (import ./scripts/nvidia-offload.nix { inherit pkgs; })
-    (import ./scripts/cfnix.nix { inherit pkgs; })
+    (import ./scripts/nvidia-offload.nix {inherit pkgs;})
+    (import ./scripts/cfnix.nix {inherit pkgs;})
   ];
 in {
   # Include the results of the hardware scan.
@@ -193,7 +193,6 @@ in {
     LC_TIME = "en_US.UTF-8";
   };
 
-
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -239,7 +238,7 @@ in {
 
   services.xserver = {
     enable = true;
-    excludePackages = with pkgs; [ xterm ];
+    excludePackages = with pkgs; [xterm];
   };
   services.displayManager = {
     defaultSession = "hyprland";
@@ -258,7 +257,6 @@ in {
       "application/pdf" = "org.pwmt.zathura.desktop";
     };
   };
-
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -352,17 +350,16 @@ in {
   };
 
   environment = {
-    pathsToLink = [ "/libexec" "/share/zsh" ];
+    pathsToLink = ["/libexec" "/share/zsh"];
 
-    systemPackages = 
+    systemPackages =
       shellScripts ++ devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
-    
+
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
-      TERMINAL = [ "kitty" ];
+      TERMINAL = ["kitty"];
     };
-
   };
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -119,7 +119,7 @@ in {
           ",XF86KbdBrightnessDown, exec, asusctl -p"
 
           ",Print, exec, grimblast copysave area ~/Pictures/screenshots/screenshot.png"
-          
+
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, brave"
           "${MOD}, SPACE, exec, ags -t applauncher"
