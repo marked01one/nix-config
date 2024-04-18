@@ -104,7 +104,7 @@ in {
 
     neovim = {
       name = "Neovim";
-      exec = "kitty -e nvim ~";
+      exec = "kitty -e nvim";
       icon = "nvim";
     };
 
