@@ -8,7 +8,6 @@ const LAUNCHER_STYLES = {
 };
 
 const APP_NAMES = new Map([
-    ["Neovim wrapper", "Neovim"],
     ["Microsoft Teams for Linux", "Microsoft Teams"]
 ])
 
