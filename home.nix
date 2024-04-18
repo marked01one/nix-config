@@ -114,11 +114,6 @@ in {
       icon = "btop";
     };
 
-    nixos-settings = {
-      name = "NixOS Settings";
-      exec = "kitty -e nvim /home/$(whoami)/SystemFlake";
-      icon = "nixos";
-    };
 
   };
 
