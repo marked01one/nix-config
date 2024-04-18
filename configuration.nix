@@ -91,9 +91,9 @@
     ngspice
   ];
 
-  qt5Packages = with pkgs.libsForQt5.qt5; [
-    qtquickcontrols2
-    qtgraphicaleffects
+  qt5Packages = with pkgs.libsForQt5; [
+    qt5.qtquickcontrols2
+    qt5.qtgraphicaleffects
     qtstyleplugins
   ];
 
