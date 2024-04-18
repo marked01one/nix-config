@@ -75,6 +75,8 @@
     pulseaudio
     glib
     udiskie
+    qgnomeplatform
+    qgnomeplatform-qt6
   ];
 
   devTools = with pkgs; [
@@ -94,7 +96,6 @@
   qt5Packages = with pkgs.libsForQt5; [
     qt5.qtquickcontrols2
     qt5.qtgraphicaleffects
-    qtstyleplugins
   ];
 
   themes = with pkgs; [
