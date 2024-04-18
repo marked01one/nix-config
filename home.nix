@@ -112,7 +112,7 @@ in {
       name = "btop++";
       exec = "kitty -e btop";
       icon = "btop";
-    }
+    };
 
   };
 
