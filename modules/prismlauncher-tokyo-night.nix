@@ -11,6 +11,6 @@ in
 
     installPhase = ''
       mkdir /home/${user}/.local/share/PrismLauncher/themes
-      ${pkgs.unizp}/bin/unzip $src -d /home/${user}/.local/share/PrismLauncher/themes/
+      ${pkgs.unzip}/bin/unzip $src -d /home/${user}/.local/share/PrismLauncher/themes/
     '';
   }
