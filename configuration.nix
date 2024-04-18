@@ -9,7 +9,7 @@
 }: let
   desktopApps = with pkgs; [
     brave
-    neovim
+    neovim-unwrapped
     vscode
     grimblast
     space-cadet-pinball
