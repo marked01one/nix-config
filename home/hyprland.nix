@@ -21,9 +21,9 @@ in {
 
       env = [
         "XCURSOR_THEME, graphite-dark-nord"
-        "XCURSOR_SIZE, 30"
+        "XCURSOR_SIZE, 24"
         "HYPRCURSOR_THEME, graphite-dark-nord"
-        "HYPRCURSOR_SIZE, 30"
+        "HYPRCURSOR_SIZE, 24"
       ];
 
       exec-once = [
