@@ -10,6 +10,7 @@
     ./home/kitty.nix
     ./home/ags/ags.nix
     ./home/waypaper.nix
+    ./home/neovim/neovim.nix
   ];
 
   inputImports = [
