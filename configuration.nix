@@ -26,6 +26,7 @@
     zoom-us
     qucs-s
     osu-lazer-bin
+    qemu
   ];
 
   flatpakApps = [
@@ -93,6 +94,7 @@
   qt5Packages = with pkgs.libsForQt5.qt5; [
     qtquickcontrols2
     qtgraphicaleffects
+    qtstyleplugins
   ];
 
   themes = with pkgs; [

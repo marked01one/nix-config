@@ -162,6 +162,7 @@ in {
   qt = {
     enable = true;
     platformTheme = "gtk";
+    style = gtkConfig;
   };
 
   programs = {
