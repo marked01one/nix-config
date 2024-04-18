@@ -162,7 +162,7 @@ in {
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style = gtkConfig;
+    style = desktopThemes.tokyonight;
   };
 
   programs = {
