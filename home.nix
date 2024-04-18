@@ -103,6 +103,11 @@ in {
     };
 
     neovim = {
+      name = "Neovim wrapper";
+      noDisplay = true;
+    };
+
+    nvim = {
       name = "Neovim";
       exec = "kitty -e nvim";
       icon = "nvim";
