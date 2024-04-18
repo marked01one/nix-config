@@ -11,6 +11,7 @@
     ./home/ags/ags.nix
     ./home/waypaper.nix
     ./home/neovim/neovim.nix
+    ./home/prismlauncher.nix
   ];
 
   inputImports = [
@@ -161,7 +162,7 @@ in {
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme = "gnome";
     style = desktopThemes.tokyonight;
   };
 
