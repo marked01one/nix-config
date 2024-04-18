@@ -12,7 +12,6 @@ in
     dontUnpack = true;
 
     installPhase = ''
-      mkdir /home/${user}/.local/share/PrismLauncher/themes
       ${pkgs.unzip}/bin/unzip $src -d /home/${user}/.local/share/PrismLauncher/themes/
     '';
   }
