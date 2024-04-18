@@ -24,6 +24,7 @@ in {
         "XCURSOR_SIZE, 24"
         "HYPRCURSOR_THEME, graphite-dark-nord"
         "HYPRCURSOR_SIZE, 24"
+        "TERMINAL, kitty"
       ];
 
       exec-once = [
