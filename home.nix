@@ -102,6 +102,18 @@ in {
       icon = "discord";
     };
 
+    neovim = {
+      name = "Neovim";
+      exec = "kitty -e nvim ~";
+      icon = "nvim";
+    };
+
+    btop = {
+      name = "btop++";
+      exec = "kitty -e btop";
+      icon = "btop";
+    }
+
   };
 
   gtk = {
