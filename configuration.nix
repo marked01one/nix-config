@@ -77,6 +77,7 @@
     udiskie
     qgnomeplatform
     qgnomeplatform-qt6
+    unzip
   ];
 
   devTools = with pkgs; [
