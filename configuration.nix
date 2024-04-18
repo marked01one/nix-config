@@ -363,9 +363,6 @@ in {
       TERMINAL = [ "kitty" ];
     };
 
-    variables = {
-      TERMINAL = [ "kitty" ];
-    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
