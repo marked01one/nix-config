@@ -9,6 +9,8 @@ in
       sha256 = "DaDoYVMV4cNLXcRgsTb3u1yeMlToON5Byibr0o/2rzU=";
     };
 
+    dontUnpack = true;
+
     installPhase = ''
       mkdir /home/${user}/.local/share/PrismLauncher/themes
       ${pkgs.unzip}/bin/unzip $src -d /home/${user}/.local/share/PrismLauncher/themes/
