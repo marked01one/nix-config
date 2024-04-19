@@ -365,7 +365,7 @@ in {
     };
 
     ssh = {
-      enableAskPassword = false;
+      enableAskPassword = true;
       askPassword = "";
     };
   };
