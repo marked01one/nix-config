@@ -322,10 +322,7 @@ in {
       async = true;
       strategy = ["completion" "match_prev_cmd" "history"];
     };
-    syntaxHighlighting = {
-      enable = true;
-      package = pkgs.zsh-syntax-highlighting; 
-    };
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
         # Allow `sudo` to be used with aliases
