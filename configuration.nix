@@ -244,7 +244,10 @@ in {
   services.upower.enable = true;
   services.xserver = {
     enable = true;
-    excludePackages = with pkgs; [xterm];
+    excludePackages = with pkgs; [
+      xterm
+      x11_ssh_askpass
+    ];
   };
   services.displayManager = {
     defaultSession = "hyprland";
