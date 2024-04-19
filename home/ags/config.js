@@ -4,7 +4,7 @@ import { Taskbar } from "./components/taskbar.js";
 App.config({
     style: "./styles.css",
     windows: [
-        // applauncher,
+        applauncher,
         Taskbar()
     ],
 })
