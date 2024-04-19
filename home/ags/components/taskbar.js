@@ -1,3 +1,5 @@
+import W from "types/widget"
+
 const hyprland = await Service.import('hyprland')
 const notifications = await Service.import('notifications')
 const mpris = await Service.import('mpris')
@@ -123,6 +125,9 @@ function BatteryLabel() {
     const value = battery.bind("percent").as(p => p > 0 ? p / 100 : 0)
     const icon = battery.bind("percent").as(p =>
         `battery-level-${Math.floor(p / 10) * 10}-symbolic`)
+
+    console.log("Battery Bind 'percent': ", battery.bind("percent"))
+    console.log("Battery Bind 'available': ", battery.bind("available"))
 
     return Widget.Box({
         class_name: "battery",

@@ -320,7 +320,7 @@ in {
     autosuggestions = {
       enable = true;
       async = true;
-      strategy = ["completion" "match_prev_cmd" "history"];
+      strategy = ["history" "completion" "match_prev_cmd"];
     };
     syntaxHighlighting.enable = true;
 
