@@ -169,15 +169,17 @@ const Right = () => Widget.Box({
     children: [Volume(), BatteryLabel(), Clock(), SysTray()]
 })
 
-export const taskbar = ({monitor = 0}) => Widget.Window({
-    name: `bar-${monitor}`,
-    class_name: "bar",
-    monitor: 0,
-    anchor: ["left", "top", "bottom"],
-    exclusivity: "exclusive",
-    child: Widget.CenterBox({
-        start_widget: Left(),
-        center_widget: Center(),
-        end_widget: Right()
+export function Taskbar(monitor = 0) {
+    return Widget.Window({
+        name: `bar-${monitor}`,
+        class_name: "bar",
+        monitor: 0,
+        anchor: ["left", "top", "bottom"],
+        exclusivity: "exclusive",
+        child: Widget.CenterBox({
+            start_widget: Left(),
+            center_widget: Center(),
+            end_widget: Right()
+        })
     })
-})
+}
