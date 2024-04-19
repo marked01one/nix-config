@@ -122,7 +122,7 @@ function Volume() {
 function BatteryLabel() {
     const value = battery.bind("percent").as(p => p > 0 ? p / 100 : 0)
     const icon = battery.bind("percent").as(p =>
-        `battery-level-${Math.floor(p/10) * 10}-symbolic`)
+        `battery-level-${Math.floor(p / 10) * 10}-symbolic`)
 
     return Widget.Box({
         class_name: "battery",
@@ -156,12 +156,12 @@ function SysTray() {
 
 const Left = () => Widget.Box({ 
     spacing: 8,
-    children: [Workspaces(), ClientTitle()]
+    children: [Workspaces()]
 })
 
 const Center = () => Widget.Box({
     spacing: 8,
-    children: [Media(), Notification()]
+    children: [ClientTitle(), Notification()]
 })
 
 const Right = () => Widget.Box({
