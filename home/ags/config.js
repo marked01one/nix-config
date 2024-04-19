@@ -4,6 +4,8 @@ import { taskbar } from "components/taskbar.js";
 App.config({
     windows: [
         applauncher,
-        taskbar()
+        // taskbar()
     ],
 })
+
+export {  }

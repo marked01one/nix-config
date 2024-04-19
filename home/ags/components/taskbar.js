@@ -172,7 +172,7 @@ const Right = () => Widget.Box({
 export const taskbar = ({monitor = 0}) => Widget.Window({
     name: `bar-${monitor}`,
     class_name: "bar",
-    monitor,
+    monitor: 0,
     anchor: ["left", "top", "bottom"],
     exclusivity: "exclusive",
     child: Widget.CenterBox({
