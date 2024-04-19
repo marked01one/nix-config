@@ -1,3 +1,5 @@
+import W from "types/widget"
+
 const hyprland = await Service.import('hyprland')
 const notifications = await Service.import('notifications')
 const mpris = await Service.import('mpris')
@@ -7,7 +9,7 @@ const systemtray = await Service.import('systemtray')
 
 
 const date = Variable("", {
-    poll: [1000, 'date "+%H:%M:%S %%b %e."']
+    poll: [1000, 'date "+%H:%M:%S %b %e."']
 })
 
 // Define workspace display functionalities
