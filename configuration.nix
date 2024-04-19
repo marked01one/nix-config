@@ -241,7 +241,7 @@ in {
   #   ];
   # };
   # };
-
+  services.upower.enable = true;
   services.xserver = {
     enable = true;
     excludePackages = with pkgs; [xterm];
