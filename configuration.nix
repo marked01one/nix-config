@@ -363,6 +363,11 @@ in {
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+
+    ssh = {
+      enableAskPassword = false;
+      askPassword = "";
+    };
   };
 
   environment = {
