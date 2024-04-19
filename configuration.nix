@@ -47,6 +47,7 @@
     thefuck
     bat
     xclip
+    lf
   ];
 
   languages = with pkgs; [
