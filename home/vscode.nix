@@ -11,6 +11,7 @@
         vscodevim.vim
         pkief.material-icon-theme
         equinusocio.vsc-material-theme
+        enkia.tokyo-night
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
