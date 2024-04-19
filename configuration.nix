@@ -313,6 +313,7 @@ in {
       ];
     };
 
+    zsh.enable = true;
     hyprland = {
       enable = true;
 
