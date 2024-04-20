@@ -177,7 +177,7 @@ export function Taskbar(monitor = 0) {
         name: `bar-${monitor}`,
         class_name: "bar",
         monitor: 0,
-        anchor: ["top", "left", "right"],
+        anchor: ["left", "bottom", "top"],
         exclusivity: "exclusive",
         child: Widget.CenterBox({
             start_widget: Left(),
