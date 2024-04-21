@@ -318,17 +318,17 @@ in {
     };
 
     zsh = {
-    enable = true;
-
-    enableCompletion = true;
-    autosuggestions = {
       enable = true;
-      async = true;
-      strategy = ["history" "completion" "match_prev_cmd"];
-    };
-    syntaxHighlighting.enable = true;
 
-    shellAliases = {
+      enableCompletion = true;
+      autosuggestions = {
+        enable = true;
+        async = true;
+        strategy = ["history" "completion" "match_prev_cmd"];
+      };
+      syntaxHighlighting.enable = true;
+
+      shellAliases = {
         # Allow `sudo` to be used with aliases
         sudo = "sudo ";
         ls = "lsd -1";

@@ -12,6 +12,7 @@
         pkief.material-icon-theme
         equinusocio.vsc-material-theme
         enkia.tokyo-night
+        vscjava.vscode-java-pack
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -38,6 +39,7 @@
       "workbench.activityBar.location" = "top";
       "workbench.iconTheme" = "material-icon-theme";
       "editor.fontSize" = 16;
+      "workbench.sideBar.location" = "right";
     };
   };
 }
