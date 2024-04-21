@@ -6,7 +6,7 @@
 }: let
   homeImports = [
     ./home/hyprland.nix
-    # ./home/vscode.nix
+    ./home/vscode.nix
     ./home/kitty.nix
     ./home/ags/ags.nix
     ./home/waypaper.nix
