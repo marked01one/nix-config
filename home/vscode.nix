@@ -12,7 +12,6 @@
         pkief.material-icon-theme
         equinusocio.vsc-material-theme
         enkia.tokyo-night
-        vscjava.vscode-java-pack
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
