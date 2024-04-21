@@ -10,7 +10,6 @@
   desktopApps = with pkgs; [
     brave
     neovim-unwrapped
-    vscode-fhs
     grimblast
     space-cadet-pinball
     drawio
