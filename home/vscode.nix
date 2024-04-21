@@ -40,7 +40,9 @@
       "editor.fontSize" = 16;
       "workbench.sideBar.location" = "right";
 
-      "java.home" = "/run/current-system/sw/lib/openjdk";
+      "redhat.telemetry.enabled" = false;
+
+      # "java.home" = "/run/current-system/sw/lib/openjdk";
     };
   };
 }
