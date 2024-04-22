@@ -1,9 +1,9 @@
 {
   pkgs,
 }: let
-  img = image2;
+  img = theme2;
   
-  image1 = {
+  theme1 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/bb4b758d23cb95284b06e5a983117078/45258116fed08252-a2/s2048x3072/45a8aefc450bacda2fad1b64ce02461c3b80b7d3.jpg";
       sha256 = "sha256-0ldhCZGRRQoeMbDp3y7X3UGTYpnDc6ToEBnq4ydeL/M=";
@@ -14,7 +14,7 @@
     blurType = "full";
   };
 
-  image2 = {
+  theme2 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
       sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
@@ -23,6 +23,7 @@
     format = "png";
     imagePosition = "right";
     blurType = "partial";
+    backgroundColor = "#FFF";
   };
 
 in
@@ -61,7 +62,7 @@ in
       BackgroundImageVAlignment="center"
       MainColor="white"
       AccentColor="#fb884f"
-      BackgroundColor="#444"
+      BackgroundColor="#FFF"
       OverrideLoginButtonTextColor=""
       InterfaceShadowSize="6"
       InterfaceShadowOpacity="0.6"
