@@ -32,9 +32,9 @@ in
     #   sha256 = "sha256-flOspjpYezPvGZ6b4R/Mr18N7N3JdytCSwwu6mf4owQ=";
     # };
 
-    src = builtins.fetchGit {
+    src = pkgs.fetchgit {
       url = "ssh://git@framagit.org:MarianArlt/sddm-sugar-candy.git";
-      ref = "master";
+      sha256 = pkgs.lib.fakeSha256;
     };
 
     theme = pkgs.writeText "theme.conf" ''
