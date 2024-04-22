@@ -24,7 +24,7 @@
   theme-conf = ''
     [General]
     Background
-    Background="Background.${img.format}"
+    Background="Background.jpg"
     ScaleImageCropped=${img.isCropped}
     ScreenWidth=2560
     ScreenHeight=1600
@@ -73,7 +73,7 @@ in
       cd $out/
       rm Background.*
       rm theme.conf
-      cp -r ${img.package} $out/Background.${img.format}
+      cp -r ${img.package} $out/Background.jpg
       echo ${theme-conf} > $out/theme.conf
     '';
   }
