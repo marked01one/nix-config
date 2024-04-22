@@ -13,7 +13,7 @@
   image2 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
-      sha256 = pkgs.lib.fakeSha256; 
+      sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
     };
     isCropped = "false";
     format = "png";
