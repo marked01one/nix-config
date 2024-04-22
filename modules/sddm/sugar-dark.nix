@@ -1,19 +1,61 @@
 {
   pkgs,
 }: let
-  CURRENT_DIR = builtins.getEnv("PWD");
-  
   image1 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/bb4b758d23cb95284b06e5a983117078/45258116fed08252-a2/s2048x3072/45a8aefc450bacda2fad1b64ce02461c3b80b7d3.jpg";
       sha256 = "sha256-0ldhCZGRRQoeMbDp3y7X3UGTYpnDc6ToEBnq4ydeL/M=";
     };
-    cropped = true;
+    isCropped = true;
+    format = "jpg";
   };
 
-  config-dir = ./theme.conf;
+  image2 = {
+    package = pkgs.fetchurl {
+      url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
+      sha256 = pkgs.lib.fakeSha256; 
+    };
+    isCropped = false;
+    format = "png";
+  };
 
-  
+  img = image2;
+
+  theme-conf = ''
+    [General]
+    Background
+    Background="Background.${img.format}"
+    ScaleImageCropped=${img.isCropped}
+    ScreenWidth=2560
+    ScreenHeight=1600
+    MainColor="navajowhite"
+    AccentColor="white"
+    RoundCorners=20
+    ScreenPadding=0
+    Font="Noto Sans"
+    FontSize=
+    Locale=
+    HourFormat="HH:mm"
+    DateFormat="dddd, d of MMMM"
+    
+    ForceLastUser=true
+    ForcePasswordFocus=true
+    ForceHideCompletePassword=false
+    ForceHideVirtualKeyboardButton="false"
+    
+    TranslateUsernamePlaceholder=""
+    TranslatePasswordPlaceholder=""
+    TranslateShowPassword=""
+    TranslateLogin=""
+    TranslateLoginFailedWarning=""
+    TranslateCapslockWarning=""
+    TranslateSession=""
+    TranslateSuspend=""
+    TranslateHibernate=""
+    TranslateReboot=""
+    TranslateShutdown=""
+    TranslateVirtualKeyboardButton=""
+  '';
 in
   pkgs.stdenv.mkDerivation {
     name = "sddm-sugar-dark";
@@ -31,7 +73,7 @@ in
       cd $out/
       rm Background.jpg
       rm theme.conf
-      cp -r ${image1.package} $out/Background.jpg
-      cp -r ${config-dir} $out/theme.conf
+      cp -r ${img.package} $out/Background.${img.format}
+      echo ${theme-conf} > $out/theme.conf
     '';
   }
