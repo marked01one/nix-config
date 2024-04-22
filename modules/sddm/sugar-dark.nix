@@ -34,7 +34,6 @@ in
 
     src = builtins.fetchGit {
       url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
-      hash = "1hwiqz3vmxd5vk9kl0iddmhnjxyi6nk6s9x5jwk77y9m6g7k2a7f";
       ref = "master";
     };
 
