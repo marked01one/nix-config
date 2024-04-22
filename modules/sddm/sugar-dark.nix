@@ -33,7 +33,7 @@ in
     # };
 
     src = pkgs.fetchgit {
-      url = "git@framagit.org:MarianArlt/sddm-sugar-candy.git";
+      url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
       sha256 = pkgs.lib.fakeSha256;
     };
 
