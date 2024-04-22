@@ -1,7 +1,7 @@
 {
   pkgs,
 }: let
-  img = image2;
+  img = image1;
   
   image1 = {
     package = pkgs.fetchurl {
@@ -23,40 +23,69 @@
 
 in
   pkgs.stdenv.mkDerivation {
-    name = "sddm-sugar-dark";
+    name = "sddm-sugar-candy";
 
-    src = pkgs.fetchFromGitHub {
-      owner = "MarianArlt";
-      repo = "sddm-sugar-dark";
-      rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
-      sha256 = "sha256-flOspjpYezPvGZ6b4R/Mr18N7N3JdytCSwwu6mf4owQ=";
+    # src = pkgs.fetchFromGitHub {
+    #   owner = "MarianArlt";
+    #   repo = "sddm-sugar-dark";
+    #   rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
+    #   sha256 = "sha256-flOspjpYezPvGZ6b4R/Mr18N7N3JdytCSwwu6mf4owQ=";
+    # };
+
+    src = builtins.fetchGit {
+      url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
+      hash = "1hwiqz3vmxd5vk9kl0iddmhnjxyi6nk6s9x5jwk77y9m6g7k2a7f";
+      ref = "master";
     };
 
     theme = pkgs.writeText "theme.conf" ''
       [General]
       Background="Background.${img.format}"
-      ScaleImageCropped=${img.isCropped}
-      ScreenWidth=2560
-      ScreenHeight=1600
-      MainColor="navajowhite"
-      AccentColor="white"
-      RoundCorners=20
-      ScreenPadding=0
+      DimBackgroundImage="0.0"
+      ScaleImageCropped="true"
+      ScreenWidth="2560"
+      ScreenHeight="1600"
+
+      ## [Blur Settings]
+      FullBlur="false"
+      PartialBlur="true"
+      BlurRadius="100"
+
+      ## [Design Customizations]
+      HaveFormBackground="false"
+      FormPosition="left"
+      BackgroundImageHAlignment="center"
+      BackgroundImageVAlignment="center"
+      MainColor="white"
+      AccentColor="#fb884f"
+      BackgroundColor="#444"
+      OverrideLoginButtonTextColor=""
+      InterfaceShadowSize="6"
+      InterfaceShadowOpacity="0.6"
+      RoundCorners="20"
+      ScreenPadding="0"
       Font="Noto Sans"
-      FontSize=
-      Locale=
+      FontSize=""
+
+      ## [Interface Behavior]
+      ForceRightToLeft="false"
+      ForceLastUser="true"
+      ForcePasswordFocus="true"
+      ForceHideCompletePassword="false"
+      ForceHideVirtualKeyboardButton="false"
+      ForceHideSystemButtons="false"
+      AllowEmptyPassword="false"
+      AllowBadUsernames="false"
+
+      ## [Locale Settings]
+      Locale=""
       HourFormat="HH:mm"
       DateFormat="dddd, d of MMMM"
 
-      BackgroundImageHAlignment="right"
-
-      ForceLastUser=true
-      ForcePasswordFocus=true
-      ForceHideCompletePassword=false
-      ForceHideVirtualKeyboardButton="false"
-    
-      TranslateUsernamePlaceholder=""
-      TranslatePasswordPlaceholder=""
+      ## [Translations]
+      HeaderText="Welcome!"
+      TranslatePlaceholderUsername=""
+      TranslatePlaceholderPassword=""
       TranslateShowPassword=""
       TranslateLogin=""
       TranslateLoginFailedWarning=""
@@ -67,13 +96,12 @@ in
       TranslateReboot=""
       TranslateShutdown=""
       TranslateVirtualKeyboardButton=""
-    ''; 
+    '';   
 
     installPhase = ''
       mkdir -p $out
       cp -R ./* $out/
       cd $out/
-      rm Background.*
       rm theme.conf
       cp -r ${img.package} $out/Background.${img.format}
       cp -r $theme $out/theme.conf
