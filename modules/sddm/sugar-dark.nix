@@ -1,6 +1,8 @@
 {
   pkgs,
 }: let
+  img = image2;
+  
   image1 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/bb4b758d23cb95284b06e5a983117078/45258116fed08252-a2/s2048x3072/45a8aefc450bacda2fad1b64ce02461c3b80b7d3.jpg";
@@ -19,7 +21,6 @@
     format = "png";
   };
 
-  img = image2;
 in
   pkgs.stdenv.mkDerivation {
     name = "sddm-sugar-dark";
@@ -46,7 +47,9 @@ in
       Locale=
       HourFormat="HH:mm"
       DateFormat="dddd, d of MMMM"
-    
+
+      BackgroundImageHAlignment="right"
+
       ForceLastUser=true
       ForcePasswordFocus=true
       ForceHideCompletePassword=false
