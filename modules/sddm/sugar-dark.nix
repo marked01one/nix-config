@@ -34,7 +34,7 @@
     isCropped = "false";
     format = "png";
     imagePosition = "right";
-    blurType = "partial";
+    blurType = "none";
     backgroundColor = "#FFF";
   };
 
