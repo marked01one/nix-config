@@ -1,7 +1,7 @@
 {
   pkgs,
 }: let
-  img = theme2;
+  img = theme3;
   
   theme1 = {
     package = pkgs.fetchurl {
@@ -17,6 +17,18 @@
   theme2 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
+      sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
+    };
+    isCropped = "false";
+    format = "png";
+    imagePosition = "right";
+    blurType = "partial";
+    backgroundColor = "#FFF";
+  };
+
+  theme3 = {
+    package = pkgs.fetchurl {
+      url = "https://64.media.tumblr.com/16958cb609849796becc3ce87d321228/8adc7574e99f1e43-e6/s2560x3840/6153745aed37443a760e04689d4a8561a3a76354.jpg";
       sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
     };
     isCropped = "false";
