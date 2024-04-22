@@ -6,7 +6,7 @@
       url = "https://64.media.tumblr.com/bb4b758d23cb95284b06e5a983117078/45258116fed08252-a2/s2048x3072/45a8aefc450bacda2fad1b64ce02461c3b80b7d3.jpg";
       sha256 = "sha256-0ldhCZGRRQoeMbDp3y7X3UGTYpnDc6ToEBnq4ydeL/M=";
     };
-    isCropped = true;
+    isCropped = "true";
     format = "jpg";
   };
 
@@ -15,7 +15,7 @@
       url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
       sha256 = pkgs.lib.fakeSha256; 
     };
-    isCropped = false;
+    isCropped = "false";
     format = "png";
   };
 
