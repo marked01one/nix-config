@@ -20,41 +20,6 @@
   };
 
   img = image2;
-
-  theme-conf = ''
-    [General]
-    Background="Background.${img.format}"
-    ScaleImageCropped=${img.isCropped}
-    ScreenWidth=2560
-    ScreenHeight=1600
-    MainColor="navajowhite"
-    AccentColor="white"
-    RoundCorners=20
-    ScreenPadding=0
-    Font="Noto Sans"
-    FontSize=
-    Locale=
-    HourFormat="HH:mm"
-    DateFormat="dddd, d of MMMM"
-    
-    ForceLastUser=true
-    ForcePasswordFocus=true
-    ForceHideCompletePassword=false
-    ForceHideVirtualKeyboardButton="false"
-    
-    TranslateUsernamePlaceholder=""
-    TranslatePasswordPlaceholder=""
-    TranslateShowPassword=""
-    TranslateLogin=""
-    TranslateLoginFailedWarning=""
-    TranslateCapslockWarning=""
-    TranslateSession=""
-    TranslateSuspend=""
-    TranslateHibernate=""
-    TranslateReboot=""
-    TranslateShutdown=""
-    TranslateVirtualKeyboardButton=""
-  '';
 in
   pkgs.stdenv.mkDerivation {
     name = "sddm-sugar-dark";
@@ -66,6 +31,41 @@ in
       sha256 = "sha256-flOspjpYezPvGZ6b4R/Mr18N7N3JdytCSwwu6mf4owQ=";
     };
 
+    theme = pkgs.writeText "theme.conf" ''
+      [General]
+      Background="Background.${img.format}"
+      ScaleImageCropped=${img.isCropped}
+      ScreenWidth=2560
+      ScreenHeight=1600
+      MainColor="navajowhite"
+      AccentColor="white"
+      RoundCorners=20
+      ScreenPadding=0
+      Font="Noto Sans"
+      FontSize=
+      Locale=
+      HourFormat="HH:mm"
+      DateFormat="dddd, d of MMMM"
+    
+      ForceLastUser=true
+      ForcePasswordFocus=true
+      ForceHideCompletePassword=false
+      ForceHideVirtualKeyboardButton="false"
+    
+      TranslateUsernamePlaceholder=""
+      TranslatePasswordPlaceholder=""
+      TranslateShowPassword=""
+      TranslateLogin=""
+      TranslateLoginFailedWarning=""
+      TranslateCapslockWarning=""
+      TranslateSession=""
+      TranslateSuspend=""
+      TranslateHibernate=""
+      TranslateReboot=""
+      TranslateShutdown=""
+      TranslateVirtualKeyboardButton=""
+    ''; 
+
     installPhase = ''
       mkdir -p $out
       cp -R ./* $out/
@@ -73,6 +73,6 @@ in
       rm Background.*
       rm theme.conf
       cp -r ${img.package} $out/Background.${img.format}
-      echo ${theme-conf} > $out/theme.conf
+      cp -r $theme $out/theme.conf
     '';
   }
