@@ -1,7 +1,7 @@
 {
   pkgs,
 }: let
-  img = image1;
+  img = image2;
   
   image1 = {
     package = pkgs.fetchurl {
@@ -10,6 +10,8 @@
     };
     isCropped = "true";
     format = "jpg";
+    imagePosition = "center";
+    blurType = "full";
   };
 
   image2 = {
@@ -19,6 +21,8 @@
     };
     isCropped = "false";
     format = "png";
+    imagePosition = "right";
+    blurType = "partial";
   };
 
 in
@@ -41,19 +45,19 @@ in
       [General]
       Background="Background.${img.format}"
       DimBackgroundImage="0.0"
-      ScaleImageCropped="true"
+      ScaleImageCropped="${img.isCropped}"
       ScreenWidth="2560"
       ScreenHeight="1600"
 
       ## [Blur Settings]
-      FullBlur="false"
-      PartialBlur="true"
+      FullBlur="${if img.blurType == "full" then "true" else "false"}"
+      PartialBlur="${if img.blurType == "partial" then "true" else "false"}"
       BlurRadius="100"
 
       ## [Design Customizations]
       HaveFormBackground="false"
-      FormPosition="left"
-      BackgroundImageHAlignment="center"
+      FormPosition="${if img.imagePosition == "left" then "right" else "left"}"
+      BackgroundImageHAlignment="${img.imagePosition}"
       BackgroundImageVAlignment="center"
       MainColor="white"
       AccentColor="#fb884f"
@@ -102,6 +106,7 @@ in
       cp -R ./* $out/
       cd $out/
       rm theme.conf
+      rm -r Backgrounds/
       cp -r ${img.package} $out/Background.${img.format}
       cp -r $theme $out/theme.conf
     '';
