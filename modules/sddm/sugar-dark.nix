@@ -1,8 +1,6 @@
-{
-  pkgs,
-}: let
+{pkgs}: let
   img = theme3;
-  
+
   theme1 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/bb4b758d23cb95284b06e5a983117078/45258116fed08252-a2/s2048x3072/45a8aefc450bacda2fad1b64ce02461c3b80b7d3.jpg";
@@ -17,7 +15,7 @@
   theme2 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/1fd9b495b00978fe65cbdcc3e3523542/a790fa0c69e4b99e-0b/s2048x3072/1d6bd9e0ad968bc5d45f4477cfd1543472e9574a.png";
-      sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
+      sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk=";
     };
     isCropped = "false";
     format = "png";
@@ -29,7 +27,7 @@
   theme3 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/16958cb609849796becc3ce87d321228/8adc7574e99f1e43-e6/s1280x1920/6153745aed37443a760e04689d4a8561a3a76354.jpg";
-      sha256 = "sha256-CS/VngzYRpzZA3oVJUTcCvh7dhtXMx8Qvf/cpCYesLc="; 
+      sha256 = "sha256-CS/VngzYRpzZA3oVJUTcCvh7dhtXMx8Qvf/cpCYesLc=";
     };
     isCropped = "false";
     format = "png";
@@ -37,7 +35,6 @@
     blurType = "none";
     backgroundColor = "#FFF";
   };
-
 in
   pkgs.stdenv.mkDerivation {
     name = "sddm-sugar-candy";
@@ -63,13 +60,25 @@ in
       ScreenHeight="1600"
 
       ## [Blur Settings]
-      FullBlur="${if img.blurType == "full" then "true" else "false"}"
-      PartialBlur="${if img.blurType == "partial" then "true" else "false"}"
+      FullBlur="${
+        if img.blurType == "full"
+        then "true"
+        else "false"
+      }"
+      PartialBlur="${
+        if img.blurType == "partial"
+        then "true"
+        else "false"
+      }"
       BlurRadius="100"
 
       ## [Design Customizations]
       HaveFormBackground="false"
-      FormPosition="${if img.imagePosition == "left" then "right" else "left"}"
+      FormPosition="${
+        if img.imagePosition == "left"
+        then "right"
+        else "left"
+      }"
       BackgroundImageHAlignment="${img.imagePosition}"
       BackgroundImageVAlignment="center"
       MainColor="black"
@@ -112,7 +121,7 @@ in
       TranslateReboot=""
       TranslateShutdown=""
       TranslateVirtualKeyboardButton=""
-    '';   
+    '';
 
     installPhase = ''
       mkdir -p $out
