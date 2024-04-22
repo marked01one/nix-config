@@ -28,7 +28,7 @@
 
   theme3 = {
     package = pkgs.fetchurl {
-      url = "https://64.media.tumblr.com/16958cb609849796becc3ce87d321228/8adc7574e99f1e43-e6/s2560x3840/6153745aed37443a760e04689d4a8561a3a76354.jpg";
+      url = "https://64.media.tumblr.com/16958cb609849796becc3ce87d321228/8adc7574e99f1e43-e6/s1280x1920/6153745aed37443a760e04689d4a8561a3a76354.jpg";
       sha256 = "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk="; 
     };
     isCropped = "false";
