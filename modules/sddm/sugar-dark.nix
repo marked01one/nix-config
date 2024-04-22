@@ -1,7 +1,5 @@
 {
   pkgs,
-  runCommand,
-  ...
 }: let
   CURRENT_DIR = builtins.getEnv("PWD");
   
