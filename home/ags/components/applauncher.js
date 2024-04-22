@@ -32,7 +32,8 @@ const AppItem = app => Widget.Button({
                 css: `margin-left: 8px; font-weight: 700;`
             })
         ]
-    })
+    }),
+    css: `margin: 4px;`
 })
 
 
