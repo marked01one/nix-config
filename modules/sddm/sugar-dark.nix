@@ -34,7 +34,7 @@ in
 
     src = builtins.fetchGit {
       url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
-      ref = "master";
+      rev = "10ay7misj20nfvspjxldld3bbgnpp28519y346js3m150ga56liw";
     };
 
     theme = pkgs.writeText "theme.conf" ''
