@@ -33,8 +33,8 @@ in
     # };
 
     src = builtins.fetchGit {
-      url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
-      hash = pkgs.lib.fakeSha256;
+      url = "ssh://git@framagit.org:MarianArlt/sddm-sugar-candy.git";
+      ref = "master";
     };
 
     theme = pkgs.writeText "theme.conf" ''
