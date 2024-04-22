@@ -254,7 +254,7 @@ in {
 
     sddm = {
       enable = true;
-      theme = "${import ./modules/sddm/sugar-dark.nix {inherit pkgs;}}";
+      theme = "${import ./modules/sddm/sugar-dark.nix }";
       wayland.enable = true;
     };
   };
