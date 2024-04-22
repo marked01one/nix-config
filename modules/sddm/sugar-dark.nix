@@ -34,7 +34,7 @@ in
 
     src = pkgs.fetchgit {
       url = "https://framagit.org/MarianArlt/sddm-sugar-candy.git";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "XggFVsEXLYklrfy1ElkIp9fkTw4wvXbyVkaVCZq4ZLU=";
     };
 
     theme = pkgs.writeText "theme.conf" ''
