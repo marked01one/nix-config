@@ -71,7 +71,7 @@ in
       mkdir -p $out
       cp -R ./* $out/
       cd $out/
-      rm Background.jpg
+      rm Background.*
       rm theme.conf
       cp -r ${img.package} $out/Background.${img.format}
       echo ${theme-conf} > $out/theme.conf
