@@ -60,7 +60,7 @@ in
       FormPosition="${if img.imagePosition == "left" then "right" else "left"}"
       BackgroundImageHAlignment="${img.imagePosition}"
       BackgroundImageVAlignment="center"
-      MainColor="white"
+      MainColor="black"
       AccentColor="#fb884f"
       BackgroundColor="#FFF"
       OverrideLoginButtonTextColor=""
