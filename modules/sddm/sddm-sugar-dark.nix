@@ -33,7 +33,7 @@ in
       cd $out/
       rm Background.jpg
       rm theme.conf
-      cp -r ${image1} $out/Background.jpg
+      cp -r ${image1.package} $out/Background.jpg
       cp -r ${config-dir} $out/theme.conf
     '';
   }
