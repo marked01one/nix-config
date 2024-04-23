@@ -39,7 +39,7 @@
   theme4 = {
     package = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/6cb93c67f04b939a5cdbee3afd9a32e4/8511077c7c1f5fab-2d/s2048x3072/cda781360a4f5149608f7625abe928d2010ec9c6.jpg";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "sha256-IlKcVra/q4xQiMRlJlsM72uIgSd+EGX0RiPzZwh9t4w=";
     };
     isCropped = "false";
     imagePosition = "left";
