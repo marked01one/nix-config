@@ -91,7 +91,7 @@
     nil
     gopls
     alejandra
-    nix-prefetch-github
+    nix-prefetch
     ngspice
   ];
 

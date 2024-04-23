@@ -77,9 +77,9 @@ in {
     TERMINAL = "kitty";
   };
 
-  # home.file = {
-  #   ".config/neofetch/config.conf".text = ''${builtins.readFile ./conf/neofetch.conf}'';
-  # };
+  home.file = {
+    ".zshrc".source = ./home/conf/.zshrc;
+  };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
