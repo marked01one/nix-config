@@ -11,22 +11,5 @@
       sha256 = "0ldhCZGRRQoeMbDp3y7X3UGTYpnDc6ToEBnq4ydeL/M=";
     };
 
-    ".config/waypaper/config.ini".text = ''
-      [Settings]
-      language = en
-      folder = /home/marked01one/Pictures/Wallpapers
-      wallpaper = /home/marked01one/Pictures/Wallpapers/luminousslime_001.jpg
-      backend = swww
-      monitors = All
-      fill = Fill
-      sort = name
-      color = #ffffff
-      subfolders = False
-      post_command =
-      swww_transition_type = any
-      swww_transition_step = 90
-      swww_transition_angle = 0
-      swww_transition_duration = 2
-    '';
   };
 }

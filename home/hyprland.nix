@@ -29,7 +29,7 @@ in {
 
       exec-once = [
         "brightnessctl --restore"
-        "waypaper --restore"
+        "swww-init"
         "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
