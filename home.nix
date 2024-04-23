@@ -12,7 +12,6 @@
     ./home/wallpapers.nix
     ./home/neovim/neovim.nix
     ./home/prismlauncher.nix
-    ./home/zsh.nix
   ];
 
   inputImports = [
