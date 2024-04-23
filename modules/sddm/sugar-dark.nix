@@ -89,7 +89,7 @@ in
       InterfaceShadowOpacity="0.6"
       RoundCorners="20"
       ScreenPadding="0"
-      Font="Noto Sans"
+      Font="TeX Gyre Adventor"
       FontSize=""
 
       ## [Interface Behavior]
