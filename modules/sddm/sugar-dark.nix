@@ -1,5 +1,5 @@
 {pkgs}: let
-  img = theme3;
+  img = theme4;
 
   theme1 = {
     package = pkgs.fetchurl {
