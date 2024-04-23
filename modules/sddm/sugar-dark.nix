@@ -45,6 +45,7 @@
     imagePosition = "left";
     blurType = "partial;";
     backgroundColor = "#111";
+    format = "jpg";
   };
 in
   pkgs.stdenv.mkDerivation {
