@@ -64,10 +64,6 @@ in {
 
   imports = homeImports ++ inputImports;
 
-  home.username = "marked01one";
-  home.homeDirectory = "/home/marked01one";
-
-  home.stateVersion = "24.05";
   home.packages = [
   ];
 
@@ -79,6 +75,13 @@ in {
 
   home.file = {
     ".zshrc".source = ./home/conf/.zshrc;
+  };
+
+  home = {
+    stateVersion = "24.05";
+    username = "marked01one";
+    homeDirectory = "/home/marked01one";
+
   };
 
   dconf.settings = {
