@@ -16,7 +16,6 @@
     drawio
     discord
     prismlauncher
-    waypaper
     networkmanagerapplet
     zathura
     teams-for-linux
