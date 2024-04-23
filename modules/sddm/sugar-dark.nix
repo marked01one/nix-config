@@ -10,6 +10,7 @@
     format = "jpg";
     imagePosition = "center";
     blurType = "full";
+    backgroundColor = "#FFF";
   };
 
   theme2 = {
@@ -45,6 +46,7 @@
     imagePosition = "left";
     blurType = "partial;";
     backgroundColor = "#111";
+    fontColor = "white";
     format = "jpg";
   };
 in
@@ -93,9 +95,9 @@ in
       }"
       BackgroundImageHAlignment="${img.imagePosition}"
       BackgroundImageVAlignment="center"
-      MainColor="black"
+      MainColor="${img.fontColor}"
       AccentColor="#fb884f"
-      BackgroundColor="#FFF"
+      BackgroundColor="${img.backgroundColor}"
       OverrideLoginButtonTextColor=""
       InterfaceShadowSize="6"
       InterfaceShadowOpacity="0.6"
