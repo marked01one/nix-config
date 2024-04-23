@@ -113,8 +113,7 @@
   ];
 
   shellScripts = [
-    (import ./scripts/nvidia-offload.nix {inherit pkgs;})
-    (import ./scripts/cfnix.nix {inherit pkgs;})
+    (import ./system/scripts.nix {inherit pkgs;})
   ];
 in {
   # Include the results of the hardware scan.
