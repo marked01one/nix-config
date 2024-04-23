@@ -1,5 +1,4 @@
 {pkgs}:
-
 pkgs.writeShellScriptBin "swww-init" ''
   numOfWallpapers=$(ls -lR $HOME/Pictures/Wallpapers | grep '^l' | wc -l)
   randNum=$((1 + $RANDOM % $numOfWallpapers))
