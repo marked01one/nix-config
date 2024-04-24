@@ -26,6 +26,7 @@
     qucs-s
     osu-lazer-bin
     qemu
+    onlyonffice-bin
   ];
 
   flatpakApps = [
