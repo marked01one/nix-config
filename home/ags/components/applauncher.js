@@ -39,10 +39,7 @@ const AppItem = app => Widget.Button({
 
 function AppLauncher() {
     // list of application buttons
-    let applications = query("")
-        .map(AppItem)
-
-
+    let applications = query("").map(AppItem)
     // container holding the buttons
     const list = Widget.Box({
         vertical: true,
@@ -115,5 +112,8 @@ export const applauncher = Widget.Window({
     }),
     visible: false,
     keymode: "exclusive",
-    child: AppLauncher()
+    child: AppLauncher(),
+    css: `
+        border: 4px solid @theme_selected_bg_color;
+    `
 })
