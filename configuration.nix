@@ -115,6 +115,7 @@
     (import ./system/scripts/check-pkg.nix {inherit pkgs;})
     (import ./system/scripts/nvidia-offload.nix {inherit pkgs;})
     (import ./system/scripts/swww-init.nix {inherit pkgs;})
+    (import ./system/scripts/smart-cd.nix {inherit pkgs;})
   ];
 in {
   # Include the results of the hardware scan.
@@ -242,6 +243,24 @@ in {
   #   ];
   # };
   # };
+  services = {
+    tlp = {
+      enable = true;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 20;
+      };
+    };
+  };
+
   services.upower.enable = true;
   services.xserver = {
     enable = true;
@@ -252,7 +271,6 @@ in {
   };
   services.displayManager = {
     defaultSession = "hyprland";
-
     sddm = {
       enable = true;
       theme = "${import ./modules/sddm/sugar-dark.nix {inherit pkgs;}}";

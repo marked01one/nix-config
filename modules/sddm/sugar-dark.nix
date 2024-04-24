@@ -1,4 +1,6 @@
 {pkgs}: let
+  themeJson = builtins.fromJSON(''${builtins.readFile(./skins.json)}'');
+  
   img = theme4;
 
   theme1 = {
@@ -48,6 +50,15 @@
     backgroundColor = "#111";
     fontColor = "white";
     format = "jpg";
+  };
+
+  theme5 = {
+    package = pkgs.fetchurl {
+      url = "https://64.media.tumblr.com/059a153bae81278f952fb9b121b41bc1/2b1af81648607aae-a6/s1280x1920/d2aaf92b9d0a89396b0e3fd4afa8dcd3539f015a.jpg";
+      sha256 = pkgs.lib.fakeSha256;
+    };
+    isCropped = false;
+
   };
 in
   pkgs.stdenv.mkDerivation {

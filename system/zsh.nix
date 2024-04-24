@@ -15,11 +15,6 @@
       };
     };
 
-    interactiveShellInit = ''
-      eval "$(starship init zsh)"
-      eval "$(zoxide init zsh)"
-    '';
-
     shellAliases = {
       # Allow `sudo` to be used with aliases
       sudo = "sudo ";
