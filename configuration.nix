@@ -26,7 +26,7 @@
     qucs-s
     osu-lazer-bin
     qemu
-    onlyoffice-bin
+    libreoffice
   ];
 
   flatpakApps = [
