@@ -183,6 +183,8 @@ export function Taskbar(monitor = 0) {
             start_widget: Left(),
             center_widget: Center(),
             end_widget: Right()
-        })
+        }),
+        css: `
+        ` 
     })
 }
