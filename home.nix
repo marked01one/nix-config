@@ -78,9 +78,9 @@ in {
       BROWSER = "brave";
       TERMINAL = "kitty";
     };
-    file = {
-      ".zshrc".source = ./home/conf/.zshrc;
-    }; 
+    # file = {
+    #   ".zshrc".source = ./home/conf/.zshrc;
+    # }; 
   };
 
   dconf.settings = {
