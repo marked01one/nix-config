@@ -172,6 +172,18 @@ in {
   # Enable polkit authenticator agent in systemd
   security.polkit.enable = true;
   systemd = {
+    # services = {
+    #   sddm-theme-randomizer = {
+    #     description = "Theme randomizer for SDDM Sugar Candy";
+    #     wantedBy = ["multi-user.target"];
+    #     before = ["sddm.service"];
+    #     serviceConfig = {
+    #       Type = "simple";
+    #       ExecStart = "${pkgs}";
+    #     };
+    #   };
+    # };
+
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
       wantedBy = ["graphical-session.target"];
@@ -390,5 +402,5 @@ in {
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "unstable"; # Did you read the comment?
+  system.stateVersion = "unstable"; 
 }

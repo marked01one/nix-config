@@ -1,7 +1,7 @@
 {pkgs}: let
   themeJson = builtins.fromJSON(''${builtins.readFile(./skins.json)}'');
   
-  img = theme4;
+  img = theme2;
 
   theme1 = {
     package = pkgs.fetchurl {
@@ -23,7 +23,7 @@
     isCropped = "false";
     format = "png";
     imagePosition = "right";
-    blurType = "partial";
+    blurType = "none";
     backgroundColor = "#FFF";
   };
 
@@ -106,7 +106,11 @@ in
       }"
       BackgroundImageHAlignment="${img.imagePosition}"
       BackgroundImageVAlignment="center"
-      MainColor="${img.fontColor}"
+      MainColor="${
+        if builtins.hasAttr "fontColor" img
+        then img.fontColor
+        else "black"
+      }"
       AccentColor="#fb884f"
       BackgroundColor="${img.backgroundColor}"
       OverrideLoginButtonTextColor=""

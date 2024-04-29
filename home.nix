@@ -67,21 +67,18 @@ in {
   home.packages = [
   ];
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    BROWSER = "brave";
-    TERMINAL = "kitty";
-  };
-
-  home.file = {
-    ".zshrc".source = ./home/conf/.zshrc;
-  };
-
   home = {
     stateVersion = "24.05";
     username = "marked01one";
     homeDirectory = "/home/marked01one";
-
+    sessionVariables = {
+      EDITOR = "nvim";
+      BROWSER = "brave";
+      TERMINAL = "kitty";
+    };
+    file = {
+      ".zshrc".source = ./home/conf/.zshrc;
+    }; 
   };
 
   dconf.settings = {
@@ -130,6 +127,12 @@ in {
     nixos-manual = {
       name = "NixOS Manual";
       noDisplay = true;
+    };
+
+    nvtop = {
+      name = "nvtop";
+      exec = "kitty -e nvtop";
+      icon = "nvtop";
     };
   };
 
