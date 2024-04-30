@@ -21,12 +21,6 @@
       ls = "lsd -1";
       ll = "lsd -1 -a -l";
       c = "/run/current-system/sw/bin/code";
-      cd = ''
-        zi $1 2> /dev/null;
-        if (( $? > 0 )); then
-          z $1
-        fi
-      '';
 
       cfnix = "/run/current-system/sw/bin/code ~/SystemFlake";
       update = "sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux";
