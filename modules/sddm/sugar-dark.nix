@@ -1,7 +1,7 @@
 {pkgs}: let
   themeJson = builtins.fromJSON(''${builtins.readFile(./skins.json)}'');
   
-  img = theme2;
+  img = theme4;
 
   theme1 = {
     package = pkgs.fetchurl {
