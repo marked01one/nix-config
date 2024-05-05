@@ -145,6 +145,11 @@ in {
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      settings = {
+        General = {
+          Enable = "Source,Sink,Media,Socket";
+        };
+      };
     };
   };
 
@@ -268,6 +273,7 @@ in {
         CPU_MAX_PERF_ON_BAT = 20;
       };
     };
+    blueman.enable = true;
   };
 
   services.upower.enable = true;
@@ -300,7 +306,7 @@ in {
 
   # Enable sound with pipewire.
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
