@@ -50,11 +50,11 @@ in {
       };
 
       general = {
-        gaps_in = 4;
-        gaps_out = 8;
+        gaps_in = 2;
+        gaps_out = 4;
         border_size = 4;
 
-        "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
+        "col.active_border" = "0xffbf5a89"; # 0xffd99cac 90deg;
         "col.inactive_border" = "0x00000000";
 
         layout = "dwindle";
@@ -79,7 +79,7 @@ in {
 
       animations = {
         enabled = true;
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1";
+        bezier = "myBezier, 0, 1, 0, 1";
 
         animation = [
           "windows, 1, 7, myBezier"

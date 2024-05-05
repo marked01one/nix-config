@@ -2,27 +2,21 @@
     "themes": [
         {
             "image": {
+                
+            },
+            "blurType": "partial",
+            "backgroundColor": "#FFF"
+        },
+        
+        {
+            "image": {
                 "url": "https://64.media.tumblr.com/059a153bae81278f952fb9b121b41bc1/2b1af81648607aae-a6/s1280x1920/d2aaf92b9d0a89396b0e3fd4afa8dcd3539f015a.jpg",
                 "sha256": "sha256-mnRvsO6jWGXlJTYodlJxZNC4U0SlJ6QcF7picqAhBuk=",
                 "position": "right",
                 "isCropped": "false"
             },
-            "blurType": "partial"
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
+            "blurType": "partial",
+            "backgroundColor": "#FFF"
         }
     ],
     "themeIndexChosen": 0    

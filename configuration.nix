@@ -27,6 +27,7 @@
     osu-lazer-bin
     qemu
     libreoffice
+    blueman
   ];
 
   flatpakApps = [
@@ -113,10 +114,7 @@
   ];
 
   shellScripts = [
-    (import ./system/scripts/check-pkg.nix {inherit pkgs;})
-    (import ./system/scripts/nvidia-offload.nix {inherit pkgs;})
     (import ./system/scripts/swww-init.nix {inherit pkgs;})
-    (import ./system/scripts/smart-cd.nix {inherit pkgs;})
   ];
 in {
   # Include the results of the hardware scan.
@@ -150,8 +148,6 @@ in {
     };
   };
 
-  # Enable Nix Commands & Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -401,6 +397,19 @@ in {
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   system.stateVersion = "unstable"; 
 }
