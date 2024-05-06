@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland = {
       url = "github:hyprwm/Hyprland";
+      inputs.hyprland.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
