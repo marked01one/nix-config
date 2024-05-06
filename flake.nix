@@ -21,7 +21,9 @@
     nix-colors,
     ags,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux"; 
+  in{
     #  config entry
     # Refresh using: `sudo -rebuild --flake .#hostname`
     nixosConfigurations = {
@@ -40,7 +42,8 @@
 
     homeConfigurations = {
       "marked01one@perfect-linux" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        pkgs = import nixpkgs { inherit system; };
+        extraSpecialArgs = { inherit inputs; };
         modules = [./home.nix];
       };
     };
