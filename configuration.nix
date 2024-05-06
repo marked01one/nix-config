@@ -67,7 +67,7 @@
 
   systemPrograms = with pkgs; [
     home-manager
-    dbus
+    # dbus
     kitty
     polkit
     polkit_gnome
