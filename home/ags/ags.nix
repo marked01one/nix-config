@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.ags = {
-    enable = false;
+    enable = true;
 
     extraPackages = with pkgs; [
       gtksourceview
