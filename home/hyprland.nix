@@ -50,7 +50,7 @@ in {
 
       general = {
         gaps_in = 2;
-        gaps_out = 2;
+        gaps_out = 0;
         border_size = 3;
 
         # "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
