@@ -57,7 +57,7 @@
     lua
     dotnet-sdk_8
     libgcc
-    nodejs_20
+    nodejs_22
     jdk21
     python3
     lua
