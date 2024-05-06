@@ -82,6 +82,7 @@
     unzip
     upower
     ags
+    libdbusmenu-gtk3
   ];
 
   devTools = with pkgs; [
