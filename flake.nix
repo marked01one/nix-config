@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,9 +21,7 @@
     nix-colors,
     ags,
     ...
-  } @ inputs: let
-    system = "x86_64-linux"; 
-  in{
+  } @ inputs: {
     #  config entry
     # Refresh using: `sudo -rebuild --flake .#hostname`
     nixosConfigurations = {
@@ -42,7 +40,7 @@
 
     homeConfigurations = {
       "marked01one@perfect-linux" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = { inherit inputs; };
         modules = [./home.nix];
       };
