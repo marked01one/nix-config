@@ -121,7 +121,7 @@ in {
 
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, brave"
-          "${MOD}, SPACE, exec, rofi -show drun -font 'TeX Gyre Adventor 12' -show-icons -x11"
+          "${MOD}, SPACE, exec, wofi --show drun --allow-images --width=600 --height=450"
           "${MOD}, RETURN, exec, kitty"
 
           "${MOD} SHIFT, Q, killactive"

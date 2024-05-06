@@ -4,5 +4,6 @@ pkgs.writeShellScriptBin "swww-init" ''
   randNum=$((1 + $RANDOM % $numOfWallpapers))
   swww-daemon &
   swww img ~/Pictures/Wallpapers/$randNum.* &
-  nm-applet --indicator
+  nm-applet --indicator &
+  waybar &
 ''
