@@ -80,6 +80,8 @@
     qgnomeplatform-qt6
     unzip
     upower
+
+    rofi
   ];
 
   devTools = with pkgs; [
