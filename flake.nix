@@ -8,6 +8,10 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+      inputs.hyprland.follows = "hyprland";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,6 +30,7 @@
     home-manager,
     nix-flatpak,
     nix-colors,
+    Hyprspace,
     ...
   } @ inputs: {
     #  config entry

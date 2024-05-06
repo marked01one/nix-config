@@ -174,7 +174,7 @@ in {
       };
 
       plugins = [
-        inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+        inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
       ];
     };
   };
