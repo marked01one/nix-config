@@ -2,7 +2,7 @@
   # config,
   # lib,
   pkgs,
-  Hyprspace,
+  hyprland-plugins,
   ...
 }: let
   MOD = "SUPER";
@@ -174,7 +174,7 @@ in {
       };
 
       plugins = [
-        Hyprspace.packages.${pkgs.system}.Hyprspace
+        hyprland-plugins.packages.${pkgs.system}.hyprexpo
       ];
     };
   };
