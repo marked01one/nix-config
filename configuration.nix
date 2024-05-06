@@ -71,7 +71,6 @@
     kitty
     polkit
     polkit_gnome
-    hyprcursor
     swww
     brightnessctl
     pulseaudio
