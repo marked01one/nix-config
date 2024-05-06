@@ -10,6 +10,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = {
@@ -18,6 +19,7 @@
     home-manager,
     nix-flatpak,
     nix-colors,
+    ags,
     ...
   } @ inputs: {
     #  config entry

@@ -1,13 +1,13 @@
 {pkgs, ...}: {
-  # programs.ags = {
-  #   enable = true;
+  programs.ags = {
+    enable = true;
 
-  #   extraPackages = with pkgs; [
-  #     gtksourceview
-  #     webkitgtk
-  #     accountsservice
-  #   ];
-  # };
+    extraPackages = with pkgs; [
+      gtksourceview
+      webkitgtk
+      accountsservice
+    ];
+  };
 
   home.file = {
     ".config/ags/config.js".source = ./config.js;
