@@ -173,9 +173,6 @@ in {
         force_zero_scaling = true;
       };
 
-      plugins = [
-        inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-      ];
     };
   };
 }
