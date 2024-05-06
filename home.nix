@@ -8,7 +8,6 @@
     ./home/hyprland.nix
     ./home/vscode.nix
     ./home/kitty.nix
-    ./home/ags/ags.nix
     ./home/wallpapers.nix
     ./home/neovim/neovim.nix
     ./home/prismlauncher.nix
@@ -17,7 +16,6 @@
   ];
 
   inputImports = [
-    inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
   ];
 

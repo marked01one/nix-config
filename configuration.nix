@@ -27,6 +27,9 @@
     qemu
     libreoffice
     blueman
+
+    brave
+    firefox
   ];
 
   flatpakApps = [
@@ -79,10 +82,7 @@
     qgnomeplatform-qt6
     unzip
     upower
-
     rofi
-
-    hyprnome
   ];
 
   devTools = with pkgs; [
