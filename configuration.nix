@@ -82,7 +82,7 @@
     qgnomeplatform-qt6
     unzip
     upower
-    rofi
+    wofi
     waybar
     dunst
   ];
