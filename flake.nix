@@ -7,6 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
