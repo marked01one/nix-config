@@ -20,7 +20,7 @@
   outputs = {
     self,
     nixpkgs,
-    # hyprland,
+    hyprland,
     hyprcursor,
     home-manager,
     nix-flatpak,
