@@ -47,7 +47,12 @@
   ];
 
   services.asusd.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
+    argsOverride = rec {
+      version = "6.8.5";
+      modDirVersion = "6.8.5";
+    };
+  });
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
