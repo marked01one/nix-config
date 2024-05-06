@@ -81,11 +81,8 @@
     qgnomeplatform-qt6
     unzip
     upower
-    ags
 
-    gtksourceview
-    webkitgtk
-    accountsservice
+    rofi
   ];
 
   devTools = with pkgs; [

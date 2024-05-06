@@ -136,6 +136,12 @@ in {
       exec = "kitty -e nvtop";
       icon = "nvtop";
     };
+
+    lf = {
+      name = "lf";
+      exec = "kitty -e lf";
+      icon = "lf";
+    };
   };
 
   gtk = {
