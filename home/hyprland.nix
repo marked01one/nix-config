@@ -1,7 +1,8 @@
 {
   # config,
   # lib,
-  # pkgs,
+  pkgs,
+  inputs,
   ...
 }: let
   MOD = "SUPER";
@@ -171,6 +172,11 @@ in {
       xwayland = {
         force_zero_scaling = true;
       };
+
+      plugins = [
+        inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+        inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
+      ];
     };
   };
 }
