@@ -22,6 +22,7 @@
     self,
     nixpkgs,
     hyprland,
+    hyprland-plugins,
     home-manager,
     nix-flatpak,
     nix-colors,
