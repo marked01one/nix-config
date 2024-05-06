@@ -71,7 +71,7 @@ in {
           passes = 1;
         };
 
-        drop_shadow = true;
+        drop_shadow = false;
         shadow_range = 2;
         shadow_render_power = 4;
         "col.shadow" = "rgba(1a1a1aee)";
