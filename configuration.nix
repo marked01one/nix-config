@@ -80,7 +80,6 @@
     qgnomeplatform-qt6
     unzip
     upower
-    hyprnome
   ];
 
   devTools = with pkgs; [
@@ -353,7 +352,8 @@ in {
 
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      package = pkgs.hyprland;
       xwayland.enable = true;
     };
     thunar.enable = true;
