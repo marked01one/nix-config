@@ -1,8 +1,6 @@
 {
   # config,
   # lib,
-  pkgs,
-  hyprland-plugins,
   ...
 }: let
   MOD = "SUPER";
