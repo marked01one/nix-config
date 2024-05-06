@@ -8,7 +8,6 @@
   ...
 }: let
   desktopApps = with pkgs; [
-    brave
     neovim-unwrapped
     vscode-fhs
     grimblast
@@ -82,6 +81,8 @@
     upower
 
     rofi
+
+    hyprnome
   ];
 
   devTools = with pkgs; [
