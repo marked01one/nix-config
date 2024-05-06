@@ -6,6 +6,7 @@
     hyprcursor.url = "github:hyprwm/hyprcursor";
     hyprland = {
       url = "github:hyprwm/Hyprland";
+      inputs.hyprland.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
