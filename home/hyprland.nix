@@ -50,10 +50,11 @@ in {
 
       general = {
         gaps_in = 2;
-        gaps_out = 4;
-        border_size = 4;
+        gaps_out = 2;
+        border_size = 2;
 
-        "col.active_border" = "0xffbf5a89"; # 0xffd99cac 90deg;
+        # "col.active_border" = "0xffbf5a89 0xffd99cac 90deg";
+        "col.active_border" = "0xffeeeeee";
         "col.inactive_border" = "0x00000000";
 
         layout = "dwindle";
@@ -70,7 +71,7 @@ in {
           passes = 1;
         };
 
-        drop_shadow = false;
+        drop_shadow = true;
         shadow_range = 2;
         shadow_render_power = 4;
         "col.shadow" = "rgba(1a1a1aee)";
