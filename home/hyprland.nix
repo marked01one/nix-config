@@ -29,7 +29,7 @@ in {
       exec-once = [
         "brightnessctl --restore"
         "swww-init"
-        "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
+        # "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
@@ -121,7 +121,7 @@ in {
 
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, brave"
-          "${MOD}, SPACE, exec, ags -t applauncher"
+          "${MOD}, SPACE, exec, rofi -show drun -font 'TeX Gyre Adventor 12' -show-icons -x11"
           "${MOD}, RETURN, exec, kitty"
 
           "${MOD} SHIFT, Q, killactive"

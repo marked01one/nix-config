@@ -83,6 +83,8 @@
     unzip
     upower
     rofi
+    waybar
+    dunst
   ];
 
   devTools = with pkgs; [
