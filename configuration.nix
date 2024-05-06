@@ -82,7 +82,10 @@
     unzip
     upower
     ags
-    libdbusmenu-gtk3
+
+    gtksourceview
+    webkitgtk
+    accountsservice
   ];
 
   devTools = with pkgs; [
