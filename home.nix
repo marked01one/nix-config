@@ -17,7 +17,6 @@
   ];
 
   inputImports = [
-    inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
   ];
 
