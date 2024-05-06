@@ -20,6 +20,7 @@
     self,
     nixpkgs,
     home-manager,
+    hyprland,
     nix-flatpak,
     nix-colors,
     ags,
