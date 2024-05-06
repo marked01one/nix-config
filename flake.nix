@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprcursor.url = "github:hyprwm/hyprcursor";
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
