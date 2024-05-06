@@ -170,7 +170,7 @@ in {
 
   qt = {
     enable = true;
-    platformTheme = "gnome";
+    platformTheme.name = "gnome";
     style = desktopThemes.tokyonight;
   };
 
