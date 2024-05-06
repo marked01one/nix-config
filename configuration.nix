@@ -81,6 +81,7 @@
     qgnomeplatform-qt6
     unzip
     upower
+    ags
   ];
 
   devTools = with pkgs; [
