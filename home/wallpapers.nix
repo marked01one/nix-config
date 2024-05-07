@@ -32,12 +32,12 @@
 
     "Pictures/Wallpapers/7.jpg".source = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/344565ac42920adce591ad81117117b6/366e4e906f29e8d5-25/s2048x3072/bd041b48166e87618d9351a0d07a74144104453c.jpg";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "Jx6W+2AAeenuMhHRn/uraeqlGvNR9WyOVZTUC63BXRw=";
     };
 
     "Pictures/Wallpapers/8.jpg".source = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/ad0796627d0bb993356d1855aa585507/e927ae1ef6937964-5f/s2048x3072/504bb09d01e99803269d4b321aa9dbb1e738f0ee.jpg";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "J21SYBmYDLtn6qIoMWSfX39fKu+nt98ZQZPw4Yjo5o4=";
     };
   };
 }
