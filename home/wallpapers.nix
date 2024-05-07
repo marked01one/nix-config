@@ -29,5 +29,15 @@
       url = "https://64.media.tumblr.com/718910e42e79880635309ece84ad3f33/54725b5271a1eae6-30/s2048x3072/0696ab053573d3c7b1f43a8ad9aa9d2c55bb38e5.jpg";
       sha256 = "tGOioBKVIIeM+JRiQ/Dn/6/ex8kdz+62XBOfU7NslV0=";
     };
+
+    "Pictures/Wallpapers/7.jpg".source = pkgs.fetchurl {
+      url = "https://64.media.tumblr.com/344565ac42920adce591ad81117117b6/366e4e906f29e8d5-25/s2048x3072/bd041b48166e87618d9351a0d07a74144104453c.jpg";
+      sha256 = pkgs.lib.fakeSha256;
+    };
+
+    "Pictures/Wallpapers/8.jpg".source = pkgs.fetchurl {
+      url = "https://64.media.tumblr.com/ad0796627d0bb993356d1855aa585507/e927ae1ef6937964-5f/s2048x3072/504bb09d01e99803269d4b321aa9dbb1e738f0ee.jpg";
+      sha256 = pkgs.lib.fakeSha256;
+    };
   };
 }
