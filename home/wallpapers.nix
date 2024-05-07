@@ -27,7 +27,7 @@
 
     "Pictures/Wallpapers/6.jpg".source = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/718910e42e79880635309ece84ad3f33/54725b5271a1eae6-30/s2048x3072/0696ab053573d3c7b1f43a8ad9aa9d2c55bb38e5.jpg";
-      sha256 = pkgs.lib.fakeSha256;
+      sha256 = "tGOioBKVIIeM+JRiQ/Dn/6/ex8kdz+62XBOfU7NslV0=";
     };
   };
 }
