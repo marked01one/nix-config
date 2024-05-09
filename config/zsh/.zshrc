@@ -11,6 +11,15 @@ function nvidia-offload() {
     exec "$@"
 }
 
+function try_command() {
+    if "$1"; then
+        echo "Command successful"
+    else
+        echo "Command Failed!"
+        "$2"
+    fi
+}
+
 # History
 
 HISTSIZE="10000"
