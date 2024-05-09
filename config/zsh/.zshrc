@@ -1,10 +1,3 @@
-function smart-cd() {
-    zi $1 2> /dev/null
-    if (( $? > 0 )); then
-        z $1
-    fi
-}
-
 function check-pkg() {
     cd "$(nix build nixpkgs#$1 --print-out-paths --no-link)"
     nix run nixpkgs#lsd -- --tree --depth 4
@@ -40,6 +33,8 @@ alias ls="lsd -1"
 alias ll="lsd -1 -a -l"
 alias c="/run/current-system/sw/bin/code"
 alias cat="bat"
+alias cd="zi"
+alias nv="nvim"
 
 alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
 alias update="sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux"
