@@ -35,21 +35,21 @@ setopt SHARE_HISTORY
 
 # Aliases
 
-sudo="sudo "
-ls="lsd -1"
-ll="lsd -1 -a -l"
-c="/run/current-system/sw/bin/code"
-cat="bat"
+alias sudo="sudo "
+alias ls="lsd -1"
+alias ll="lsd -1 -a -l"
+alias c="/run/current-system/sw/bin/code"
+alias cat="bat"
 
-cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
-update="sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux"
+alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
+alias update="sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux"
 
-logout="pkill -u $(whoami)"
-shutdown="systemctl poweroff"
+alias logout="pkill -u $(whoami)"
+alias shutdown="systemctl poweroff"
 
-home="cd ~"
-..="cd .."
-...="cd ../.."
+alias home="cd ~"
+alias ".."="cd .."
+alias "..."="cd ../.."
 
 # Evaluate on startup
 
