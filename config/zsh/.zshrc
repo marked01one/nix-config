@@ -12,11 +12,11 @@ function nvidia-offload() {
 }
 
 function try_command() {
-    if "$1"; then
+    if eval $1; then
         echo "Command successful"
     else
         echo "Command Failed!"
-        "$2"
+        eval $2
     fi
 }
 
