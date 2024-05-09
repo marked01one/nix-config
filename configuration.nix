@@ -90,6 +90,7 @@
     gtksourceview
     webkitgtk
     accountsservice
+    libdbusmenu-gtk3
   ];
 
   devTools = with pkgs; [
