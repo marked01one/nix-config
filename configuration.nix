@@ -85,12 +85,6 @@
     wofi
     waybar
     dunst
-
-    ags
-    # gtksourceview
-    # webkitgtk
-    # accountsservice
-    # libdbusmenu
   ];
 
   devTools = with pkgs; [
