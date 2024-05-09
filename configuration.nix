@@ -88,6 +88,7 @@
     wofi
     waybar
     dunst
+    acpilight
   ];
 
   devTools = with pkgs; [
@@ -158,6 +159,8 @@ in {
         };
       };
     };
+
+    acpilight.enable = true;
   };
 
 
