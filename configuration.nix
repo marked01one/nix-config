@@ -72,7 +72,6 @@
 
   systemPrograms = with pkgs; [
     home-manager
-    # dbus
     kitty
     polkit
     polkit_gnome
@@ -88,7 +87,6 @@
     wofi
     waybar
     dunst
-    acpilight
   ];
 
   devTools = with pkgs; [

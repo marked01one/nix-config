@@ -29,7 +29,7 @@ in {
       exec-once = [
         "brightnessctl --restore"
         "swww-init"
-        # "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
+        "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
         "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
@@ -121,8 +121,9 @@ in {
           ",Print, exec, grimblast copysave area ~/Pictures/screenshots/screenshot.png"
 
           "${MOD} SHIFT, P, exec, systemctl poweroff"
-          "${MOD} SHIFT, RETURN, exec, brave"
+          "${MOD} SHIFT, RETURN, exec, firefox"
           "${MOD}, SPACE, exec, wofi --show drun --allow-images --width=600 --height=450"
+          "${MOD}, RETURN, exec, ags -t applauncher"
           "${MOD}, RETURN, exec, kitty"
 
           "${MOD} SHIFT, Q, killactive"

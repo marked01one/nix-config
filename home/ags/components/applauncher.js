@@ -7,9 +7,6 @@ const LAUNCHER_STYLES = {
     spacing: 12
 };
 
-const APP_NAMES = new Map([
-    ["Microsoft Teams for Linux", "Microsoft Teams"]
-])
 
 const AppItem = app => Widget.Button({
     on_clicked: () => {
@@ -25,7 +22,7 @@ const AppItem = app => Widget.Button({
             }),
             Widget.Label({
                 class_name: "title",
-                label: APP_NAMES.get(app.name) ?? app.name,
+                label: app.name,
                 xalign: 0,
                 vpack: "center",
                 truncate: "end",

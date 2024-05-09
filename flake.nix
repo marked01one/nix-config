@@ -16,13 +16,17 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
+
+    matugen = {
+      url = "github:InioX/matugen";
+      ref = "refs/tags/matugen-v2.2.0";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    # hyprland,
     nix-flatpak,
     nix-colors,
     ...
