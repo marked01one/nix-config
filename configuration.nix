@@ -51,6 +51,7 @@
     bat
     xclip
     lf
+    fzf
   ];
 
   languages = with pkgs; [
