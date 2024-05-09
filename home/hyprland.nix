@@ -122,8 +122,8 @@ in {
 
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, firefox"
-          "${MOD}, SPACE, exec, wofi --show drun --allow-images --width=600 --height=450"
-          "${MOD}, RETURN, exec, ags -t applauncher"
+          # "${MOD}, SPACE, exec, wofi --show drun --allow-images --width=600 --height=450"
+          "${MOD}, SPACE, exec, ags -t applauncher"
           "${MOD}, RETURN, exec, kitty"
 
           "${MOD} SHIFT, Q, killactive"
