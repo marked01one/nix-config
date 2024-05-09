@@ -16,6 +16,7 @@
   ];
 
   inputImports = [
+    inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
   ];
 
@@ -139,6 +140,11 @@ in {
       name = "lf";
       exec = "kitty -e lf";
       icon = "lf";
+    };
+
+    teams-for-linux = {
+      name = "Microsoft Teams for Linux";
+      
     };
   };
 
