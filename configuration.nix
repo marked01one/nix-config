@@ -87,10 +87,10 @@
     dunst
 
     ags
-    gtksourceview
-    webkitgtk
-    accountsservice
-    libdbusmenu-gtk3
+    # gtksourceview
+    # webkitgtk
+    # accountsservice
+    # libdbusmenu
   ];
 
   devTools = with pkgs; [
