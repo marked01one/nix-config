@@ -140,11 +140,13 @@ in {
     lf = {
       name = "lf";
       exec = "kitty -e lf";
+      icon = "terminal";
     };
 
     teams-for-linux = {
       name = "Microsoft Teams for Linux";
       exec = "teams-for-linux";
+      icon = "teams-for-linux";
     };
   };
 
