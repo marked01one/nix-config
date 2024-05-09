@@ -13,11 +13,9 @@
     ./home/prismlauncher.nix
     ./home/zoxide.nix
     ./home/zsh.nix
-    ./home/ags/ags.nix
   ];
 
   inputImports = [
-    inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
   ];
 
