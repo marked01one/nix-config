@@ -85,6 +85,8 @@
     wofi
     waybar
     dunst
+
+    ags
   ];
 
   devTools = with pkgs; [
