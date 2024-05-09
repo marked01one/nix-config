@@ -9,11 +9,11 @@
     ./home/vscode.nix
     ./home/kitty.nix
     ./home/wallpapers.nix
-    ./home/neovim/neovim.nix
+    ./home/neovim.nix
     ./home/prismlauncher.nix
     ./home/zoxide.nix
     ./home/zsh.nix
-    ./home/ags/ags.nix
+    ./home/ags.nix
   ];
 
   inputImports = [
