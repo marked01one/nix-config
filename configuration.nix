@@ -87,6 +87,9 @@
     dunst
 
     ags
+    gtksourceview
+    webkitgtk
+    accountsservice
   ];
 
   devTools = with pkgs; [
