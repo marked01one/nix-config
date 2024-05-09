@@ -52,6 +52,8 @@
     xclip
     lf
     fzf
+
+    _2048-in-terminal
   ];
 
   languages = with pkgs; [
