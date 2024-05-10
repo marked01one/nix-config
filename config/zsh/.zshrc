@@ -23,6 +23,16 @@ function cv() {
     fi
 }
 
+function update() {
+    
+}
+
+function neofetch() {
+    echo ""
+    fastfetch --kitty "$HOME/.config/fastfetch/logo1.jpg" --logo-width 40 --logo-padding 2
+    echo ""
+}
+
 # History
 
 HISTSIZE="10000"
