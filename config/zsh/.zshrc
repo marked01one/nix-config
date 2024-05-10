@@ -12,11 +12,11 @@ function nvidia-offload() {
 }
 
 function try_command() {
-    if eval $1; then
-        echo "Command successful"
+    if eval "zi $1"; then
+        return
     else
-        echo "Command Failed!"
-        eval $2
+        echo "Directory not found! Adding new directory..."
+        eval "z $1"
     fi
 }
 
