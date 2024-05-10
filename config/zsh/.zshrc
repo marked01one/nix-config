@@ -11,11 +11,12 @@ function nvidia-offload() {
     exec "$@"
 }
 
-function try_command() {
+function smart-cd() {
     if eval "zi $1"; then
+        echo "\n"
         return
     else
-        echo "Directory not found! Adding new directory..."
+        echo "Adding new directory '$1'...\n"
         eval "z $1"
     fi
 }
@@ -42,7 +43,7 @@ alias ls="lsd -1"
 alias ll="lsd -1 -a -l"
 alias c="/run/current-system/sw/bin/code"
 alias cat="bat"
-alias cd="zi"
+alias cd="smart-cd"
 alias nv="nvim"
 
 alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
