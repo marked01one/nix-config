@@ -11,7 +11,7 @@ function nvidia-offload() {
     exec "$@"
 }
 
-function smart-cd() {
+function cv() {
     exceptions=("~" "." ".." "...")
     if [[ "${exceptions[@]}" =~ "$1" ]]; then 
         cd $1
@@ -45,7 +45,6 @@ alias ls="lsd -1"
 alias ll="lsd -1 -a -l"
 alias c="/run/current-system/sw/bin/code"
 alias cat="bat"
-alias cv="smart-cd"
 alias nv="nvim"
 
 alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
