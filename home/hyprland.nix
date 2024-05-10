@@ -18,7 +18,7 @@ in {
 
       # monitor = [ ",preferred,auto,auto" ];
       windowrule = [
-        "float,^(.blueman-manager-wrapped|nm-connection-editor|Sign in - Google Accounts — Mozilla Firefox)$"
+        "float,^(.blueman-manager-wrapped|nm-connection-editor)$"
       ];
 
       env = [
@@ -142,8 +142,7 @@ in {
           "${MOD} CTRL, up, movewindow, u"
           "${MOD} CTRL, down, movewindow, d"
 
-          "${MOD}, S, togglespecialworkspace, magic"
-          "${MOD} SHIFT, S, movetoworkspace, special:magic"
+          "${MOD}, S, togglefloating"
           "${MOD}, F, fullscreen, 1"
 
           # Move focus with $MOD + arrow keys
