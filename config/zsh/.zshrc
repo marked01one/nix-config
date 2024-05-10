@@ -12,7 +12,10 @@ function nvidia-offload() {
 }
 
 function smart-cd() {
-    if eval "zi $1"; then
+    exceptions=("~" "." ".." "...")
+    if [ "${exceptions[@]}" =~ "$1" ]; then 
+        command cd $1
+    elif eval "zi $1"; then
         return
     else
         eval "z $1"
