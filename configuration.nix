@@ -27,8 +27,6 @@
     qemu
     libreoffice
     blueman
-
-    brave
     firefox
   ];
 

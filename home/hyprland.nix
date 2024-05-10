@@ -17,6 +17,9 @@ in {
       ];
 
       # monitor = [ ",preferred,auto,auto" ];
+      windowrule = [
+        "float,^(blueman-manager|nm-connection-editor)$"
+      ];
 
       env = [
         "XCURSOR_THEME, graphite-dark-nord"
