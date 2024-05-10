@@ -13,11 +13,10 @@ function nvidia-offload() {
 
 function smart-cd() {
     if eval "zi $1"; then
-        echo "\n"
         return
     else
-        echo "Adding new directory '$1'...\n"
         eval "z $1"
+        echo "Adding new directory '$PWD'...\n"
     fi
 }
 
