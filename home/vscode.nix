@@ -35,7 +35,7 @@
 
       "editor.fontFamily" = "CaskaydiaCove Nerd Font";
 
-      "workbench.colorTheme" = "Tokyo Night Storm";
+      "workbench.colorTheme" = "Tokyo Night";
       "workbench.activityBar.location" = "top";
       "workbench.iconTheme" = "material-icon-theme";
       "editor.fontSize" = 16;
