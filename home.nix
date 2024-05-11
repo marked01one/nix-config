@@ -81,7 +81,7 @@ in {
     };
     # file = {
     #   ".zshrc".source = ./home/conf/.zshrc;
-    # }; 
+    # };
   };
 
   dconf.settings = {

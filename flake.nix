@@ -10,7 +10,6 @@
 
     ags.url = "github:Aylur/ags";
 
-
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
     matugen.url = "github:InioX/matugen";
@@ -43,7 +42,7 @@
     homeConfigurations = {
       "marked01one@perfect-linux" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {inherit inputs;};
         modules = [./home.nix];
       };
     };

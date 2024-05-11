@@ -163,7 +163,6 @@ in {
     acpilight.enable = true;
   };
 
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -418,10 +417,9 @@ in {
     settings = {
       experimental-features = ["nix-command" "flakes"];
     };
-
   };
 
   virtualisation.docker.enable = true;
 
-  system.stateVersion = "24.05"; 
+  system.stateVersion = "24.05";
 }

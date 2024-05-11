@@ -1,6 +1,6 @@
 {pkgs}: let
-  themeJson = builtins.fromJSON(''${builtins.readFile(./skins.json)}'');
-  
+  themeJson = builtins.fromJSON ''${builtins.readFile ./skins.json}'';
+
   img = theme4;
 
   theme1 = {
@@ -58,7 +58,6 @@
       sha256 = pkgs.lib.fakeSha256;
     };
     isCropped = false;
-
   };
 in
   pkgs.stdenv.mkDerivation {

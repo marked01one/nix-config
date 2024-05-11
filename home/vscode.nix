@@ -12,6 +12,7 @@
         pkief.material-icon-theme
         equinusocio.vsc-material-theme
         enkia.tokyo-night
+        golang.go
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -34,7 +35,7 @@
 
       "editor.fontFamily" = "CaskaydiaCove Nerd Font";
 
-      "workbench.colorTheme" = "Material Theme Ocean High Contrast";
+      "workbench.colorTheme" = "Tokyo Night Storm";
       "workbench.activityBar.location" = "top";
       "workbench.iconTheme" = "material-icon-theme";
       "editor.fontSize" = 16;
