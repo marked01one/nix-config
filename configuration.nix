@@ -54,7 +54,8 @@
   ];
 
   languages = with pkgs; [
-    rustup
+    rustc
+    cargo
     go
     lua
     dotnet-sdk_8
