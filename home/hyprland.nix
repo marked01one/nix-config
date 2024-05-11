@@ -121,7 +121,7 @@ in {
           ",XF86KbdBrightnessUp, exec, asusctl -n"
           ",XF86KbdBrightnessDown, exec, asusctl -p"
 
-          ",Print, exec, grimblast copysave area ~/Pictures/screenshots/screenshot.png"
+          ",Print, exec, grimblast copysave area ~/Pictures/Screenshots/screenshot.png"
 
           "${MOD} SHIFT, P, exec, systemctl poweroff"
           "${MOD} SHIFT, RETURN, exec, firefox"

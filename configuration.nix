@@ -18,7 +18,6 @@
     networkmanagerapplet
     zathura
     teams-for-linux
-    zed-editor
     obsidian
     zotero
     zoom-us
@@ -99,6 +98,9 @@
     alejandra
     nix-prefetch
     ngspice
+
+    tauri
+    corepack_22
   ];
 
   qt5Packages = with pkgs.libsForQt5; [

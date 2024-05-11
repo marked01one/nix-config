@@ -10,7 +10,7 @@
       sha256 = "0ldhCZGRRQoeMbDp3y7X3UGTYpnDc6ToEBnq4ydeL/M=";
     };
 
-    "Picture/Wallpapers/3.jpg".source = pkgs.fetchurl {
+    "Pictures/Wallpapers/3.jpg".source = pkgs.fetchurl {
       url = "https://64.media.tumblr.com/358b5f58ebaf68cc5c8145b36e2f2773/30ef98839f9be569-83/s2048x3072/28111406e017ff2dc0f61c3d0477ad4c05696d26.jpg";
       sha256 = "cxg+nbDHdmUAYRinWbjhtRKjMhO7q/DGs19WSMA0AyM=";
     };
