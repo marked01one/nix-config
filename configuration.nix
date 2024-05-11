@@ -122,12 +122,12 @@
   ];
 
   shellScripts = [
-    (import ./system/scripts/swww-init.nix {inherit pkgs;})
+    (import ./scripts/swww-init.nix {inherit pkgs;})
   ];
 in {
   # Include the results of the hardware scan.
   imports = [
-    ./hardware/hardware-configuration.nix
+    ./system/hardware-configuration.nix
     ./system/zsh.nix
     inputs.home-manager.nixosModules.home-manager
   ];

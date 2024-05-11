@@ -82,6 +82,11 @@ in {
     # file = {
     #   ".zshrc".source = ./home/conf/.zshrc;
     # };
+
+    sessionPath = [
+      "/run/current-system/sw/bin"
+      "$HOME/.local/bin"
+    ];
   };
 
   dconf.settings = {

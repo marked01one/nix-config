@@ -13,6 +13,7 @@
         equinusocio.vsc-material-theme
         enkia.tokyo-night
         golang.go
+        sumneko.lua
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
