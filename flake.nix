@@ -9,7 +9,6 @@
     };
 
     ags.url = "github:Aylur/ags";
-
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
     matugen.url = "github:InioX/matugen";
