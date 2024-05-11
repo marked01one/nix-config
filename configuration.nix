@@ -99,7 +99,7 @@
     nix-prefetch
     ngspice
 
-    tauri
+    cargo-tauri
     corepack_22
   ];
 
