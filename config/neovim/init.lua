@@ -4,7 +4,8 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 
 local plugins = {
-   {"catppuccin/nvim", name = "catpuccin", priority = 1000} 
+   {"catppuccin/nvim", name = "catppuccin", priority = 1000} 
+
 }
 local options = {}
 
