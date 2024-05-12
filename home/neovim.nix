@@ -2,6 +2,7 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    extraConfig = ":luafile ~/.config/nvim/init.lua";
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
