@@ -4,11 +4,11 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 
 local plugins = {
-   {"catpuccin/nvim", name = "catpuccin", priority = 1000} 
+   {"catppuccin/nvim", name = "catpuccin", priority = 1000} 
 }
 local options = {}
 
 require("lazy").setup(plugins, options)
 
-require("catpuccin").setup()
-vim.cmd.colorscheme "catpuccin"
+require("catppuccin").setup()
+vim.cmd.colorscheme "catppuccin"
