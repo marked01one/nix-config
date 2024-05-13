@@ -58,6 +58,7 @@
     cargo
     go
     lua
+    dotnet-sdk_7
     dotnet-sdk_8
     libgcc
     nodejs_22
