@@ -342,7 +342,7 @@ in {
     users.marked01one = {
       isNormalUser = true;
       description = "marked01one";
-      extraGroups = ["audio" "networkmanager" "wheel"];
+      extraGroups = ["audio" "networkmanager" "wheel" "docker"];
     };
   };
 
@@ -423,10 +423,6 @@ in {
 
   virtualisation.docker = {
     enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
   system.stateVersion = "24.05";
