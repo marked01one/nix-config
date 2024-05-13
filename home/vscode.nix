@@ -14,7 +14,6 @@
         enkia.tokyo-night
         golang.go
         sumneko.lua
-        postman.postman-for-vscode
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
