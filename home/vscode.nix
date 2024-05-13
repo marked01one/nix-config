@@ -25,7 +25,7 @@
         {
           name = "postman-for-vscode";
           publisher = "postman";
-          version = "v1.0.1";
+          version = "1.0.1";
           sha256 = pkgs.lib.fakeSha256;
         }
       ];
