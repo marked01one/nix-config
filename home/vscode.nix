@@ -23,6 +23,12 @@
           version = "5.5.20240411";
           sha256 = "gyQCiyt4WQ/lhIoIE5qRPnnaN73kJ1khCAZtRHTj1Vs=";
         }
+        {
+          name = "postman-for-vscode";
+          publisher = "postman";
+          version = "v1.0.1";
+          sha256 = pkgs.lib.fakeSha256;
+        }
       ];
 
     userSettings = {
