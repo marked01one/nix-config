@@ -103,6 +103,7 @@
     cargo-tauri
     corepack_22
     pkg-config-unwrapped
+    python311Packages.pip
   ];
 
   qt5Packages = with pkgs.libsForQt5; [
