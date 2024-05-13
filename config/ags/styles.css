@@ -18,7 +18,7 @@ button:hover {
 }
 
 .workspaces button.focused {
-    border: solid @theme_selected_bg_color;
+    border: solid @theme_fg_color;
 }
 
 .client-title {
