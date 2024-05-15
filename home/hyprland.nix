@@ -11,9 +11,8 @@ in {
 
     settings = {
       monitor = [
-        "eDP-1,2560x1600,0x0,1"
+        "eDP-1,2560x1600@240,0x0,1"
         "DP-3,2560x1440@240,2560x0,auto"
-        "HDMI-A-3,2560x1440@120,2560x0,auto"
       ];
 
       # monitor = [ ",preferred,auto,auto" ];
@@ -66,7 +65,7 @@ in {
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 6;
 
         blur = {
           enabled = false;
