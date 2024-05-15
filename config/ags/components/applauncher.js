@@ -113,6 +113,5 @@ export const applauncher = Widget.Window({
     css: `
         border: 4px solid @theme_selected_bg_color;
         border-radius: 16px;
-        opacity: 0.8;
-    `
+    `,
 })
