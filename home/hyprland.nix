@@ -18,7 +18,7 @@ in {
 
       # monitor = [ ",preferred,auto,auto" ];
       windowrule = [
-        "float,^(.blueman-manager-wrapped|nm-connection-editor)$"
+        "float,^(.blueman-manager-wrapped|nm-connection-editor)$|.*swayimg:.*"
       ];
 
       env = [
