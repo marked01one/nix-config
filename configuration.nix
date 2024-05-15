@@ -27,6 +27,7 @@
     libreoffice
     blueman
     firefox
+    swayimg
   ];
 
   flatpakApps = [
