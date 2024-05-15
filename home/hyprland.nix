@@ -66,7 +66,7 @@ in {
       };
 
       decoration = {
-        rounding = 6;
+        rounding = 0;
 
         blur = {
           enabled = false;
