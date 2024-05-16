@@ -14,9 +14,6 @@
         enkia.tokyo-night
         golang.go
         sumneko.lua
-        ms-dotnettools.csdevkit
-        ms-dotnettools.csharp
-        ms-dotnettools.vscodeintellicode-csharp
         patcx.vscode-nuget-gallery
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -31,6 +28,24 @@
           publisher = "postman";
           version = "1.0.1";
           sha256 = "38fwjQ32M4dv5UOf/4CWEkDOG00I1LbiSj+HAG/UVE0=";
+        }
+        {
+          name = "csdevkit";
+          publisher = "ms-dotnettools";
+          version = "1.5.20";
+          sha256 = pkgs.lib.fakeSha256;
+        }
+        {
+          name = "csharp";
+          publisher = "ms-dotnettools";
+          version = "2.28.11";
+          sha256 = pkgs.lib.fakeSha256;
+        }
+        {
+          name = "vscodeintellicode-csharp";
+          publisher = "ms-dotnettools";
+          version = "2.1.11";
+          sha256 = pkgs.lib.fakeSha256;
         }
       ];
 
