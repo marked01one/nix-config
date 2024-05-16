@@ -82,16 +82,10 @@
           sha256 = "VWdUAU6SC7/dNDIOJmSGuIeffbwmcfeGhuSDmUE7Dig=";
         }
         {
-          name = "lua";
-          publisher = "sumneko";
-          version = "3.9.1";
-          sha256 = "oBhVzC6rMEzx8JjU2GepSCwRuHFnLqrhxNbRoakw2dk=";
-        }
-        {
           name = "material-icon-theme";
           publisher = "pkief";
           version = "5.3.0";
-          sha256 = "oBhVzC6rMEzx8JjU2GepSCwRuHFnLqrhxNbRoakw2dk=";
+          sha256 = "SCiRpqoUy+TKkiOrhjL5dPvYCMlxnEaVUb0Cjiu3674=";
         }
       ];
 
