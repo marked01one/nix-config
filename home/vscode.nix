@@ -76,7 +76,7 @@
           name = "lua";
           publisher = "sumneko";
           version = "3.9.1";
-          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+          sha256 = "oBhVzC6rMEzx8JjU2GepSCwRuHFnLqrhxNbRoakw2dk=";
         }
       ];
 
