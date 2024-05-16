@@ -5,7 +5,7 @@
 }: {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    extensions = with pkgs.vscode-utils.extensionsFromVscodeMarketplace; [
         {
           name = "vscode-typescript-next";
           publisher = "ms-vscode";
