@@ -28,6 +28,7 @@
     blueman
     firefox
     swayimg
+    slack
   ];
 
   flatpakApps = [
