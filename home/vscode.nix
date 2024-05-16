@@ -14,7 +14,6 @@
         enkia.tokyo-night
         golang.go
         sumneko.lua
-        patcx.vscode-nuget-gallery
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
