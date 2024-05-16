@@ -7,13 +7,13 @@
     enable = true;
     extensions = with pkgs.vscode-extensions;
       [
-        jnoortheen.nix-ide
-        vscodevim.vim
-        pkief.material-icon-theme
-        equinusocio.vsc-material-theme
-        enkia.tokyo-night
-        golang.go
-        sumneko.lua
+        # jnoortheen.nix-ide
+        # vscodevim.vim
+        # pkief.material-icon-theme
+        # equinusocio.vsc-material-theme
+        # enkia.tokyo-night
+        # golang.go
+        # sumneko.lua
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
