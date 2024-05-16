@@ -154,6 +154,16 @@ in {
       exec = "teams-for-linux";
       icon = "teams-for-linux";
     };
+
+    thunar-bulk-rename = {
+      name = "Bulk Rename";
+      noDisplay = true;
+    };
+
+    thunar-settings = {
+      name = "File Manager Settings";
+      noDisplay = true;
+    };
   };
 
   gtk = {
