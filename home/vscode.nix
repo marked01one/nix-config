@@ -73,8 +73,8 @@
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
         {
-          name = "sumneko";
-          publisher = "lua";
+          name = "lua";
+          publisher = "sumneko";
           version = "3.9.1";
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
