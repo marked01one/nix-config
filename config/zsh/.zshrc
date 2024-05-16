@@ -55,7 +55,7 @@ alias ls="lsd -1"
 alias ll="lsd -1 -a -l"
 alias c="/run/current-system/sw/bin/code"
 alias cat="bat"
-alias nv="nvim"
+alias vim="nvim"
 
 alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
 alias update="sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux"

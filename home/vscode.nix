@@ -50,7 +50,7 @@
           name = "vscode-nuget-gallery";
           publisher = "patcx";
           version = "1.0.0";
-          sha256 = pkgs.lib.fakeSha256;
+          sha256 = "kymExeo3BsfjeNR8vFr0SVe7WefL7v4IunJYG6dKhoY=";
         }
       ];
 
