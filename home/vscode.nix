@@ -38,7 +38,7 @@
           name = "csharp";
           publisher = "ms-dotnettools";
           version = "2.28.11";
-          sha256 = pkgs.lib.fakeSha256;
+          sha256 = "ZGzwWQcwXGgZ+oEKfTX2Dc62KerOmE0v34d7b00sei8=";
         }
         {
           name = "vscodeintellicode-csharp";
