@@ -47,6 +47,12 @@
           version = "2.1.11";
           sha256 = pkgs.lib.fakeSha256;
         }
+        {
+          name = "vscode-nuget-gallery";
+          publisher = "patcx";
+          version = "1.0.0";
+          sha256 = pkgs.lib.fakeSha256;
+        }
       ];
 
     userSettings = {
