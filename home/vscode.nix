@@ -55,7 +55,7 @@
         {
           name = "vscode-dotnet-runtime";
           publisher = "ms-dotnettools";
-          version = "1.0.0";
+          version = "2.0.5";
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
 
