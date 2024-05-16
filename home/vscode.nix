@@ -32,7 +32,7 @@
           name = "csdevkit";
           publisher = "ms-dotnettools";
           version = "1.5.20";
-          sha256 = pkgs.lib.fakeSha256;
+          sha256 = "VsQKAgxbskRfmwZof8BNmguXtPzm55aKmYJu3guZdm4=";
         }
         {
           name = "csharp";
