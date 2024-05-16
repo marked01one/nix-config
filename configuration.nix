@@ -9,7 +9,7 @@
 }: let
   desktopApps = with pkgs; [
     neovim-unwrapped
-    vscode-fhs
+    # vscode-fhs
     grimblast
     space-cadet-pinball
     drawio
