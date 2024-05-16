@@ -58,7 +58,7 @@
           name = "go";
           publisher = "golang";
           version = "0.41.4";
-          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+          sha256 = "ntrEI/l+UjzqGJmtyfVf/+sZJstZy3fm/PSWKTd7/Q0=";
         }
         {
           name = "vim";
