@@ -7,13 +7,9 @@
     enable = true;
     extensions = with pkgs.vscode-extensions;
       [
-        jnoortheen.nix-ide
-        vscodevim.vim
         pkief.material-icon-theme
         equinusocio.vsc-material-theme
         enkia.tokyo-night
-        golang.go
-        sumneko.lua
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -58,7 +54,30 @@
           version = "2.0.5";
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
-
+        {
+          name = "go";
+          publisher = "golang";
+          version = "0.41.4";
+          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+        }
+        {
+          name = "vim";
+          publisher = "vscodevim";
+          version = "1.27.2";
+          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+        }
+        {
+          name = "jnoortheen";
+          publisher = "nix-ide";
+          version = "0.3.1";
+          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+        }
+        {
+          name = "sumneko";
+          publisher = "lua";
+          version = "3.9.1";
+          sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
+        }
       ];
 
     userSettings = {
