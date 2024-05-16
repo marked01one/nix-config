@@ -167,9 +167,11 @@ const Center = () => Widget.Box({
     children: [ClientTitle(), Notification()]
 })
 
-const Right = () => Widget.Box({
+const Right = (mon) => Widget.Box({
     hpack: "end", spacing: 8,
-    children: [Volume(), BatteryLabel(), Clock(), SysTray()]
+    children: (mon === 0) ? 
+        [Volume(), BatteryLabel(), Clock(), SysTray()] :
+        [Clock(), SysTray()]
 })
 
 export function Taskbar(monitor = 0) {
@@ -182,7 +184,7 @@ export function Taskbar(monitor = 0) {
         child: Widget.CenterBox({
             start_widget: Left(),
             center_widget: Center(),
-            end_widget: Right()
+            end_widget: Right(monitor)
         }),
     })
 }
