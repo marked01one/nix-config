@@ -67,8 +67,8 @@
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
         {
-          name = "jnoortheen";
-          publisher = "nix-ide";
+          name = "nix-ide";
+          publisher = "jnoortheen";
           version = "0.3.1";
           sha256 = "LO1vF3WHsqqL4LbzcBohkU90bRB7wnXrhJxaVfCMcbE=";
         }
