@@ -184,7 +184,5 @@ export function Taskbar(monitor = 0) {
             center_widget: Center(),
             end_widget: Right()
         }),
-        css: `
-        ` 
     })
 }

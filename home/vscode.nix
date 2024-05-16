@@ -14,6 +14,10 @@
         enkia.tokyo-night
         golang.go
         sumneko.lua
+        ms-dotnettools.csdevkit
+        ms-dotnettools.csharp
+        ms-dotnettools.vscodeintellicode-csharp
+        patcx.vscode-nuget-gallery
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
