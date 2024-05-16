@@ -44,7 +44,7 @@
           name = "vscodeintellicode-csharp";
           publisher = "ms-dotnettools";
           version = "2.1.11";
-          sha256 = pkgs.lib.fakeSha256;
+          sha256 = "QOnaDLNpaVrSbXbbGYw1fE8BuWz2DyB6j6OpDW/95kE=";
         }
         {
           name = "vscode-nuget-gallery";
