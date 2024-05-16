@@ -79,7 +79,7 @@
           name = "tokyo-night";
           publisher = "enkia";
           version = "1.0.6";
-          sha256 = "oBhVzC6rMEzx8JjU2GepSCwRuHFnLqrhxNbRoakw2dk=";
+          sha256 = "VWdUAU6SC7/dNDIOJmSGuIeffbwmcfeGhuSDmUE7Dig=";
         }
         {
           name = "lua";
