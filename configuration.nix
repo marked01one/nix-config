@@ -30,6 +30,7 @@
     swayimg
     slack
     delta
+    pandoc
   ];
 
   flatpakApps = [
