@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os/exec"
+	"strings"
 )
 
 func main() {
@@ -13,6 +14,19 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Print(string(out))
+	diffLines := strings.Split(string(out), "\n")
+
+	defer func() {
+		if err := recover(); err != nil {
+			return
+		}
+	}()
+
+	for _, line := range diffLines {
+
+		if line[:3] == "+++" {
+			fmt.Printf("\033[32m%s\033[0m\n", line)
+		}
+	}
 
 }

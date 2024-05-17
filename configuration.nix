@@ -29,6 +29,7 @@
     firefox
     swayimg
     slack
+    delta
   ];
 
   flatpakApps = [
