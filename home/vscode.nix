@@ -6,18 +6,18 @@
   programs.vscode = {
     enable = true;
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          name = "vscode-typescript-next";
-          publisher = "ms-vscode";
-          version = "5.5.20240411";
-          sha256 = "gyQCiyt4WQ/lhIoIE5qRPnnaN73kJ1khCAZtRHTj1Vs=";
-        }
-        {
-          name = "postman-for-vscode";
-          publisher = "postman";
-          version = "1.0.1";
-          sha256 = "38fwjQ32M4dv5UOf/4CWEkDOG00I1LbiSj+HAG/UVE0=";
-        }
+        # {
+        #   name = "vscode-typescript-next";
+        #   publisher = "ms-vscode";
+        #   version = "5.5.20240411";
+        #   sha256 = "gyQCiyt4WQ/lhIoIE5qRPnnaN73kJ1khCAZtRHTj1Vs=";
+        # }
+        # {
+        #   name = "postman-for-vscode";
+        #   publisher = "postman";
+        #   version = "1.0.1";
+        #   sha256 = "38fwjQ32M4dv5UOf/4CWEkDOG00I1LbiSj+HAG/UVE0=";
+        # }
         {
           name = "csdevkit";
           publisher = "ms-dotnettools";
