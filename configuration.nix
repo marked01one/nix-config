@@ -65,6 +65,7 @@
     go
     lua
     dotnet-sdk_8
+    dotnet-sdk_7
     libgcc
     nodejs_22
     jdk21
