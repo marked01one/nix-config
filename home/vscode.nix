@@ -18,18 +18,18 @@
         version = "1.0.1";
         sha256 = "38fwjQ32M4dv5UOf/4CWEkDOG00I1LbiSj+HAG/UVE0=";
       }
-      # {
-      #   name = "csdevkit";
-      #   publisher = "ms-dotnettools";
-      #   version = "1.5.20";
-      #   sha256 = "VsQKAgxbskRfmwZof8BNmguXtPzm55aKmYJu3guZdm4=";
-      # }
-      # {
-      #   name = "csharp";
-      #   publisher = "ms-dotnettools";
-      #   version = "2.28.11";
-      #   sha256 = "ZGzwWQcwXGgZ+oEKfTX2Dc62KerOmE0v34d7b00sei8=";
-      # }
+      {
+        name = "csdevkit";
+        publisher = "ms-dotnettools";
+        version = "1.5.20";
+        sha256 = "VsQKAgxbskRfmwZof8BNmguXtPzm55aKmYJu3guZdm4=";
+      }
+      {
+        name = "csharp";
+        publisher = "ms-dotnettools";
+        version = "2.28.11";
+        sha256 = "ZGzwWQcwXGgZ+oEKfTX2Dc62KerOmE0v34d7b00sei8=";
+      }
       {
         name = "vscodeintellicode-csharp";
         publisher = "ms-dotnettools";
