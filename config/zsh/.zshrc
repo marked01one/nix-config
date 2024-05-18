@@ -59,6 +59,7 @@ alias vim="nvim"
 
 alias cfnix="/run/current-system/sw/bin/code ~/SystemFlake"
 alias update="sudo nixos-rebuild switch --flake ~/SystemFlake/#perfect-linux"
+alias go="GOTELEMETRY=off go"
 
 alias logout="pkill -u $(whoami)"
 alias shutdown="systemctl poweroff"

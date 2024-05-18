@@ -31,6 +31,8 @@
     slack
     delta
     pandoc
+    jan
+    wezterm
   ];
 
   flatpakApps = [
