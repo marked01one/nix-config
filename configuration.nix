@@ -13,7 +13,8 @@
     grimblast
     space-cadet-pinball
     drawio
-    discord
+    vesktop
+    betterdiscordctl
     prismlauncher
     networkmanagerapplet
     zathura
