@@ -13,7 +13,7 @@
     grimblast
     space-cadet-pinball
     drawio
-    vesktop
+    discord
     betterdiscordctl
     prismlauncher
     networkmanagerapplet

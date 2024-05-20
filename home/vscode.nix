@@ -26,6 +26,8 @@
 
       "redhat.telemetry.enabled" = false;
 
+      "update.mode" = "none";
+
       # "java.home" = "/run/current-system/sw/lib/openjdk";
     };
   };
