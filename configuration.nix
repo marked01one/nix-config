@@ -33,7 +33,6 @@
     delta
     pandoc
     jan
-    wezterm
   ];
 
   flatpakApps = [
