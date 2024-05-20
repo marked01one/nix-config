@@ -15,6 +15,7 @@
     ./home/zsh.nix
     ./home/ags.nix
     ./home/fastfetch.nix
+    ./home/wezterm.nix
   ];
 
   inputImports = [
