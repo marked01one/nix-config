@@ -400,6 +400,7 @@ in {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
       TERMINAL = ["kitty"];
+      XDG_CONFIG_HOME = "$HOME";
     };
   };
 
