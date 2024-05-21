@@ -64,8 +64,10 @@
     cargo
     go
     lua
-    dotnet-sdk_8
-    dotnet-sdk_7
+    (with dotnetCorePackages; combinePackages [
+      sdk_7_0
+      sdk_8_0
+    ])
     libgcc
     nodejs_22
     jdk21
