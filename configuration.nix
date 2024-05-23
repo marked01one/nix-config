@@ -94,6 +94,7 @@
     wofi
     waybar
     dunst
+    xwaylandvideobridge
   ];
 
   devTools = with pkgs; [
