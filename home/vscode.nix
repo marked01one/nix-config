@@ -28,6 +28,10 @@
 
       "update.mode" = "none";
 
+      "[json]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+
       # "java.home" = "/run/current-system/sw/lib/openjdk";
     };
   };
