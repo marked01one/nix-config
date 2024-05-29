@@ -35,10 +35,7 @@
     jan
   ];
 
-  flatpakApps = [
-    "app.moosync.moosync"
-    "org.kicad.KiCad"
-  ];
+  flatpakApps = ["app.moosync.moosync" "org.kicad.KiCad"];
 
   commandLineApps = with pkgs; [
     wget
@@ -64,10 +61,11 @@
     cargo
     go
     lua
-    (with dotnetCorePackages; combinePackages [
-      sdk_7_0
-      sdk_8_0
-    ])
+    (with dotnetCorePackages;
+      combinePackages [
+        sdk_7_0
+        sdk_8_0
+      ])
     libgcc
     nodejs_22
     jdk21
