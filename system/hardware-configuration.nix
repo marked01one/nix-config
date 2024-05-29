@@ -41,11 +41,11 @@
 
   swapDevices = [];
   environment.systemPackages = with pkgs; [
-    # asusctl
+    asusctl
     nvtopPackages.full
   ];
 
-  services.asusd.enable = false;
+  services.asusd.enable = true;
   boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
     argsOverride = rec {
       src = pkgs.fetchurl {
