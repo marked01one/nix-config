@@ -41,7 +41,7 @@
 
   swapDevices = [];
   environment.systemPackages = with pkgs; [
-    asusctl
+    # asusctl
     nvtopPackages.full
   ];
 
