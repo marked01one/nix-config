@@ -45,7 +45,7 @@
     nvtopPackages.full
   ];
 
-  services.asusd.enable = true;
+  services.asusd.enable = false;
   boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
     argsOverride = rec {
       src = pkgs.fetchurl {
