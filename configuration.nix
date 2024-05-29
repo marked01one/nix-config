@@ -371,8 +371,8 @@ in {
 
     hyprland = {
       enable = true;
-      # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      package = pkgs.hyprland;
+      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      # package = pkgs.hyprland;
       xwayland.enable = true;
     };
     thunar.enable = true;
