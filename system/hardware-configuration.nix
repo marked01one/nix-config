@@ -46,16 +46,18 @@
   ];
 
   services.asusd.enable = true;
-  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
-    argsOverride = rec {
-      src = pkgs.fetchurl {
-        url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
-        sha256 = "E4kj5dc3SLS9vptaC48236yfzBZ1OpIiko3GyWPv+ok=";
-      };
-      version = "6.8.5";
-      modDirVersion = "6.8.5";
-    };
-  });
+  boot.kernelPackages = 
+    pkgs.linuxPackages_latest; 
+    # pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
+    #   argsOverride = rec {
+    #     src = pkgs.fetchurl {
+    #       url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
+    #       sha256 = "E4kj5dc3SLS9vptaC48236yfzBZ1OpIiko3GyWPv+ok=";
+    #     };
+    #     version = "6.8.5";
+    #     modDirVersion = "6.8.5";
+    #   };
+    # });
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
