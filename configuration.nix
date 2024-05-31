@@ -68,7 +68,7 @@
       ])
     libgcc
     nodejs_22
-    jdk21
+    jdk
     python3
     lua
     php
