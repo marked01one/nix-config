@@ -292,9 +292,11 @@ in {
       };
     };
     blueman.enable = true;
+    upower.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
   };
 
-  services.upower.enable = true;
   services.xserver = {
     enable = true;
     excludePackages = with pkgs; [
@@ -399,7 +401,7 @@ in {
 
     sessionVariables = {
       # WLR_NO_HARDWARE_CURSORS = "1";
-      NIXOS_OZONE_WL = "1";
+      # NIXOS_OZONE_WL = "1";
       TERMINAL = ["kitty"];
     };
   };

@@ -34,13 +34,36 @@ in {
         "HYPRCURSOR_THEME, graphite-dark-nord"
         "HYPRCURSOR_SIZE, 24"
         "TERMINAL, kitty"
+
+        "GDK_BACKEND,wayland,x11"
+        "XDG_CURRENT_DESKTOP, Hyprland"
+        "XDG_SESSION_TYPE, wayland"
+        "XDG_SESSION_DESKTOP, Hyprland"
+
+        "LIBVA_DRIVER_NAME,nvidia"
+        "GBM_BACKEND,nvidia-drm"
+        "EGL_PLATFORM,wayland"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
+
+        "MOZ_ENABLE_WAYLAND,1"
+        "MOZ_WAYLAND_USE_VAAPI,1"
+        "MOZ_DBUS_REMOTE,1"
+        "MOZ_ACCELERATED,1"
+        "MOZ_WEBRENDERER,1"
+        "MOZ_DISABLE_RDD_SANDBOX,1"
+        
+        "_JAVA_AWT_WM_NONREPARENING,1"
+        "WLR_USE_LIBINPUT,1"
+        "WLR_DRM_NO_ATOMIC,1"
+        "__GL_VRR_ALLOWED,1"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       ];
 
       exec-once = [
         "brightnessctl --restore"
         "swww-init"
         "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
-        "dbus-update-activcation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
       input = {
