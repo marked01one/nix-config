@@ -87,8 +87,10 @@
     udiskie
     qgnomeplatform
     qgnomeplatform-qt6
+    usbutils
     unzip
     upower
+
     wofi
     waybar
     dunst
