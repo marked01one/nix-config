@@ -373,7 +373,6 @@ in {
       enable = true;
       package = inputs.hyprland.packages."${pkgs.system}".hyprland;
       # package = pkgs.hyprland;
-      nvidiaPactches = true;
       xwayland.enable = true;
     };
     thunar.enable = true;
