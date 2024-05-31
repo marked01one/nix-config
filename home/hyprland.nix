@@ -13,6 +13,7 @@ in {
       monitor = [
         "eDP-1,2560x1600@240,0x0,1"
         "DP-3,2560x1440@240,2560x0,auto"
+        "Unknown-1,disable"
       ];
 
       # monitor = [ ",preferred,auto,auto" ];
