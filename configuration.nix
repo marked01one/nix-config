@@ -371,8 +371,8 @@ in {
 
     hyprland = {
       enable = true;
-      # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      package = pkgs.hyprland;
+      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      # package = pkgs.hyprland;
       xwayland.enable = true;
     };
     thunar.enable = true;
@@ -383,6 +383,7 @@ in {
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+
 
     ssh = {
       enableAskPassword = true;
@@ -397,7 +398,7 @@ in {
       shellScripts ++ devTools ++ systemPrograms ++ desktopApps ++ commandLineApps ++ languages ++ qt5Packages ++ themes;
 
     sessionVariables = {
-      WLR_NO_HARDWARE_CURSORS = "1";
+      # WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
       TERMINAL = ["kitty"];
     };
