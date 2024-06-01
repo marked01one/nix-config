@@ -12,7 +12,7 @@ in {
     settings = {
       monitor = [
         "eDP-1,2560x1600@240,0x0,1"
-        "DP-3,2560x1440@240,2560x0,auto"
+        "DP-3,2560x1440@240,2560x0,1"
         "Unknown-1,disable"
       ];
 
@@ -64,7 +64,7 @@ in {
         "brightnessctl --restore"
         "swww-init"
         "ags --init -c ~/.config/ags/config.js && ags -c ~/.config/ags/config.js"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
       input = {
