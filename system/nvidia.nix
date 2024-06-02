@@ -49,7 +49,7 @@ let
     prime = {
       offload = {
         enable = isOffload;
-        enableOffloadCmd = true;
+        enableOffloadCmd = isOffload;
       };
 
       sync = {
