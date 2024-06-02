@@ -4,7 +4,10 @@
   pkgs,
   # modulesPath,
   ...
-}: {
+}: 
+let 
+  isOffload = false;
+ in {
   hardware.nvidia = {
     modesetting.enable = true;
 
@@ -45,8 +48,12 @@
 
     prime = {
       offload = {
-        enable = true;
+        enable = isOffload;
         enableOffloadCmd = true;
+      };
+
+      sync = {
+        enable = !isOffload;
       };
 
       intelBusId = "PCI:0:2:0";
