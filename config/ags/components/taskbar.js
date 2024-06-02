@@ -170,9 +170,7 @@ const Center = () => Widget.Box({
 
 const Right = (mon) => Widget.Box({
     hpack: "end", spacing: 8,
-    children: (mon === 0) ? 
-        [Volume(), BatteryLabel(), Clock(), SysTray()] :
-        [Clock(), SysTray()]
+    children: [Volume(), BatteryLabel(), Clock(), SysTray()] 
 })
 
 export function Taskbar(monitor = 0) {
