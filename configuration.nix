@@ -166,7 +166,7 @@ in {
         version = "0.39.1";
         src = prev.fetchFromGitHub {
           owner = "hyprwm";
-          repo = "hyprland";
+          repo = "Hyprland";
           fetchSubmodules = true;
           rev = "0.39.1";
           hash = "sha256-Urb/njWiHYUudXpmK8EKl9Z58esTIG0PxXw5LuM2r5g=";
