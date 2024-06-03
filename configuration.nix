@@ -135,6 +135,8 @@
   shellScripts = [
     (import ./scripts/swww-init.nix {inherit pkgs;})
   ];
+
+  use-hyprland-stable = true;
 in {
   # Include the results of the hardware scan.
   imports = [
@@ -376,8 +378,12 @@ in {
 
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      # package = pkgs.hyprlandOld;
+      package = 
+        if use-hyprland-stable then 
+          inputs.hyprland-stable.packages."{pkgs.system}".hyprland
+        else 
+          inputs.hyprland.packages."${pkgs.system}".hyprland;
+      
       xwayland.enable = true;
     };
     thunar.enable = true;

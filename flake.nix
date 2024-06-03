@@ -12,6 +12,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
     matugen.url = "github:InioX/matugen";
+    hyprland-stable.url = "github:nixos/nixpkgs/nixpkgs/179e0f110d859ec7f64c52de56de5b264d5db98a";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
