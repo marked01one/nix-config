@@ -34,7 +34,7 @@
     pandoc
     jan
     virtualbox
-    bottles
+    heroic
   ];
 
   flatpakApps = ["app.moosync.moosync" "org.kicad.KiCad"];
