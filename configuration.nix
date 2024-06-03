@@ -162,7 +162,7 @@ in {
 
   nixpkgs.overlays = [
     (final: prev: {
-      hyprland = prev.hyprland.overrideAttrs (old: {
+      hyprlandOld = prev.hyprland.overrideAttrs (old: {
         version = "0.39.1";
         # src = prev.fetchFromGitHub {
         #   owner = "hyprwm";
@@ -391,7 +391,7 @@ in {
     hyprland = {
       enable = true;
       # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      package = pkgs.hyprland;
+      package = pkgs.hyprlandOld;
       xwayland.enable = true;
     };
     thunar.enable = true;
