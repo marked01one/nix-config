@@ -380,7 +380,7 @@ in {
       enable = true;
       package = 
         if use-hyprland-stable then 
-          inputs.hyprland-stable.packages."{pkgs.system}".hyprland
+          pkgs.inputs.hyprland-stable.packages."{pkgs.system}".hyprland
         else 
           inputs.hyprland.packages."${pkgs.system}".hyprland;
       
