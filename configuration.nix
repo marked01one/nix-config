@@ -160,6 +160,20 @@ in {
     ];
   };
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      hyprland = prev.hyprland.overrideAttrs (old: {
+        version = "0.39.1";
+        src = prev.fetchFromGitHub {
+          owner = "hyprwm";
+          repo = "hyprland";
+          rev = "v0.39.1";
+          hash = "";
+        }
+      })
+    })
+  ];
+
   hardware = {
     bluetooth = {
       enable = true;
@@ -375,8 +389,8 @@ in {
 
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      # package = pkgs.hyprland;
+      # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      package = pkgs.hyprland;
       xwayland.enable = true;
     };
     thunar.enable = true;
