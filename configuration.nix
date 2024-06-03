@@ -162,7 +162,6 @@ in {
     ];
   };
 
-
   hardware = {
     bluetooth = {
       enable = true;
@@ -378,12 +377,11 @@ in {
 
     hyprland = {
       enable = true;
-      package = 
-        if use-hyprland-stable then 
-          inputs.hyprland-stable.legacyPackages."${pkgs.system}".hyprland
-        else 
-          inputs.hyprland.packages."${pkgs.system}".hyprland;
-      
+      package =
+        if use-hyprland-stable
+        then inputs.hyprland-stable.legacyPackages."${pkgs.system}".hyprland
+        else inputs.hyprland.packages."${pkgs.system}".hyprland;
+
       xwayland.enable = true;
     };
     thunar.enable = true;
@@ -394,7 +392,6 @@ in {
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-
 
     ssh = {
       enableAskPassword = true;

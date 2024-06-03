@@ -46,8 +46,8 @@
   ];
 
   services.asusd.enable = true;
-  boot.kernelPackages = 
-    # pkgs.linuxPackages_latest; 
+  boot.kernelPackages =
+    # pkgs.linuxPackages_latest;
     pkgs.linuxPackagesFor (pkgs.linux_6_8.override {
       argsOverride = rec {
         src = pkgs.fetchurl {

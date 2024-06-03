@@ -4,10 +4,9 @@
   pkgs,
   # modulesPath,
   ...
-}: 
-let 
+}: let
   isOffload = false;
- in {
+in {
   hardware.nvidia = {
     modesetting.enable = true;
 
@@ -15,8 +14,8 @@ let
 
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.beta; 
-    
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
+
     # let
     #   rcu_patch = pkgs.fetchpatch {
     #     url = "https://github.com/gentoo/gentoo/raw/c64caf53/x11-drivers/nvidia-drivers/files/nvidia-drivers-470.223.02-gpl-pfn_valid.patch";

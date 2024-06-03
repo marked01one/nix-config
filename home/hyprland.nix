@@ -52,7 +52,7 @@ in {
         # "MOZ_ACCELERATED,1"
         # "MOZ_WEBRENDERER,1"
         # "MOZ_DISABLE_RDD_SANDBOX,1"
-        
+
         # "_JAVA_AWT_WM_NONREPARENTING,1"
         # "WLR_USE_LIBINPUT,1"
         # "WLR_DRM_NO_ATOMIC,1"

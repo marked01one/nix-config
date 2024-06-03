@@ -13,9 +13,16 @@ func logError(err error) {
 	}
 }
 
-func main() {
-	nixRoot, err := exec.Command("sh", "-c", "git rev-parse --show-toplevel").Output()
+func nixFormat(nixRoot string) {
+	_, err := exec.Command("echo", "Formatting Nix files...").Output()
 	logError(err)
+	out, err := exec.Command("sh", "-c", fmt.Sprintf("alejandra %s", nixRoot)).Output()
+	fmt.Printf("%s\n", string(out))
+	logError(err)
+}
+
+func gitDiff() {
+
 	out, err := exec.Command("sh", "-c", "git diff").Output()
 	logError(err)
 
@@ -42,9 +49,11 @@ func main() {
 			continue
 		}
 	}
-	_, err = exec.Command("echo", "Formatting Nix files...").Output()
+}
+
+func main() {
+	gitDiff()
+	nixRoot, err := exec.Command("sh", "-c", "git rev-parse --show-toplevel").Output()
 	logError(err)
-	out, err = exec.Command("sh", "-c", fmt.Sprintf("alejandra %s", nixRoot)).Output()
-	fmt.Printf("%s\n", string(out))
-	logError(err)
+	nixFormat(string(nixRoot))
 }
