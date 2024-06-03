@@ -168,7 +168,7 @@ in {
           owner = "hyprwm";
           repo = "hyprland";
           fetchSubmodules = true;
-          rev = "v0.39.1";
+          rev = "0.39.1";
           hash = "sha256-Urb/njWiHYUudXpmK8EKl9Z58esTIG0PxXw5LuM2r5g=";
         };
       });
