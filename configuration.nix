@@ -163,7 +163,6 @@ in {
   nixpkgs.overlays = [
     (final: prev: {
       hyprland = prev.hyprland.overrideAttrs (old: {
-        version = "0.39.1";
         src = prev.fetchFromGitHub {
           owner = "hyprwm";
           repo = "Hyprland";
