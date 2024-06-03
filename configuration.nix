@@ -33,6 +33,8 @@
     delta
     pandoc
     jan
+    virtualbox
+    bottles
   ];
 
   flatpakApps = ["app.moosync.moosync" "org.kicad.KiCad"];
