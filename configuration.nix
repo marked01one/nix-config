@@ -138,7 +138,8 @@
     (import ./scripts/swww-init.nix {inherit pkgs;})
   ];
 
-  use-hyprland-stable = true;
+  use-hyprland-stable = false;
+  use-x11-only = false;
 in {
   # Include the results of the hardware scan.
   imports = [
@@ -256,31 +257,29 @@ in {
     };
   };
   # Enable the X11 windowing system.
-  # services.xserver = {
-  # enable = true;
-  # xkb.layout = "us";
-  # xkb.variant = "";
-  # excludePackages = [];
-  # displayManager = {
-  #   defaultSession = "Hyprland";
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.variant = "";
+    excludePackages = with pkgs; [
+      xterm
+      x11_ssh_askpass
+    ];
 
-  #   sddm = {
-  #     enable = true;
-  #     theme = "";
-  #   };
-  # };
+    windowManager.i3 = {
+      enable = true;
+      package = pkgs.i3-gaps;
+      extraPackages = with pkgs; [
+        rofi
+        i3status-rust
+        i3blocks
+        i3lock
+      ];
+    };
+  };
 
-  # windowManager.i3 = {
-  #   enable = true;
-  #   package = pkgs.i3-gaps;
-  #   extraPackages = with pkgs; [
-  #     rofi
-  #     i3status-rust
-  #     i3blocks
-  #     i3lock
-  #   ];
-  # };
-  # };
+
+
   services = {
     tlp = {
       enable = true;
@@ -303,19 +302,13 @@ in {
     udisks2.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
-    excludePackages = with pkgs; [
-      xterm
-      x11_ssh_askpass
-    ];
-  };
   services.displayManager = {
-    defaultSession = "hyprland";
+    defaultSession = if use-x11-only then "none+i3" else "hyprland";
+    
     sddm = {
       enable = true;
       theme = "${import ./modules/sddm/sugar-dark.nix {inherit pkgs;}}";
-      wayland.enable = true;
+      wayland.enable = !use-x11-only;
     };
   };
 
@@ -378,7 +371,7 @@ in {
     };
 
     hyprland = {
-      enable = true;
+      enable = !use-x11-only;
       package =
         if use-hyprland-stable
         then inputs.hyprland-stable.legacyPackages."${pkgs.system}".hyprland
