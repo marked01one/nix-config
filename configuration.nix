@@ -308,7 +308,7 @@ in {
     sddm = {
       enable = true;
       theme = "${import ./modules/sddm/sugar-dark.nix {inherit pkgs;}}";
-      wayland.enable = !use-x11-only;
+      wayland.enable = false;
     };
   };
 
