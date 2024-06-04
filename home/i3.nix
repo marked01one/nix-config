@@ -24,7 +24,7 @@ in {
       bars = [
         {
           position = "bottom";
-          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./../config/i3/i3status-rust.toml}";
           fonts = {
             names = ["CaskaydiaCove Nerd Font"];
             size = 12.0;
