@@ -35,7 +35,6 @@
     jan
     virtualbox
     heroic
-    latest.firefox-bin
   ];
 
   flatpakApps = ["app.moosync.moosync" "org.kicad.KiCad"];
@@ -393,6 +392,11 @@ in {
     ssh = {
       enableAskPassword = true;
       askPassword = "";
+    };
+
+    firefox = {
+      enable = true;
+      package = pkgs.firefox-bin;
     };
   };
 
