@@ -21,7 +21,6 @@
     teams-for-linux
     obsidian
     zotero
-    zoom-us
     qucs-s
     osu-lazer-bin
     qemu
