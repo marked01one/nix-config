@@ -27,7 +27,7 @@
     qemu
     libreoffice
     blueman
-    firefox
+    brave
     swayimg
     slack
     delta
