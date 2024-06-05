@@ -35,6 +35,7 @@
     jan
     virtualbox
     heroic
+    latest.firefox-bin
   ];
 
   flatpakApps = ["app.moosync.moosync" "org.kicad.KiCad"];
@@ -264,6 +265,7 @@ in {
     excludePackages = with pkgs; [
       xterm
       x11_ssh_askpass
+      
     ];
 
     windowManager.i3 = {
